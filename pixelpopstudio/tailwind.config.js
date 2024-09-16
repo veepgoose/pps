@@ -17,7 +17,7 @@ module.exports = {
           text: '#FB6FC6',
           header: '#7493AF',
           menuBackground: '#FB6FC6',  // Add custom menu colors
-          menuText: '#FFF6E3',
+          menuText: '#192A51',
         },
         dark: {
           background: '#7493AF',

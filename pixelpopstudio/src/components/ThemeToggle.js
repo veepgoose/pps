@@ -27,7 +27,7 @@ export default function ThemeToggle() {
   return (
     <button 
       onClick={toggleTheme}
-      className="text-amber-50 p-2 "
+      className="text-dark-header-50 p-2 "
     >
       {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
     </button>

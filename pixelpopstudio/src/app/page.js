@@ -16,13 +16,7 @@ export default function Home() {
   return (
     <div className={`min-h-screen bg-light-background dark:bg-dark-background`}>
       <LandingHeader theme={theme} />
-      <main className="p-40">
-        <h1 className={`text-8xl font-bold text-right mt-0 mb-5 text-light-text dark:text-dark-text`}>
-          Creative<br />Web<br />Design
-        </h1>
-
-        {/* Add more content as needed */}
-      </main>
+  
     </div>
   );
 }
