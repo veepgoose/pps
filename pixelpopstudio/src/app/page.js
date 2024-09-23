@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import LandingHeader from '@/components/LandingHeader';
+import Footer from '@/components/Footer';
 
 
 export default function Home() {
@@ -14,9 +15,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-light-background dark:bg-dark-background`}>
+    <div className={`flex flex-col min-h-screen bg-light-background dark:bg-dark-background`}>
       <LandingHeader theme={theme} />
-  
+
+
+
+      <Footer theme={theme} />
     </div>
   );
 }
+

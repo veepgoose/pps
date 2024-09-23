@@ -2,8 +2,6 @@ import ThemeToggle from './ThemeToggle';
 import Menu from './Menu';
 import Image from 'next/image';
 import { useState } from 'react';
-import Footer from './Footer';
-import AnimatedText from './AnimatedText';
 
 export default function LandingHeader({ theme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,10 +42,10 @@ export default function LandingHeader({ theme }) {
         </div>
       </div>
       <div className="absolute top-1/2 left-0 right-0">
-        <AnimatedText />
+       
       </div>
       <div className="absolute bottom-0 left-0 right-0">
-        <Footer />
+       
       </div>
       
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
