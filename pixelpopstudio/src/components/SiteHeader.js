@@ -8,11 +8,9 @@ export default function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-  //   <div
-  //   className="relative bg-[url('/GraphBackground.png')] bg-cover bg-no-repeat bg-center min-h-screen" 
-  // >
-    <header className="flex justify-between items-center p-5">
-      <div className="relative w-[100px] h-[50px]">
+
+    <header className="flex justify-between items-center p-4">
+      <div className="relative w-[150px] h-[100px]">
         <Image
           src="/P.P.SLogo.png"
           alt="Pixel Pop Studio Logo"
@@ -35,6 +33,6 @@ export default function SiteHeader() {
           </button>
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </header>
-    // </div>
+  
   );
 }

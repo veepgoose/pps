@@ -14,17 +14,17 @@ module.exports = {
       colors: {
         light: {
           background: '#FFF6E3',
-          text: '#FB6FC6',
-          header: '#7493AF',
+          text: '#192A51',
+          header: '#B1CCE4',
           menuBackground: '#FB6FC6',  // Add custom menu colors
           menuText: '#192A51',
         },
         dark: {
           background: '#7493AF',
-          text: '#FFF6E3',
-          header: '#192A51',
+          text: '#192A51',
+          header: '#7493AF',
           menuBackground: '#192A51',  // Add custom menu colors
-          menuText: '#FFF6E3',
+          menuText: '#B1CCE4',
         },
       },
     },
