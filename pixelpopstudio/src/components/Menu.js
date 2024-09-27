@@ -1,4 +1,5 @@
 import SocialIcons from "./SocialIcons";
+import Rectangles from "./Rectangles";
 
 export default function Menu({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -43,8 +44,14 @@ export default function Menu({ isOpen, onClose }) {
           </li>
         </ul>
       </nav>
-      <div className="mt-10">
-        <SocialIcons />
+      <div className="relative -mt-16">
+        {/* Rectangle and SocialIcons */}
+        <div className="relative flex justify-center items-center">
+          <Rectangles />
+          <div className="absolute inset-0 flex justify-center items-center">
+            <SocialIcons />
+          </div>
+        </div>
       </div>
     </div>
   );

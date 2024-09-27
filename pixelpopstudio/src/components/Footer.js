@@ -3,7 +3,7 @@ import Rectangles from "./Rectangles";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center items-center w-full bg-[#B1CCE4] h-24 absolute bottom-0">
+    <footer className="flex justify-center items-center w-full bg-[#B1CCE4] h-24">
       <div className="relative -mt-16">
         {/* Rectangle and SocialIcons */}
         <div className="relative flex justify-center items-center">
