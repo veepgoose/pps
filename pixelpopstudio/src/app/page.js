@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import LandingHeader from '@/components/LandingHeader';
 import Footer from '@/components/Footer';
 import LandingPageGraphic from '@/components/LandingPageGraphic';
+import ECommerce from '@/components/ECommerce';
+import BrandIdentity from '@/components/BrandIdentity';
 
 export default function Home() {
   const [theme, setTheme] = useState('light');
@@ -27,8 +29,10 @@ export default function Home() {
       <LandingHeader theme={theme} />
 
       {/* Main content should grow to push footer to the bottom */}
-      <div className="flex-grow p-20 bg-light-background dark:bg-dark-background">
+      <div className="flex flex-row flex-grow justify-center bg-light-background dark:bg-dark-background">
+        <ECommerce />
         <LandingPageGraphic />
+        <BrandIdentity />
       </div>
 
       {/* Footer naturally placed at the bottom */}

@@ -1,14 +1,13 @@
-
-const LandingPageGraphic = () => {
+const ECommerce = () => {
     return (
         <div className="relative flex justify-center items-center">
             <img
-            src="/LandingPageGraphic.svg" 
+            src="/ECommerce.svg" 
             alt="landing page graphic"
-            className="w-1/2 h-auto"
+            className="w-full h-auto"
         />
         </div>
     );
     };
 
-export default LandingPageGraphic;
+export default ECommerce;
