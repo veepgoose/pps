@@ -27,7 +27,7 @@ export default function Home() {
       <LandingHeader theme={theme} />
 
       {/* Main content should grow to push footer to the bottom */}
-      <div className="flex-grow p-40 bg-light-background dark:bg-dark-background">
+      <div className="flex-grow p-20 bg-light-background dark:bg-dark-background">
         <LandingPageGraphic />
       </div>
 
