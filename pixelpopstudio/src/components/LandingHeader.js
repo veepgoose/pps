@@ -30,7 +30,7 @@ const LandingHeader = () => {
         </div>
       </div>
       <div className="flex justify-center mt-6">
-        <LPLogo className="w-full h-auto" />
+        <LPLogo />
       </div>
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
