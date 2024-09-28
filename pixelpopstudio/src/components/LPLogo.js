@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const LPLogo = ({ className }) => {
     return (
-        <div className={`relative -mt-28 ${className} h-52 w-full`}>
+        <div className={`relative -mt-28 ${className} h-64 w-full`}>
             {/* SVG for the yellow rectangle */}
             <svg 
                 width="100%" 
@@ -29,10 +29,9 @@ const LPLogo = ({ className }) => {
                     <Image
                         src="/PPSLogoMainBlack.png"  // Use the PNG for the text here
                         alt="Pixel Pop Studio Logo Text"
-                        layout="intrinsic"
-                        width={700}  // Adjust the width to fit the logo text
-                        height={200}  // Adjust the height to fit the logo text
-                        objectFit="contain"
+                        width={700}  // Set the width, adjust as needed
+                        height={0}  // Set height to 0 to allow auto height adjustment
+                        style={{ objectFit: 'contain', height: 'auto' }}  // Allow height to adjust automatically
                         priority
                     />
                 </div>
@@ -42,5 +41,6 @@ const LPLogo = ({ className }) => {
 };
 
 export default LPLogo;
+
 
 

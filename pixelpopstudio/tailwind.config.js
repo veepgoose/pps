@@ -16,14 +16,16 @@ module.exports = {
           background: '#FFF6E3',
           text: '#192A51',
           header: '#B1CCE4',
-          menuBackground: '#FB6FC6',  // Add custom menu colors
+          footer: '#B1CCE4',  // Added footer color for light mode
+          menuBackground: '#FB6FC6',
           menuText: '#192A51',
         },
         dark: {
           background: '#7493AF',
           text: '#192A51',
-          header: '#7493AF',
-          menuBackground: '#192A51',  // Add custom menu colors
+          header: '#192A51',  // Header color for dark mode
+          footer: '#192A51',  // Footer color for dark mode
+          menuBackground: '#B1CCE4',
           menuText: '#B1CCE4',
         },
       },
@@ -40,4 +42,3 @@ module.exports = {
     },
   ],
 };
-
