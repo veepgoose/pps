@@ -18,7 +18,7 @@ const LPLogo = ({ className }) => {
                     width="739" 
                     height="155" 
                     fill="#FCFF6C" 
-                    stroke="#192A51" 
+                    stroke="black" 
                     strokeWidth="4" 
                 />
             </svg>

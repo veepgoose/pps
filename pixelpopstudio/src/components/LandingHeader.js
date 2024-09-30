@@ -9,7 +9,7 @@ const LandingHeader = () => {
   return (
     <div className="relative">
       {/* Header background color changes based on theme */}
-      <div className="bg-light-header dark:bg-dark-header h-36 w-full relative">
+      <div className="bg-light-header dark:bg-dark-header h-40 w-full relative">
         <div className="absolute top-0 left-0 right-0 pt-0 px-4">
           <header className="flex justify-between items-center">
             <ThemeToggle />

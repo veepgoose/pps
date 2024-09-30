@@ -31,7 +31,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       whileTap={{ scale: 1 }}
     >
-      <svg width="75" height="47" viewBox="0 0 75 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="56.25" height="35.25" viewBox="0 0 75 47" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Black shadow rectangle (stays black) */}
         <rect x="9" y="9" width="64" height="36" rx="18" fill="black" stroke="black" strokeWidth="4" />
 
