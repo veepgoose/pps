@@ -8,17 +8,15 @@ const LandingHeader = () => {
 
   return (
     <div className="relative">
-      {/* Header background color changes based on theme */}
-      <div className="bg-light-header dark:bg-dark-header h-40 w-full relative">
-        <div className="absolute top-0 left-0 right-0 pt-0 px-4">
+      <div className="bg-light-header dark:bg-dark-header min-h-36 w-full relative">
+        <div className="absolute top-3 inset-x-0 px-4">
           <header className="flex justify-between items-center">
-            <ThemeToggle />
+          <ThemeToggle className="self-start -mt-4" />
             <button
               onClick={() => setIsMenuOpen(true)}
               className="bg-transparent p-0 border-none cursor-pointer outline-none"
             >
-              {/* Your SVG for the menu */}
-              <svg width="60" height="116" viewBox="0 0 104 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="60" height="60" viewBox="0 0 104 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="62.5" cy="74.5" r="41.5" fill="black" />
                 <circle cx="48" cy="48" r="44" fill="#FB6FC6" stroke="black" strokeWidth="6" />
                 <rect x="21" y="45" width="54" height="6" fill="black" />
