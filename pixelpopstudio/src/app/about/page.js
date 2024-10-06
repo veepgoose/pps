@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
 import AboutText from '@/components/AboutText';
@@ -37,14 +36,3 @@ export default function About() {
     </div>
   );
 }
-
-
-
-//   {/* Profile Image */}
-//   <Image
-//   src="/ProfilePic.png" // Replace with actual image path
-//   alt="Profile Image"
-//   width={250}
-//   height={250}
-//   className="rounded-full mt-8"
-// />

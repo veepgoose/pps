@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
-
+import PackagesCarousel from '@/components/PackagesCarousel';
 
 export default function Home() {
   const [theme, setTheme] = useState('light');
@@ -15,12 +15,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-    className="relative bg-[url('/GraphBackground.png')] bg-cover bg-no-repeat bg-center min-h-screen" 
-  >
+    <div className="relative min-h-screen flex flex-col">
       <SiteHeader theme={theme} />
 
-
+      <div className="flex-grow flex flex-col items-center justify-start pt-24">
+        <PackagesCarousel />
+      </div>
 
       <Footer theme={theme} />
     </div>
