@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
+import AboutText from '@/components/AboutText';
 
 export default function About() {
   const [theme, setTheme] = useState('light');
@@ -36,19 +37,28 @@ export default function About() {
           className="rounded-full mt-8"
         />
 
-        {/* Text Box */}
-        <div className="bg-dark-background border-4 border-black p-6 mt-8 mb-16 max-w-3xl">
-          <div className="p-8 text-center bg-light-header dark:bg-menu-background text-light-text dark:text-dark-text border-4 border-black">
-            <p className="text-l">
-              Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
-              Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
-              Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
-              {/* ... (rest of the text) ... */}
-            </p>
-          </div>
-        </div>
+        <AboutText />
       </div>
       <Footer theme={theme} />
     </div>
   );
 }
+
+
+//  {/* Text Box */}
+        
+//  <div className="bg-dark-background border-4 border-black p-6 mt-8 mb-16 max-w-3xl">
+//  <div className="p-8 text-center bg-light-header dark:bg-menu-background text-light-text dark:text-dark-text border-4 border-black">
+//    <p className="text-l">
+//      Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
+//      Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
+//      Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
+//      {/* ... (rest of the text) ... */}
+//    </p>
+//  </div>
+// </div>
+// </div>
+// <Footer theme={theme} />
+// </div>
+// );
+// }
