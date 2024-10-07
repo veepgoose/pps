@@ -5,3 +5,7 @@
 body {
   @apply bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text;
 }
+
+html {
+  scroll-behavior: smooth;
+}
