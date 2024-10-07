@@ -19,6 +19,7 @@ export default function Home() {
       <SiteHeader theme={theme} />
 
       <div className="flex-grow flex flex-col items-center justify-start pt-24">
+      <h1 className="text-4xl font-bold mb-8">Packages</h1>
         <PackagesCarousel />
       </div>
 
