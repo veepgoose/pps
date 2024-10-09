@@ -1,15 +1,42 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { packages } from '@/data/packagesData';
+import { getCurrentTheme } from '@/utils/themeUtils';
 
 export default function PackagesCarousel() {
+  const [currentTheme, setCurrentTheme] = useState('light');
+
+  useEffect(() => {
+    // Set initial theme
+    setCurrentTheme(getCurrentTheme());
+
+    // Create a mutation observer to watch for theme changes
+    const observer = new MutationObserver(() => {
+      setCurrentTheme(getCurrentTheme());
+    });
+
+    // Start observing
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    // Cleanup
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-[#FFF6E3]">
-      <h1 className="text-4xl font-bold mb-8">Packages</h1> {/* Adding the page title back */}
-      {/* Circle Group */}
+    <div className={`relative flex flex-col items-center justify-center min-h-screen ${
+      currentTheme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
+    }`}>
+      <h1 className="text-4xl font-bold mb-8">Packages</h1>
+      
       <div className="flex items-center justify-center space-x-20">
         {packages.map((pkg) => (
           <a
             key={pkg.id}
-            href={`#${pkg.name.toLowerCase().replace(/\s+/g, '')}`} // Link to respective package section
+            href={`#${pkg.name.toLowerCase().replace(/\s+/g, '')}`}
             className="relative flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110"
           >
             <svg
@@ -43,4 +70,3 @@ export default function PackagesCarousel() {
     </div>
   );
 }
-

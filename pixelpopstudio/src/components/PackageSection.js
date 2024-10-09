@@ -1,4 +1,5 @@
-import SectionNavigator from '@/components/SectionNavigator'; // Ensure correct import path for SectionNavigator
+// src/components/PackageSection.js
+import SectionNavigator from './SectionNavigator';
 
 export default function PackageSection({ pkg, theme }) {
   const content = [
@@ -9,20 +10,18 @@ export default function PackageSection({ pkg, theme }) {
     "Payment terms"
   ];
 
-  const backgroundColor = theme === "dark" ? "#192A51" : "#FB6FC6";
-  const secondaryBackgroundColor = theme === "dark" ? "#7493AF" : "#FFF6E3";
+  const backgroundClass = pkg.id % 2 === 0 
+    ? theme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
+    : theme === 'dark' ? 'bg-[rgba(25,42,81,0.5)]' : 'bg-[#FB6FC6]';
 
   return (
     <section
-      id={pkg.name.toLowerCase().replace(/\s+/g, '')} // Dynamically generate IDs for each package
-      className="min-h-screen p-8 flex flex-col items-center pt-32" // Added pt-32 to prevent header overlap
-      style={{
-        backgroundColor: pkg.id % 2 === 0 ? secondaryBackgroundColor : backgroundColor,
-      }}
+      id={pkg.name.toLowerCase().replace(/\s+/g, '')}
+      className={`min-h-screen p-8 flex flex-col items-center pt-32 ${backgroundClass}`}
     >
       <h2 className="text-4xl font-bold text-white mb-6">{pkg.name}</h2>
 
-      <SectionNavigator content={content} />
+      <SectionNavigator content={content} theme={theme} />
 
       <button
         onClick={() => window.location.href = '/contact'}
