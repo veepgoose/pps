@@ -32,7 +32,7 @@ export default function PackageSection({ pkg }) {
 
   const backgroundClass = pkg.id % 2 === 0 
     ? currentTheme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
-    : currentTheme === 'dark' ? 'bg-[rgba(25,42,81,0.5)]' : 'bg-[#FB6FC6]';
+    : currentTheme === 'dark' ? 'bg-[rgba(25,42,81,0.9)]' : 'bg-[#FB6FC6]';
 
   return (
     <section
