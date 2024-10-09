@@ -20,6 +20,13 @@ export default function Home() {
   >
       <SiteHeader theme={theme} />
 
+      <main className="flex flex-col items-center justify-center min-h-screen">   
+        <h1 className="text-4xl font-bold mb-8">Pixel Pop Studio Blog</h1>
+        <p className="text-xl text-center">
+          Coming soon!
+        </p>
+      </main>
+      
 
 
       <Footer theme={theme} />
