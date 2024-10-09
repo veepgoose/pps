@@ -10,7 +10,7 @@ export default function Menu({ isOpen, onClose }) {
     >
       <button 
         onClick={onClose} 
-        className="absolute top-4 right-4 focus:outline-none text-light-header dark:text-dark-header"
+        className="absolute top-4 right-4 focus:outline-none text-light-header dark:text-light-header"
       >
         Close
       </button>
@@ -23,8 +23,8 @@ export default function Menu({ isOpen, onClose }) {
             </a>
           </li>
           <li>
-            <a href="/work" className="block p-6 py-8 text-6xl text-left font-bold"> {/* Adjust text size and centering */}
-              Work
+            <a href="/portfolio" className="block p-6 py-8 text-6xl text-left font-bold"> {/* Adjust text size and centering */}
+              Portfolio
             </a>
           </li>
           <li>
@@ -44,7 +44,7 @@ export default function Menu({ isOpen, onClose }) {
           </li>
         </ul>
       </nav>
-      <div className="relative -mt-16">
+      <div className="relative mt-6">
         {/* Rectangle and SocialIcons */}
         <div className="relative flex justify-center items-center">
           <Rectangles />
