@@ -1,7 +1,27 @@
-// src/components/PackageSection.js
-import SectionNavigator from './SectionNavigator';
+'use client';
 
-export default function PackageSection({ pkg, theme }) {
+import { useState, useEffect } from 'react';
+import SectionNavigator from '@/components/SectionNavigator';
+import { getCurrentTheme } from '@/utils/themeUtils';
+
+export default function PackageSection({ pkg }) {
+  const [currentTheme, setCurrentTheme] = useState('light');
+
+  useEffect(() => {
+    setCurrentTheme(getCurrentTheme());
+    
+    const observer = new MutationObserver(() => {
+      setCurrentTheme(getCurrentTheme());
+    });
+    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const content = [
     pkg.description,
     "Why choose Pixel Pop Studio?",
@@ -11,8 +31,8 @@ export default function PackageSection({ pkg, theme }) {
   ];
 
   const backgroundClass = pkg.id % 2 === 0 
-    ? theme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
-    : theme === 'dark' ? 'bg-[rgba(25,42,81,0.5)]' : 'bg-[#FB6FC6]';
+    ? currentTheme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
+    : currentTheme === 'dark' ? 'bg-[rgba(25,42,81,0.5)]' : 'bg-[#FB6FC6]';
 
   return (
     <section
@@ -21,7 +41,7 @@ export default function PackageSection({ pkg, theme }) {
     >
       <h2 className="text-4xl font-bold text-white mb-6">{pkg.name}</h2>
 
-      <SectionNavigator content={content} theme={theme} />
+      <SectionNavigator content={content} />
 
       <button
         onClick={() => window.location.href = '/contact'}

@@ -29,7 +29,7 @@ module.exports = {
           footer: '#192A51',
           menuBackground: '#B1CCE4',
           menuText: '#B1CCE4',
-          sectionPrimary: 'rgba(25, 42, 81, 0.5)',
+          sectionPrimary: 'rgba(25, 42, 81, 0.9)',
           sectionSecondary: '#7493AF',
         },
       },
