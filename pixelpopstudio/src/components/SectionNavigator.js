@@ -27,11 +27,14 @@ const SectionNavigator = ({ content }) => {
       </div>
 
       {/* Navigation buttons */}
-      <div className="flex space-x-4 mt-4 justify-center">
-        <button onClick={handlePrevious} className="text-white text-2xl">
+      <div className="absolute inset-0 flex justify-between items-center px-4">
+        {/* Left Arrow */}
+        <button onClick={handlePrevious} className="text-white text-4xl bg-[#192A51] rounded-full w-12 h-12 flex items-center justify-center">
           ←
         </button>
-        <button onClick={handleNext} className="text-white text-2xl">
+        
+        {/* Right Arrow */}
+        <button onClick={handleNext} className="text-white text-4xl bg-[#192A51] rounded-full w-12 h-12 flex items-center justify-center">
           →
         </button>
       </div>
@@ -40,3 +43,4 @@ const SectionNavigator = ({ content }) => {
 };
 
 export default SectionNavigator;
+
