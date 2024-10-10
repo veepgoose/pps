@@ -25,7 +25,7 @@ export default function Contact() {
     <div className="flex flex-col min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">
       <SiteHeader theme={theme} setTheme={setTheme} />
       <div className="flex flex-col items-center justify-start flex-grow pt-24">
-        <h1 className="text-4xl font-bold mb-8">Contact</h1>
+      <img src="/Contact..png" alt="Contact Header Text"/>
         <ContactForm />
       </div>
       <Footer theme={theme} />

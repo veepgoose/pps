@@ -30,8 +30,6 @@ export default function PortfolioCarousel() {
     <div className={`relative flex flex-col items-center justify-center min-h-screen ${
       currentTheme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
     }`}>
-      <h1 className="text-4xl font-bold mb-12">Portfolio</h1>
-      
       <div className="flex items-center justify-center space-x-20">
         {portfolio.map((portfolio) => (
           <a

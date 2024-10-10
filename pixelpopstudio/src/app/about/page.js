@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
 import AboutText from '@/components/AboutText';
 import ProfilePic from '@/components/ProfilePic';
+import Image from 'next/image';
 
 export default function About() {
   const [theme, setTheme] = useState('light');
@@ -26,7 +27,7 @@ export default function About() {
     <div className="flex flex-col min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">
       <SiteHeader theme={theme} setTheme={setTheme} />
       <div className="flex flex-col items-center justify-start flex-grow pt-24">
-        <h1 className="text-4xl font-bold">About Page</h1>
+        <img src="/About..png" alt="About Header Text"/>
 
         <ProfilePic />
 

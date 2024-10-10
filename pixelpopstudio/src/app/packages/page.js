@@ -41,6 +41,9 @@ export default function Home() {
       <SiteHeader>
         <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
       </SiteHeader>
+      <div className="flex justify-center my-10">
+      <img src="/Packages..png" alt="About Header Text"/>
+      </div>
 
       <PackagesCarousel theme={darkMode ? 'dark' : 'light'} />
 

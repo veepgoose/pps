@@ -9,7 +9,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 import { portfolio } from '@/data/portfolioData';
 import Image from 'next/image';
 
-export default function Home() {
+export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -42,11 +42,17 @@ export default function Home() {
         <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
       </SiteHeader>
 
+      {/* Add the Portfolio Text PNG beneath Header */}
+      <div className="flex justify-center my-10">
+      <img src="/Portfolio..png" alt="About Header Text"/>
+      </div>
+
+      {/* Portfolio Carousel */}
       <PortfolioCarousel theme={darkMode ? 'dark' : 'light'} />
 
+      {/* Sticky Navigation with Top Icon */}
       <div className="sticky top-0 z-50 bg-[#B1CCE4] p-4">
         <div className="flex items-center w-full max-w-screen-lg mx-auto relative">
-          
           {/* Centered Navigation Links */}
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             <a href="#example1" className="text-lg font-bold hover:underline">Example</a>
@@ -64,10 +70,10 @@ export default function Home() {
               <Image src="/TopIcon.svg" alt="Top Icon" width={40} height={40} />
             </button>
           </div>
-          
         </div>
       </div>
 
+      {/* Portfolio Sections */}
       {portfolio.map((portfolio) => (
         <PortfolioSection key={portfolio.id} pkg={portfolio} theme={darkMode ? 'dark' : 'light'} />
       ))}
