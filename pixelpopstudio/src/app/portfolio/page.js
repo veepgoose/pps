@@ -10,25 +10,21 @@ import { portfolio } from '@/data/portfolioData';
 import Image from 'next/image';
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    setDarkMode(savedTheme === 'dark');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
     if (savedTheme === 'dark') {
       document.documentElement.classList.add('dark');
     }
   }, []);
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    if (darkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    localStorage.setItem('theme', newTheme);
   };
 
   // Function to scroll to top of the page
@@ -37,18 +33,19 @@ export default function Portfolio() {
   };
 
   return (
-    <div className={`relative min-h-screen flex flex-col ${darkMode ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'}`}>
+    <div className={`relative min-h-screen flex flex-col bg-light-background dark:bg-dark-background`}>
       <SiteHeader>
-        <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
+        <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
       </SiteHeader>
 
-      {/* Add the Portfolio Text PNG beneath Header */}
-      <div className="flex justify-center my-10">
-      <img src="/Portfolio..png" alt="About Header Text"/>
+      <div className="flex flex-col items-center justify-start flex-grow pt-24">
+        <div className={`bg-light-background dark:bg-dark-background`}>
+          <img src="/Portfolio..png" alt="Portfolio Header" width={350} />
+        </div>
       </div>
 
       {/* Portfolio Carousel */}
-      <PortfolioCarousel theme={darkMode ? 'dark' : 'light'} />
+      <PortfolioCarousel theme={theme} />
 
       {/* Sticky Navigation with Top Icon */}
       <div className="sticky top-0 z-50 bg-[#B1CCE4] p-4">
@@ -75,10 +72,10 @@ export default function Portfolio() {
 
       {/* Portfolio Sections */}
       {portfolio.map((portfolio) => (
-        <PortfolioSection key={portfolio.id} pkg={portfolio} theme={darkMode ? 'dark' : 'light'} />
+        <PortfolioSection key={portfolio.id} pkg={portfolio} theme={theme} />
       ))}
 
-      <Footer theme={darkMode ? 'dark' : 'light'} />
+      <Footer theme={theme} />
     </div>
   );
 }

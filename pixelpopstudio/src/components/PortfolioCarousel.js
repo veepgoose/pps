@@ -27,7 +27,7 @@ export default function PortfolioCarousel() {
   }, []);
 
   return (
-    <div className={`relative flex flex-col items-center justify-center min-h-screen ${
+    <div className={`relative flex flex-col items-center justify-center min-h-[80vh] ${
       currentTheme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
     }`}>
       <div className="flex items-center justify-center space-x-20">

@@ -10,25 +10,21 @@ import { packages } from '@/data/packagesData';
 import Image from 'next/image';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    setDarkMode(savedTheme === 'dark');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
     if (savedTheme === 'dark') {
       document.documentElement.classList.add('dark');
     }
   }, []);
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    if (darkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    localStorage.setItem('theme', newTheme);
   };
 
   // Function to scroll to top of the page
@@ -37,16 +33,22 @@ export default function Home() {
   };
 
   return (
-    <div className={`relative min-h-screen flex flex-col ${darkMode ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'}`}>
+    <div className={`relative min-h-screen flex flex-col bg-light-background dark:bg-dark-background`}>
       <SiteHeader>
-        <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
+        <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
       </SiteHeader>
-      <div className="flex justify-center my-10">
-      <img src="/Packages..png" alt="About Header Text"/>
+
+      {/* Header Section */}
+      <div className="flex flex-col items-center justify-start flex-grow pt-24">
+        <div className={`bg-light-background dark:bg-dark-background`}>
+          <img src="/Packages.png" alt="Packages Header" width={350} />
+        </div>
       </div>
 
-      <PackagesCarousel theme={darkMode ? 'dark' : 'light'} />
-
+      {/* Packages Carousel */}
+      <PackagesCarousel theme={theme} />
+      
+      {/* Sticky Navigation */}
       <div className="sticky top-0 z-50 bg-[#B1CCE4] p-4">
         <div className="flex items-center w-full max-w-screen-lg mx-auto relative">
           
@@ -72,10 +74,10 @@ export default function Home() {
       </div>
 
       {packages.map((pkg) => (
-        <PackageSection key={pkg.id} pkg={pkg} theme={darkMode ? 'dark' : 'light'} />
+        <PackageSection key={pkg.id} pkg={pkg} theme={theme} />
       ))}
 
-      <Footer theme={darkMode ? 'dark' : 'light'} />
+      <Footer theme={theme} />
     </div>
   );
 }
