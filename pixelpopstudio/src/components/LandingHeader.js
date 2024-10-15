@@ -8,15 +8,15 @@ const LandingHeader = () => {
 
   return (
     <div className="relative">
-      <div className="bg-light-header dark:bg-dark-header min-h-36 w-full relative">
+      <div className="bg-light-header dark:bg-dark-header min-h-20 w-full lg:min-h-36">
         <div className="absolute top-3 inset-x-0 px-4">
           <header className="flex justify-between items-center">
-          <ThemeToggle className="self-start -mt-4" />
+            <ThemeToggle className="self-start -mt-4" />
             <button
               onClick={() => setIsMenuOpen(true)}
               className="bg-transparent p-0 border-none cursor-pointer outline-none"
             >
-              <svg width="60" height="60" viewBox="0 0 104 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="50" height="50" viewBox="0 0 104 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="62.5" cy="74.5" r="41.5" fill="black" />
                 <circle cx="48" cy="48" r="44" fill="#FB6FC6" stroke="black" strokeWidth="6" />
                 <rect x="21" y="45" width="54" height="6" fill="black" />

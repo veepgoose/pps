@@ -29,11 +29,12 @@ export default function Home() {
       <LandingHeader theme={theme} />
 
       {/* Main content should grow to push footer to the bottom */}
-      <div className="flex flex-row flex-grow justify-center bg-light-background dark:bg-dark-background">
-        <ECommerce />
-        <LandingPageGraphic />
-        <BrandIdentity />
-      </div>
+      <div className="flex flex-col lg:flex-row flex-grow justify-center items-center lg:items-stretch bg-light-background dark:bg-dark-background">
+  {/* Hide ECommerce and BrandIdentity on mobile */}
+  <ECommerce />
+  <LandingPageGraphic />
+  <BrandIdentity />
+</div>
 
       {/* Footer naturally placed at the bottom */}
       <Footer theme={theme} />

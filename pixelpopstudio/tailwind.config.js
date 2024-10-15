@@ -33,6 +33,12 @@ module.exports = {
           sectionSecondary: '#7493AF',
         },
       },
+      scale: {
+        '60': '0.60', // 60% of the original size
+        '65': '0.65', // 65% of the original size
+        '75': '0.75', // 75% of the original size
+        '85': '0.85', // 85% of the original size
+      },
     },
   },
   plugins: [

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const LPLogo = ({ className }) => {
     return (
-        <div className={`relative -mt-28 ${className} h-64 w-full`}>
+        <div className={`relative -my-6 md:-mt-28 lg:-mt-36 ${className} h-32 md:h-64 lg:h-72 w-3/4 mx-auto`}>
             {/* SVG for the yellow rectangle */}
             <svg 
                 width="100%" 
@@ -10,13 +10,13 @@ const LPLogo = ({ className }) => {
                 viewBox="0 0 745 200" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute top-0 left-0 w-full h-full hidden lg:block"
             >
                 <rect 
-                    x="3" 
-                    y="3" 
-                    width="739" 
-                    height="155" 
+                    x="90" 
+                    y="22" 
+                    width="560"
+                    height="125" 
                     fill="#FCFF6C" 
                     stroke="black" 
                     strokeWidth="4" 
@@ -24,14 +24,15 @@ const LPLogo = ({ className }) => {
             </svg>
 
             {/* PNG for the logo text on top */}
-            <div className="absolute inset-0 flex justify-center items-center">
+            <div className="absolute inset-0 flex justify-center items-center h-32 w-full md:h-64 lg:h-72 w-3/4 mx-auto ">
                 <div className="flex items-center justify-center h-full">
                     <Image
-                        src="/PPSLogoMainBlack.png"  // Use the PNG for the text here
+                        src="/PPSLogoMainBlack.png"
                         alt="Pixel Pop Studio Logo Text"
-                        width={700}  // Set the width, adjust as needed
-                        height={0}  // Set height to 0 to allow auto height adjustment
-                        style={{ objectFit: 'contain', height: 'auto' }}  // Allow height to adjust automatically
+                        width={700}  // Set for larger screens
+                        height={0}
+                        style={{ objectFit: 'contain', height: 'auto' }}
+                        className="w-full"
                         priority
                     />
                 </div>
@@ -41,6 +42,8 @@ const LPLogo = ({ className }) => {
 };
 
 export default LPLogo;
+
+
 
 
 

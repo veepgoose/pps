@@ -4,7 +4,7 @@ const BrandIdentity = () => {
             <img
             src="/BrandIdentity.svg" 
             alt="landing page graphic"
-            className="w-full h-auto"
+            className="w-2/5 hidden  lg:block lg:w-3/4 h-auto"
         />
         </div>
     );
