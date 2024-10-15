@@ -31,7 +31,7 @@ const LPLogo = ({ className }) => {
         viewBox={isLargeScreen ? "0 0 745 200" : "0 20 990 220"} // Adjust viewBox based on screen size
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute top-0 left-0 w-full h-full lg:block"
+        className="absolute top-0 left-0 w-full h-full hidden lg:block"
       >
         <rect
           x={isLargeScreen ? 90 : 35}       // Adjust X position based on screen size
@@ -50,7 +50,7 @@ const LPLogo = ({ className }) => {
           <Image
             src="/PPSLogoMainBlack.png"
             alt="Pixel Pop Studio Logo Text"
-            width={isLargeScreen ? 700 : 130} // Adjust logo width based on screen size
+            width={isLargeScreen ? 700 : 200} // Adjust logo width based on screen size
             height={0}
             style={{ objectFit: 'contain', height: 'auto' }}
             className="w-full"
