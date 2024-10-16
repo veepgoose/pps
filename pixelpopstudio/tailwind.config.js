@@ -31,6 +31,7 @@ module.exports = {
           menuText: '#7493AF',
           sectionPrimary: 'rgba(25, 42, 81, 0.9)',
           sectionSecondary: '#7493AF',
+          packagesBackground: '#B1CCE4',
         },
       },
       scale: {
