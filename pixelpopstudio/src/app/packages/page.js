@@ -34,7 +34,7 @@ export default function Home() {
       </SiteHeader>
 
       {/* Header Section */}
-      <div className="flex flex-col items-center justify-start flex-grow pt-16 md:pt-24">
+      <div className="flex flex-col items-center justify-start flex-grow pt-16 md:pt-24 lg:-mt-6">
   <div className="w-2/4 md:w-2/3 lg:w-1/6">
     <Image 
       src="/Packages.png" 
@@ -46,44 +46,42 @@ export default function Home() {
   </div>
 </div>
 
-{/* Main Body Section */}
-<div className="grid grid-cols-2 gap-4 md:grid-cols-4 mt-10 px-4">
+<div className="grid grid-cols-2 gap-4 md:grid-cols-4 mt-12 pb-16 md:mt-8 lg:mt-16 xl:mt-20 px-4 lg:pb-16">
   {/* Package 1 */}
   <div className="flex flex-col items-center">
-    <Image src="/JumpstartIcon.png" alt="Jumpstart Package" width={150} height={100} layout="responsive" />
+    <div className="w-3/4 md:w-2/3 lg:w-2/3">
+      <Image src="/JumpstartIcon.png" alt="Jumpstart Package" width={150} height={100} layout="responsive" />
+    </div>
     <p className="mt-4 text-center">Learn More...</p>
   </div>
 
   {/* Package 2 */}
   <div className="flex flex-col items-center">
-    <Image src="/JumpstartIcon.png" alt="Pro Package" width={150} height={100} layout="responsive" />
+    <div className="w-3/4 md:w-2/3 lg:w-2/3">
+      <Image src="/ProIcon.png" alt="Pro Package" width={150} height={100} layout="responsive" />
+    </div>
     <p className="mt-4 text-center">Learn More...</p>
   </div>
 
   {/* Package 3 */}
   <div className="flex flex-col items-center">
-    <Image src="/JumpstartIcon.png" alt="Shop Package" width={150} height={100} layout="responsive" />
+    <div className="w-3/4 md:w-2/3 lg:w-2/3">
+      <Image src="/ShopIcon.png" alt="Shop Package" width={150} height={100} layout="responsive" />
+    </div>
     <p className="mt-4 text-center">Learn More...</p>
   </div>
 
   {/* Package 4 */}
   <div className="flex flex-col items-center">
-    <Image src="/JumpstartIcon.png" alt="Power Package" width={150} height={100} layout="responsive" />
+    <div className="w-3/4 md:w-2/3 lg:w-2/3">
+      <Image src="/PowerIcon.png" alt="Power Package" width={150} height={100} layout="responsive" />
+    </div>
     <p className="mt-4 text-center">Learn More...</p>
   </div>
 </div>
 
+<Footer theme={theme} />
 
-
-     
-
-
-      
-    
-
-     
-
-      <Footer theme={theme} />
     </div>
   );
 }
