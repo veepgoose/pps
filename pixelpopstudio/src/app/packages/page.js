@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import SiteHeader from '@/components/SiteHeader';
 import ThemeToggle from '@/components/ThemeToggle';
 import Image from 'next/image';
+import Link from 'next/link';
+
 export default function Home() {
   const [theme, setTheme] = useState('light');
 
@@ -52,7 +54,9 @@ export default function Home() {
     <div className="w-3/4 md:w-2/3 lg:w-2/3">
       <Image src="/JumpstartIcon.png" alt="Jumpstart Package" width={150} height={100} layout="responsive" />
     </div>
-    <p className="mt-4 text-center">Learn More...</p>
+    <Link href="/jumpstart">
+      <p className="mt-4 text-center cursor-pointer text-blue-600 hover:underline">Learn More...</p>
+    </Link>
   </div>
 
   {/* Package 2 */}
@@ -60,7 +64,9 @@ export default function Home() {
     <div className="w-3/4 md:w-2/3 lg:w-2/3">
       <Image src="/ProIcon.png" alt="Pro Package" width={150} height={100} layout="responsive" />
     </div>
-    <p className="mt-4 text-center">Learn More...</p>
+    <Link href="/pro">
+      <p className="mt-4 text-center cursor-pointer text-blue-600 hover:underline">Learn More...</p>
+    </Link>
   </div>
 
   {/* Package 3 */}
@@ -68,7 +74,9 @@ export default function Home() {
     <div className="w-3/4 md:w-2/3 lg:w-2/3">
       <Image src="/ShopIcon.png" alt="Shop Package" width={150} height={100} layout="responsive" />
     </div>
-    <p className="mt-4 text-center">Learn More...</p>
+    <Link href="/shop">
+      <p className="mt-4 text-center cursor-pointer text-blue-600 hover:underline">Learn More...</p>
+    </Link>
   </div>
 
   {/* Package 4 */}
@@ -76,7 +84,9 @@ export default function Home() {
     <div className="w-3/4 md:w-2/3 lg:w-2/3">
       <Image src="/PowerIcon.png" alt="Power Package" width={150} height={100} layout="responsive" />
     </div>
-    <p className="mt-4 text-center">Learn More...</p>
+    <Link href="/power">
+      <p className="mt-4 text-center cursor-pointer text-blue-600 hover:underline">Learn More...</p>
+    </Link>
   </div>
 </div>
 
