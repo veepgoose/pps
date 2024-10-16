@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image'; // Import the Next.js Image component
+import Image from 'next/image';
 import { packages } from '@/data/packagesData';
 import { getCurrentTheme } from '@/utils/themeUtils';
 
@@ -9,21 +9,17 @@ export default function PackagesCarousel() {
   const [currentTheme, setCurrentTheme] = useState('light');
 
   useEffect(() => {
-    // Set initial theme
     setCurrentTheme(getCurrentTheme());
 
-    // Create a mutation observer to watch for theme changes
     const observer = new MutationObserver(() => {
       setCurrentTheme(getCurrentTheme());
     });
 
-    // Start observing
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['class'],
     });
 
-    // Cleanup
     return () => observer.disconnect();
   }, []);
 
@@ -42,12 +38,12 @@ export default function PackagesCarousel() {
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-center min-h-[80vh] ${
+      className={`relative flex flex-col items-center justify-center min-h-[60vh] md:min-h-[80vh] ${
         currentTheme === 'dark' ? 'bg-[#7493AF]' : 'bg-[#FFF6E3]'
       }`}
     >
       {/* Package Discs */}
-      <div className="flex items-center justify-center space-x-20">
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 lg:gap-20">
         {packages.map((pkg) => (
           <a
             key={pkg.id}
@@ -57,9 +53,9 @@ export default function PackagesCarousel() {
             <Image
               src={getDiscImage(pkg.name)}
               alt={`${pkg.name} Disc`}
-              width={300}
-              height={300}
-              className="object-cover"
+              width={150}
+              height={150}
+              className="object-cover w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]"
             />
           </a>
         ))}
@@ -67,4 +63,3 @@ export default function PackagesCarousel() {
     </div>
   );
 }
-

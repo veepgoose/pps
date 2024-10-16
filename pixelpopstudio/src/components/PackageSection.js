@@ -37,15 +37,15 @@ export default function PackageSection({ pkg }) {
   return (
     <section
       id={pkg.name.toLowerCase().replace(/\s+/g, '')}
-      className={`min-h-screen p-8 flex flex-col items-center pt-32 ${backgroundClass}`}
+      className={`min-h-screen p-4 md:p-8 flex flex-col items-center pt-16 md:pt-32 ${backgroundClass}`}
     >
-      <h2 className="text-4xl font-bold text-white mb-6">{pkg.name}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6">{pkg.name}</h2>
 
       <SectionNavigator content={content} />
 
       <button
         onClick={() => window.location.href = '/contact'}
-        className="w-[185px] h-[47px] bg-[#FB6FC6] border-4 border-black font-inter font-black text-xl mt-6"
+        className="w-[150px] md:w-[185px] h-[40px] md:h-[47px] bg-[#FB6FC6] border-4 border-black font-inter font-black text-lg md:text-xl mt-4 md:mt-6"
       >
         Enquire
       </button>
