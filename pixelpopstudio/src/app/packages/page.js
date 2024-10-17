@@ -84,7 +84,7 @@ export default function Home() {
     <div className="w-3/4 md:w-2/3 lg:w-2/3">
       <Image src="/PowerIcon.png" alt="Power Package" width={150} height={100} layout="responsive" />
     </div>
-    <Link href="/">
+    <Link href="/power">
       <p className="mt-4 text-center cursor-pointer text-blue-600 hover:underline">Learn More...</p>
     </Link>
   </div>

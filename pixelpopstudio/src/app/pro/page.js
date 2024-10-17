@@ -47,8 +47,8 @@ export default function ProPackage() {
       {/* Main Content */}
       <div className="px-0 md:px-16 lg:px-24"> {/* Remove padding on small screens */}
         <h1 className="text-2xl font-bold text-center mb-8">Pixel Pop Pro</h1>
-        <p className="text-center mb-4 italic">Your launchpad to a standout online presence</p>
-        <p className="text-center text-2xl font-bold mb-8">£749</p>
+        <p className="text-center mb-4 italic">Level up your digital game with comprehensive online solutions</p>
+        <p className="text-center text-2xl font-bold mb-8">£1,499</p>
         
         {/* Grid Layout for Package Details */}
         <div className="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-4"> {/* Removed gap */}
@@ -56,8 +56,7 @@ export default function ProPackage() {
        {/* Package Details */}
 <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-20 dark:bg-opacity-20 lg:bg-transparent lg:dark:bg-transparent">
   <h2 className="font-semibold mb-2">Pixel Pop Pro</h2>
-  <p className="italic mb-2">Level up your digital game with comprehensive online solutions</p>
-  <p className="font-bold text-lg mb-4">£1,499</p>
+
   <ul className="list-disc ml-4">
     <li>Everything in Pixel Perfect, plus:</li>
     <li>Up to 8 pages of custom content</li>
