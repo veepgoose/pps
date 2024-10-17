@@ -70,12 +70,11 @@ export default function ProPackage() {
   </ul>
 </div>
 
-
-          {/* Why Choose Us */}
-          <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-40 dark:bg-opacity-40 lg:bg-transparent lg:dark:bg-transparent">
+         {/* Why Choose Us */}
+         <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-40 dark:bg-opacity-40 lg:bg-transparent lg:dark:bg-transparent">
             <h2 className="font-semibold mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm">
-              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over a decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don't just build websites - we create digital solutions that drive real business growth.
+              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over a decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don&apos;t just build websites - we create digital solutions that drive real business growth.
             </p>
           </div>
 

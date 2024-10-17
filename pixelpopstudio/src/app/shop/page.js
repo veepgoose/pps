@@ -7,7 +7,6 @@ import ThemeToggle from '@/components/ThemeToggle';
 import Image from 'next/image';
 
 export default function ShopPackage() {
-
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
@@ -45,37 +44,35 @@ export default function ShopPackage() {
       </div>
 
       {/* Main Content */}
-      <div className="px-0 md:px-16 lg:px-24"> {/* Remove padding on small screens */}
+      <div className="px-0 md:px-16 lg:px-24">
         <h1 className="text-2xl font-bold text-center mb-8">Pixel Pop Shop</h1>
         <p className="text-center mb-4 italic">Blast off into e-commerce with a custom Shopify solution</p>
         <p className="text-center text-2xl font-bold mb-8">£3,999</p>
         
         {/* Grid Layout for Package Details */}
-        <div className="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-4"> {/* Removed gap */}
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-4">
           
-       {/* Package Details */}
-<div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-20 dark:bg-opacity-20 lg:bg-transparent lg:dark:bg-transparent">
-  <h2 className="font-semibold mb-2">Pixel Pop Pro</h2>
+          {/* Package Details */}
+          <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-20 dark:bg-opacity-20 lg:bg-transparent lg:dark:bg-transparent">
+            <h2 className="font-semibold mb-2">Pixel Pop Pro</h2>
 
-  <ul className="list-disc ml-4">
-    <li>Everything in Pixel Pop Pro, plus:</li>
-    <li>Custom Shopify store using Next.js frontend</li>
-    <li>Product inventory setup (up to 25 products)</li>
-    <li>Secure payment gateway integration</li>
-    <li>Order management system</li>
-    <li>Order management system</li>
-    <li>Advanced SEO for e-commerce</li>
-    <li>3 rounds of revisions</li>
-    <li>1-hour training session</li>
-  </ul>
-</div>
-
+            <ul className="list-disc ml-4">
+              <li>Everything in Pixel Pop Pro, plus:</li>
+              <li>Custom Shopify store using Next.js frontend</li>
+              <li>Product inventory setup (up to 25 products)</li>
+              <li>Secure payment gateway integration</li>
+              <li>Order management system</li>
+              <li>Advanced SEO for e-commerce</li>
+              <li>3 rounds of revisions</li>
+              <li>1-hour training session</li>
+            </ul>
+          </div>
 
           {/* Why Choose Us */}
           <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-40 dark:bg-opacity-40 lg:bg-transparent lg:dark:bg-transparent">
             <h2 className="font-semibold mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm">
-              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over a decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don't just build websites - we create digital solutions that drive real business growth.
+              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over a decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don&apos;t just build websites - we create digital solutions that drive real business growth.
             </p>
           </div>
 
@@ -109,16 +106,13 @@ export default function ShopPackage() {
         </div>
 
         {/* Payment Terms Section */}
-    {/* Payment Terms Section */}
-<div className="w-full p-4 bg-light-background dark:bg-dark-background bg-opacity-90 dark:bg-opacity-90 mt-4 pb-24">
-  <p className="text-sm text-center lg:text-center"> {/* Align right on large screens */}
-    <strong>Payment terms:</strong> 50% deposit, 50% upon completion.
-    <br />
-    Domain and hosting costs are additional: Approximately £150/year.
-  </p>
-</div>
-
-
+        <div className="w-full p-4 bg-light-background dark:bg-dark-background bg-opacity-90 dark:bg-opacity-90 mt-4 pb-24">
+          <p className="text-sm text-center lg:text-center">
+            <strong>Payment terms:</strong> 50% deposit, 50% upon completion.
+            <br />
+            Domain and hosting costs are additional: Approximately £150/year.
+          </p>
+        </div>
       </div>
 
       <Footer theme={theme} />
