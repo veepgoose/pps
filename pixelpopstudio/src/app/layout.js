@@ -4,8 +4,8 @@ import './globals.css';
 
 // Import Inter font from Google Fonts
 export const metadata = {
-  title: 'Your Website Title',
-  description: 'Your Website Description',
+  title: 'Pixel Pop Studio',
+  description: 'Creative Web Design & Development',
 };
 
 export default function RootLayout({ children }) {
@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
         {/* Add the Google Fonts link here */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet"/>
       </head>
       <body className="font-sans">
         {/* <ThemeToggle /> */}

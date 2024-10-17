@@ -7,7 +7,7 @@ const AboutText = () => {
 
       {/* Inner text box */}
       <div className="relative w-[90%] md:w-[90%] h-auto md:h-[80%] min-h-[260px] bg-[#B1CCE4] border-4 border-black mx-auto mt-4 md:mt-10 p-6 md:p-4 flex items-center justify-center">
-        <p className="text-black text-sm md:text-base lg:text-lg text-center font-inter font-black leading-relaxed">
+        <p className="text-black text-sm md:text-base lg:text-lg text-center font-mono font-normal leading-relaxed">
         Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
           Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
         </p>

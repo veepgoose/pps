@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';  // Import Framer Motion
 import ThemeToggle from './ThemeToggle';
 import Menu from './Menu';
 import LPLogo from './LPLogo';
+import { h1Variant } from '@/utils/motion';  // Import the h1 animation variant
 
 const LandingHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="relative">
-      <div className="bg-light-header dark:bg-dark-header min-h-20 w-full lg:min-h-36">
+      <div className="min-h-20 w-full lg:min-h-36">
         <div className="absolute top-3 inset-x-0 px-4">
           <header className="flex justify-between items-center">
             <ThemeToggle className="self-start -mt-4" />
@@ -27,12 +29,23 @@ const LandingHeader = () => {
           </header>
         </div>
       </div>
+      
       <div className="flex justify-center mt-6">
-        <LPLogo />
+        {/* Animate the h1 text */}
+        <motion.h1
+          className="text-3xl lg:text-6xl font-mono font-black text-center text-[#FB6FC6] text-shadow-custom-yellow-mobile lg:text-shadow-custom-yellow"
+          variants={h1Variant}  // Apply the motion variant
+          initial="initial"
+          animate="animate"
+        >
+          PIXEL.POP.STUDIO
+        </motion.h1>
       </div>
+      
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
   );
 };
 
 export default LandingHeader;
+

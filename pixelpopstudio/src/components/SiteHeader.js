@@ -8,7 +8,7 @@ const SiteHeader = () => {
 
   return (
     <div className="relative">
-      <div className="bg-light-header dark:bg-dark-header h-36 w-full relative">
+      <div className=" h-36 w-full relative">
         <div className="absolute inset-x-0 top-3 px-4">
           <header className="flex justify-between items-start">
             <div className="flex flex-col items-start">

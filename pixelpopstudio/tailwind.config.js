@@ -10,12 +10,13 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
         light: {
           background: '#FFF6E3',
           text: '#192A51',
-          header: '#B1CCE4',
+          header: '#7493AF',
           footer: '#B1CCE4',
           menuBackground: '#FB6FC6',
           menuText: '#192A51',
@@ -35,18 +36,29 @@ module.exports = {
         },
       },
       scale: {
-        '60': '0.60', // 60% of the original size
-        '65': '0.65', // 65% of the original size
-        '75': '0.75', // 75% of the original size
-        '85': '0.85', // 85% of the original size
+        '60': '0.60',
+        '65': '0.65',
+        '75': '0.75',
+        '85': '0.85',
+      },
+      backgroundImage: {
+        'light-gradient': 'linear-gradient(to bottom, #B1CCE4, #FFF6E3)',
+        'dark-gradient': 'linear-gradient(to bottom, #192A51, #7493AF)',
+      },
+      textShadow: {
+        'custom-yellow-mobile': '2px 2px 0 rgba(252, 255, 108, 0.8)', // Smaller shadow for mobile
+        'custom-yellow': '7px 4px 0 rgba(252, 255, 108, 0.8)', // Larger shadow for desktop
       },
     },
   },
   plugins: [
     function({ addUtilities }) {
       const newUtilities = {
-        '.clip-path-custom-header': {
-          clipPath: 'polygon(0% 0%, 0 98%, 7% 24%, 17% 41%, 21% 12%, 30% 42%, 33% 23%, 46% 76%, 53% 27%, 90% 75%, 69% 17%, 100% 0)',
+        '.text-shadow-custom-yellow-mobile': {
+          textShadow: '2px 2px 0 rgba(252, 255, 108, 0.8)', // Mobile shadow
+        },
+        '.text-shadow-custom-yellow': {
+          textShadow: '7px 4px 0 rgba(252, 255, 108, 0.8)', // Desktop shadow
         },
       };
       addUtilities(newUtilities);

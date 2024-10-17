@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-light-background dark:bg-dark-background">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-background dark:from-dark-footer dark:to-dark-background">
       <SiteHeader>
         <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
       </SiteHeader>

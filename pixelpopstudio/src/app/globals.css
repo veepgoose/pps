@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text;
+  @apply text-light-text dark:text-dark-text;
 }
 
 html {

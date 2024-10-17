@@ -22,7 +22,7 @@ export default function Contact() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-background dark:from-dark-footer dark:to-dark-background">
       <SiteHeader theme={theme} setTheme={setTheme} />
 
       {/* Adjust the margin to control the gap between the PNG and the header */}

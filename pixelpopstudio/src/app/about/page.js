@@ -23,7 +23,7 @@ export default function About() {
   }, [theme]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-background dark:from-dark-footer dark:to-dark-background">
       <SiteHeader theme={theme} setTheme={setTheme} />
 
       <div className="flex flex-col items-center justify-start flex-grow pt-12 md:pt-24">

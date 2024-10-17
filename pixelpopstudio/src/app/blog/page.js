@@ -15,9 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-    className="relative bg-[url('/GraphBackground.png')] bg-cover bg-no-repeat bg-center min-h-screen" 
-  >
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-background dark:from-dark-footer dark:to-dark-background">
       <SiteHeader theme={theme} />
       {/* <div className="flex justify-center my-10">
       <img src="/Blog..png" alt="About Header Text"/>

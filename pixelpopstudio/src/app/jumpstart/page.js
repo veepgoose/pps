@@ -26,13 +26,13 @@ export default function JumpstartPackage() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-light-background dark:bg-dark-background">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-background dark:from-dark-footer dark:to-dark-background">
       <SiteHeader>
         <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
       </SiteHeader>
       
       {/* Header Section */}
-      <div className="flex flex-col items-center justify-start flex-grow pt-16 md:pt-24 lg:-mt-6">
+      <div className="flex flex-col items-center justify-start flex-grow pt-16 pb-2 md:pt-24 lg:-mt-6 lg:pb-8">
         <div className="w-2/6 md:w-2/3 lg:w-1/6">
           <Image 
             src="/JumpstartIcon.png" 
