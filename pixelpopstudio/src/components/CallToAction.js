@@ -1,11 +1,10 @@
 const CallToAction = () => {
-    return (
-        <section className="py-12 text-center bg-pink-600 text-white">
-        <h2 className="text-2xl lg:text-4xl font-bold mb-4">Ready to get started?</h2>
-        <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg">Make an Enquiry</button>
-      </section>
+  return (
+    <section className="py-12 text-center bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] opacity-90 text-[#192A51]">
+      <h2 className="text-2xl lg:text-4xl font-mono font-black mb-4">READY TO BRING YOUR VISION TO LIFE?</h2>
+      <p className="text-lg lg:text-2xl font-mono mb-4">Let’s work together and create something extraordinary!</p>
+    </section>
+  );
+};
 
-    );
-    }
-
-    export default CallToAction;
+export default CallToAction;
