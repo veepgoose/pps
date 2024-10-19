@@ -13,8 +13,8 @@ const Header = () => {
       <div className="min-h-20 w-full lg:min-h-36">
         <div className="absolute top-3 inset-x-0 px-4">
           <header className="flex justify-between items-center">
-            <ThemeToggle className="self-start -mt-4" />
-            <button
+            {/* <ThemeToggle className="self-start -mt-4" /> */}
+            {/* <button
               onClick={() => setIsMenuOpen(true)}
               className="bg-transparent p-0 border-none cursor-pointer outline-none"
             >
@@ -25,7 +25,7 @@ const Header = () => {
                 <rect x="21" y="59" width="54" height="6" fill="black" />
                 <rect x="21" y="31" width="54" height="6" fill="black" />
               </svg>
-            </button>
+            </button> */}
           </header>
         </div>
       </div>
@@ -33,7 +33,7 @@ const Header = () => {
       <div className="flex justify-center mt-6">
         {/* Animate the h1 text */}
         <motion.h1
-          className="text-3xl lg:text-6xl font-mono font-black text-center text-[#FB6FC6] text-shadow-custom-yellow-mobile lg:text-shadow-custom-yellow"
+          className="text-3xl lg:text-6xl font-mono font-black text-center text-[#FB6FC6] drop-shadow-2xl text-shadow-custom-yellow-mobile lg:text-shadow-custom-yellow"
           variants={h1Variant}  // Apply the motion variant
           initial="initial"
           animate="animate"

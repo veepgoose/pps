@@ -47,7 +47,7 @@ module.exports = {
       },
       textShadow: {
         'custom-yellow-mobile': '2px 2px 0 rgba(252, 255, 108, 0.8)', // Smaller shadow for mobile
-        'custom-yellow': '7px 4px 0 rgba(252, 255, 108, 0.8)', // Larger shadow for desktop
+        'custom-yellow': '2px 4px 0 rgba(252, 255, 108, 0.7)', // Larger shadow for desktop
       },
     },
   },
@@ -58,7 +58,7 @@ module.exports = {
           textShadow: '2px 2px 0 rgba(252, 255, 108, 0.8)', // Mobile shadow
         },
         '.text-shadow-custom-yellow': {
-          textShadow: '7px 4px 0 rgba(252, 255, 108, 0.8)', // Desktop shadow
+          textShadow: '2px 4px 0 rgba(252, 255, 108, 0.7)', // Desktop shadow
         },
       };
       addUtilities(newUtilities);
