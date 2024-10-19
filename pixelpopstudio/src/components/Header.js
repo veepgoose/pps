@@ -5,7 +5,7 @@ import Menu from './Menu';
 import LPLogo from './LPLogo';
 import { h1Variant } from '@/utils/motion';  // Import the h1 animation variant
 
-const LandingHeader = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -47,5 +47,5 @@ const LandingHeader = () => {
   );
 };
 
-export default LandingHeader;
+export default Header;
 
