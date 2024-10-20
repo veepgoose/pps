@@ -37,15 +37,16 @@ const MiniAbout = () => {
         <h2 className="text-2xl lg:text-4xl font-mono font-black mb-4">Behind The Pixels</h2>
       
         <p className="text-lg lg:text-lg mb-4">
-          At Pixel Pop, we believe your online presence should be as unique and impactful as your business. 
-          We focus on creating bespoke, hand-coded websites that capture the essence of your brand and help you stand out in the digital world.
-        </p>
-        <p className="text-lg lg:text-lg mb-4">
-          Our approach to web design and development combines fresh ideas with solid business understanding. Whether you’re a startup in Digbeth or an established brand in Birmingham’s city centre, we elevate your digital strategy with creativity and technical know-how.
-        </p>
-        <p className="text-lg lg:text-lg mb-4">
-          Working with Pixel Pop means collaborating directly with Victoria – a creative problem-solver who combines artistic vision, business acumen, and a strong foundation in modern web development.
-        </p>
+  At Pixel Pop, we believe your online presence should be as unique and impactful as your business. 
+  We focus on creating bespoke, hand-coded websites that capture the essence of your brand and help you stand out in the digital world.
+</p>
+<p className="text-lg lg:text-lg mb-4">
+  Our approach to web design and development combines fresh ideas with solid business understanding. Whether you&apos;re a startup in Digbeth or an established brand in Birmingham&apos;s city centre, we elevate your digital strategy with creativity and technical know-how.
+</p>
+<p className="text-lg lg:text-lg mb-4">
+  Working with Pixel Pop means collaborating directly with Victoria – a creative problem-solver who combines artistic vision, business acumen, and a strong foundation in modern web development.
+</p>
+
         
         {/* Read More Button */}
         <div className="text-center lg:text-right">

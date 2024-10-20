@@ -50,4 +50,15 @@ export const logoVariant = {
       },
     },
   };
+
+  export const topLineVariant = {
+    open: { rotate: 45, y: 3, transition: { duration: 0.3 } },
+    closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
+  };
+  
+  export const bottomLineVariant = {
+    open: { rotate: -45, y: 0, transition: { duration: 0.3 } },
+    closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
+  };
+  
   

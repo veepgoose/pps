@@ -112,16 +112,16 @@ export default function AboutPage() {
         {/* About Section */}
         <div className="w-full p-4">
           <p className="text-lg mb-4">
-            I'm Victoria Platt, founder and creative director of Pixel Pop Studio, a fresh face in the web design and development scene in Birmingham, UK. My journey to web design and development has been an exciting blend of creativity and business acumen, shaping a unique approach to digital solutions.
+            I&apos;m Victoria Platt, founder and creative director of Pixel Pop Studio, a fresh face in the web design and development scene in Birmingham, UK. My journey to web design and development has been an exciting blend of creativity and business acumen, shaping a unique approach to digital solutions.
           </p>
           <p className="text-lg mb-4">
-            With a background in fine art and filmmaking from Birmingham City University, I've always been passionate about visual storytelling and creative problem-solving. This artistic foundation, combined with over two decades of business experience in Birmingham, informs my approach to web design and development at Pixel Pop Studio.
+            With a background in fine art and filmmaking from Birmingham City University, I&apos;ve always been passionate about visual storytelling and creative problem-solving. This artistic foundation, combined with over two decades of business experience in Birmingham, informs my approach to web design and development at Pixel Pop Studio.
           </p>
           <p className="text-lg mb-4">
             Before embarking on my journey as a web developer, I co-founded and ran Loki Wine for a decade. This venture allowed me to wear multiple hats - from brand strategist to venue designer, and from team manager to e-commerce developer. Following my success with Loki Wine, I went on to consult for other well-known wine brands, including Wine Freedom and Vagabond. These experiences honed my skills in identifying business strengths, overcoming industry-specific challenges, and crafting innovative solutions to drive growth across various business models.
           </p>
           <p className="text-lg mb-4">
-            In 2023, I made the exciting decision to fully immerse myself in software development. I completed an intensive FullStack Development bootcamp with the School of Code, adding technical skills to my creative and business background. This transition wasn't just a career change; it was a way to fully utilise my skill set and merge my passion for design with modern web technology, all to benefit businesses in Birmingham and beyond.
+            In 2023, I made the exciting decision to fully immerse myself in software development. I completed an intensive FullStack Development bootcamp with the School of Code, adding technical skills to my creative and business background. This transition wasn&apos;t just a career change; it was a way to fully utilise my skill set and merge my passion for design with modern web technology, all to benefit businesses in Birmingham and beyond.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export default function AboutPage() {
         <div className="w-full p-4 mt-8">
           <h3 className="text-2xl font-bold mb-4">Bringing Experience to Life at Pixel Pop Studio</h3>
           <p className="text-lg mb-4">
-            At Pixel Pop Studio, I bring this diverse experience to every web project. Whether it's designing an engaging website, developing a functional e-commerce platform, or crafting a digital strategy, my approach is always holistic. I consider not just the aesthetic and technical aspects of web development, but also the broader business implications and user experience.
+            At Pixel Pop Studio, I bring this diverse experience to every web project. Whether it&apos;s designing an engaging website, developing a functional e-commerce platform, or crafting a digital strategy, my approach is always holistic. I consider not just the aesthetic and technical aspects of web development, but also the broader business implications and user experience.
           </p>
           <p className="text-lg mb-4">
             My goal is to create digital solutions that are as unique and effective as the Birmingham businesses they represent. By combining custom web designs with strategic business insights, I aim to provide more than just a website - but a valuable tool for digital success in the competitive Birmingham market.
@@ -142,7 +142,7 @@ export default function AboutPage() {
         {/* Closing Statement */}
         <div className="w-full p-4 mt-4 pb-24">
           <p className="text-lg text-center font-bold">
-            Let's work together to create something that truly represents your brand in the digital space!
+            Let&apos;s work together to create something that truly represents your brand in the digital space!
           </p>
         </div>
       </motion.div>
