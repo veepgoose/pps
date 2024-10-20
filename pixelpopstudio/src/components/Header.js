@@ -65,7 +65,7 @@ const Header = () => {
       <div className="flex justify-center mt-6">
         {/* Replace the h1 text with the image */}
         <motion.div
-          className="w-2/3 lg:w-2/6"
+          className="w-2/3 lg:w-2/6 z-20"
           variants={h1Variant}
           initial="initial"
           animate="animate"

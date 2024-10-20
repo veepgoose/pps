@@ -15,6 +15,14 @@ const bottomLineVariant = {
 export default function Menu({ isOpen, onClose }) {
   if (!isOpen) return null;
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      onClose();  // Close the menu after navigating to section
+    }
+  };
+
   return (
     <div
       className="fixed inset-0 p-5 shadow-lg z-50 bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] text-[#192A51] px-4 lg:px-16"
@@ -44,29 +52,32 @@ export default function Menu({ isOpen, onClose }) {
       <nav className="mt-10">
         <ul className="space-y-4">
           <li>
-            <a href="#services" className="block p-6 py-8 text-5xl text-left font-bold">
+            <button 
+              onClick={() => scrollToSection('services')} 
+              className="block p-6 py-8 text-5xl text-left font-bold">
               Services
-            </a>
+            </button>
           </li>
           <li>
-            <a href="/about" className="block p-6 py-8 text-5xl text-left font-bold">
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="block p-6 py-8 text-5xl text-left font-bold">
               About
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#miniPackages" className="block p-6 py-8 text-5xl text-left font-bold">
+            <button 
+              onClick={() => scrollToSection('packages')} 
+              className="block p-6 py-8 text-5xl text-left font-bold">
               Packages
-            </a>
+            </button>
           </li>
           <li>
-            <a href="/blog" className="block p-6 py-8 text-5xl text-left font-bold">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="block p-6 py-8 text-5xl text-left font-bold">
+            <button 
+              onClick={() => scrollToSection('contact')} 
+              className="block p-6 py-8 text-5xl text-left font-bold">
               Contact
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
