@@ -1,17 +1,6 @@
 import { motion } from 'framer-motion';
 import SocialIcons from './SocialIcons';
 
-// Animation for the two-line burger and X icon
-const topLineVariant = {
-  open: { rotate: 45, y: 3, transition: { duration: 0.3 } },
-  closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
-};
-
-const bottomLineVariant = {
-  open: { rotate: -45, y: 0, transition: { duration: 0.3 } },
-  closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
-};
-
 export default function Menu({ isOpen, onClose }) {
   if (!isOpen) return null;
 
@@ -19,7 +8,7 @@ export default function Menu({ isOpen, onClose }) {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      onClose();  // Close the menu after navigating to section
+      onClose();  // Close the menu after navigating to the section
     }
   };
 
@@ -37,13 +26,11 @@ export default function Menu({ isOpen, onClose }) {
           <motion.span
             className="block h-0.5 w-full bg-[#192A51]"
             animate={isOpen ? "open" : "closed"}
-            variants={topLineVariant}
           />
           {/* Bottom line */}
           <motion.span
             className="block h-0.5 w-full bg-[#192A51]"
             animate={isOpen ? "open" : "closed"}
-            variants={bottomLineVariant}
           />
         </motion.div>
       </div>

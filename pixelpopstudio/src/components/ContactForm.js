@@ -84,7 +84,7 @@ const ContactForm = () => {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-8">
-          <div className="w-full max-w-[689px] space-y-4 relative pb-8"> {/* Add some padding at the bottom */}
+          <div className="w-full max-w-[689px] space-y-4 relative pb-8 pt-6"> {/* Added pt-6 to create padding above input fields */}
             {/* Name input */}
             <div className="relative">
               <input
@@ -124,7 +124,7 @@ const ContactForm = () => {
             </div>
 
             {/* Submit button */}
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-4"> {/* Added mb-4 for spacing below the button */}
               <button
                 type="submit"
                 className="w-[150px] md:w-[185px] h-[40px] md:h-[47px] bg-[#FB6FC6] border-4 border-black rounded-2xl font-mono font-black text-[#192A51] text-base md:text-xl hover:bg-[#FCFF6C] hover:text-black transition-all"
@@ -134,7 +134,7 @@ const ContactForm = () => {
             </div>
 
             {/* Status message */}
-            <div className="absolute w-full text-center"> {/* Position status below the form */}
+            <div className="absolute w-full text-center mt-4"> {/* Increased spacing with mt-4 for better visibility */}
               {status && (
                 <p className="font-bold">{status}</p>
               )}
@@ -147,4 +147,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
 

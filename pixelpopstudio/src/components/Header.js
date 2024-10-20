@@ -30,13 +30,14 @@ const Header = () => {
         <div className="absolute top-3 inset-x-0 px-4">
           <header className="flex justify-end items-center">  {/* Align everything to the right */}
             
-            {/* Nav Links (Desktop) */}
-            <nav className="hidden lg:flex space-x-10 text-lg font-black font-mono">
-              <a href="#services" className="hover:underline">Services</a>
-              <a href="#about" className="hover:underline">About</a>
-              <a href="#packages" className="hover:underline">Packages</a>
-              <a href="#contact" className="hover:underline">Contact</a>
-            </nav>
+          {/* Nav Links (Desktop) */}
+<nav className="hidden lg:flex space-x-10 text-lg font-black font-mono">
+  <a href="#services" className="hover:text-[#FCFF6C] transition-colors">Services</a>
+  <a href="#about" className="hover:text-[#FCFF6C] transition-colors">About</a>
+  <a href="#packages" className="hover:text-[#FCFF6C] transition-colors">Packages</a>
+  <a href="#contact" className="hover:text-[#FCFF6C] transition-colors">Contact</a>
+</nav>
+
 
             {/* Burger Menu Icon (Mobile) */}
             <div className="lg:hidden flex items-center ml-4"> {/* Ensure burger menu is also aligned right */}

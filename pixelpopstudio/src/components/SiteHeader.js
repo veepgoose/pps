@@ -1,36 +1,70 @@
 import React, { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Menu from './Menu';
-import HeaderLogo from './HeaderLogo';
+import { topLineVariant, bottomLineVariant } from '@/utils/motion';
 
 const SiteHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="relative">
-      <div className=" h-36 w-full relative">
+      {/* Navigation Bar */}
+      <div className="min-h-20 w-full lg:min-h-28"> {/* Adjust height for shorter header */}
         <div className="absolute inset-x-0 top-3 px-4">
-          <header className="flex justify-between items-start">
-            <div className="flex flex-col items-start">
-              <HeaderLogo className="-ml-1" />
-              <div className="h-2"></div> {/* Adjustable spacer */}
-              <ThemeToggle />
-            </div>  
-            <button
-              onClick={() => setIsMenuOpen(true)}
-              className="bg-transparent p-0 border-none cursor-pointer outline-none mt-1"
+          <header className="flex justify-between items-center">
+            {/* Logo */}
+            <motion.div
+              className="w-2/5 lg:w-1/6 z-20" // Larger size for desktop
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             >
-              <svg width="60" height="60" viewBox="0 0 104 116" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="62.5" cy="74.5" r="41.5" fill="black" />
-                <circle cx="48" cy="48" r="44" fill="#FB6FC6" stroke="black" strokeWidth="6" />
-                <rect x="21" y="45" width="54" height="6" fill="black" />
-                <rect x="21" y="59" width="54" height="6" fill="black" />
-                <rect x="21" y="31" width="54" height="6" fill="black" />
-              </svg>
-            </button>
+              <Image 
+                src="/PIXEL.POP.STUDIO.png" 
+                alt="Pixel Pop Studio Logo"
+                width={500} // Adjust the size to make it larger
+                height={100}
+                layout="responsive"
+              />
+            </motion.div>
+
+            {/* Nav Links (Desktop) */}
+            <nav className="hidden lg:flex space-x-10 text-lg font-black font-mono">
+              <a href="/#services" className="hover:text-[#FCFF6C] transition-colors">Services</a>
+              <a href="/#about" className="hover:text-[#FCFF6C] transition-colors">About</a>
+              <a href="/#packages" className="hover:text-[#FCFF6C] transition-colors">Packages</a>
+              <a href="/#contact" className="hover:text-[#FCFF6C] transition-colors">Contact</a>
+            </nav>
+
+            {/* Burger Menu Icon (Mobile) */}
+            <div className="lg:hidden flex items-center ml-4">
+              <motion.div
+                className="w-8 h-3 bg-transparent cursor-pointer flex flex-col justify-between"
+                onClick={toggleMenu}
+              >
+                {/* Top line */}
+                <motion.span
+                  className="block h-0.5 w-full bg-[#192A51]"
+                  animate={isMenuOpen ? "open" : "closed"}
+                  variants={topLineVariant}
+                />
+                {/* Bottom line */}
+                <motion.span
+                  className="block h-0.5 w-full bg-[#192A51]"
+                  animate={isMenuOpen ? "open" : "closed"}
+                  variants={bottomLineVariant}
+                />
+              </motion.div>
+            </div>
           </header>
         </div>
       </div>
+
+      {/* Mobile Menu handled by Menu.js */}
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
   );
