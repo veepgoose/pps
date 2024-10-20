@@ -3,12 +3,12 @@ import SocialIcons from './SocialIcons';
 
 // Animation for the two-line burger and X icon
 const topLineVariant = {
-  open: { rotate: 45, y: 7, transition: { duration: 0.3 } },
+  open: { rotate: 45, y: 3, transition: { duration: 0.3 } },
   closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
 };
 
 const bottomLineVariant = {
-  open: { rotate: -45, y: -7, transition: { duration: 0.3 } },
+  open: { rotate: -45, y: 0, transition: { duration: 0.3 } },
   closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
 };
 
@@ -22,18 +22,18 @@ export default function Menu({ isOpen, onClose }) {
       {/* Improved X for closing the menu */}
       <div className="absolute top-4 right-4">
         <motion.div
-          className="w-8 h-8 bg-transparent cursor-pointer flex flex-col justify-between"
+          className="w-8 h-8 bg-transparent cursor-pointer flex flex-col justify-center items-center"
           onClick={onClose}
         >
           {/* Top line */}
           <motion.span
-            className="block h-1 bg-black"
+            className="block h-0.5 w-full bg-black"
             animate={isOpen ? "open" : "closed"}
             variants={topLineVariant}
           />
           {/* Bottom line */}
           <motion.span
-            className="block h-1 bg-black"
+            className="block h-0.5 w-full bg-black"
             animate={isOpen ? "open" : "closed"}
             variants={bottomLineVariant}
           />

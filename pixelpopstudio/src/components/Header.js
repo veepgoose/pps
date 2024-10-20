@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';  // Import Framer Motion
+import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import Menu from './Menu';
-import LPLogo from './LPLogo';
-import { h1Variant } from '@/utils/motion';  // Import the h1 animation variant
+import { h1Variant } from '@/utils/motion';
 
-// Animation for the burger menu icon
-const burgerVariant = {
-  open: { rotate: 45, y: 5, transition: { duration: 0.3 } },
+// Animation for the two-line burger menu icon
+const topLineVariant = {
+  open: { rotate: 45, y: 6, transition: { duration: 0.3 } },
+  closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
+};
+
+const bottomLineVariant = {
+  open: { rotate: -45, y: -6, transition: { duration: 0.3 } },
   closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
 };
 
@@ -40,23 +44,20 @@ const Header = () => {
             {/* Burger Menu Icon (Mobile) */}
             <div className="lg:hidden flex items-center">
               <motion.div
-                className="w-8 h-8 bg-transparent cursor-pointer flex flex-col justify-between"
+                className="w-8 h-3 bg-transparent cursor-pointer flex flex-col justify-between"
                 onClick={toggleMenu}
               >
+                {/* Top line */}
                 <motion.span
-                  className="block h-1 bg-black"
+                  className="block h-0.5 w-full bg-black"
                   animate={isMenuOpen ? "open" : "closed"}
-                  variants={burgerVariant}
+                  variants={topLineVariant}
                 />
+                {/* Bottom line */}
                 <motion.span
-                  className="block h-1 bg-black"
-                  animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                <motion.span
-                  className="block h-1 bg-black"
+                  className="block h-0.5 w-full bg-black"
                   animate={isMenuOpen ? "open" : "closed"}
-                  variants={burgerVariant}
+                  variants={bottomLineVariant}
                 />
               </motion.div>
             </div>
@@ -68,7 +69,7 @@ const Header = () => {
         {/* Animate the h1 text */}
         <motion.h1
           className="text-3xl lg:text-6xl font-mono font-black text-center text-[#FB6FC6] drop-shadow-2xl text-shadow-custom-yellow-mobile lg:text-shadow-custom-yellow"
-          variants={h1Variant}  // Apply the motion variant
+          variants={h1Variant}
           initial="initial"
           animate="animate"
         >
@@ -78,7 +79,7 @@ const Header = () => {
       
       {/* Mobile Menu (Shown when burger is clicked) */}
       {isMenuOpen && (
-        <div className="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-80 flex flex-col items-center justify-center z-50">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-80 flex flex-col items-center justify-center z-50">
           <nav className="space-y-8 text-white font-mono font-black text-2xl">
             <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
             <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
@@ -94,5 +95,6 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
