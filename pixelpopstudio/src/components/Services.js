@@ -11,7 +11,7 @@ const Services = () => {
         {/* Service 1: Web Design & Development */}
         <div className="flex flex-col items-center min-h-[300px]">
           <div className="mb-4">
-            <Image src="/WebDesignIcon.svg" alt="Web Design & Development Icon" width={80} height={80} />
+            <Image src="/WebdesignIcon.svg" alt="Web Design & Development Icon" width={80} height={80} />
           </div>
           <h3 className="font-bold text-lg mb-2">Web Design & Development</h3>
           <p>Create a stunning, custom-coded website tailored to your unique vision. From simple, scrollable sites to complex interactive experiences, you have full creative control.</p>
