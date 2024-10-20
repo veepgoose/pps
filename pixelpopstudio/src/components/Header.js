@@ -31,7 +31,7 @@ const Header = () => {
           <header className="flex justify-end items-center">  {/* Align everything to the right */}
             
             {/* Nav Links (Desktop) */}
-            <nav className="hidden lg:flex space-x-6 text-lg font-black font-mono">
+            <nav className="hidden lg:flex space-x-10 text-lg font-black font-mono">
               <a href="#services" className="hover:underline">Services</a>
               <a href="#about" className="hover:underline">About</a>
               <a href="#packages" className="hover:underline">Packages</a>

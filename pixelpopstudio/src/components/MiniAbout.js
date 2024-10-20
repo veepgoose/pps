@@ -45,7 +45,7 @@ const MiniAbout = () => {
         </p>
         
         {/* Read More Button */}
-        <div className="text-right">
+        <div className="text-center lg:text-right">
           <button className="px-6 py-2 bg-[#FB6FC6] text-[#192A51] font-black font-mono rounded-lg hover:bg-[#FCFF6C] hover:text-black transition-all">
             Read More
           </button>
@@ -56,4 +56,5 @@ const MiniAbout = () => {
 };
 
 export default MiniAbout;
+
 

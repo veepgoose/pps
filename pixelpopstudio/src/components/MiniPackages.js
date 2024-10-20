@@ -52,7 +52,7 @@ const MiniPackages = () => {
           PIXEL POP PACKAGES
         </motion.h2>
         <motion.p
-          className="max-w-xl mx-auto"
+          className="max-w-xl mx-auto p-4"
           variants={textVariant}
           initial="initial"
           whileInView="animate"

@@ -25,7 +25,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('Sending...');
+    setStatus('Preparing for Blast Off...');
 
     try {
       const response = await fetch('/api/contact', {
@@ -39,7 +39,7 @@ const ContactForm = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus('Message sent successfully!');
+        setStatus('Message sent! 🚀');
         setFormData({ name: '', email: '', message: '' });
       } else {
         console.error('Server responded with error:', data);
@@ -84,7 +84,7 @@ const ContactForm = () => {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-8">
-          <div className="w-full max-w-[689px] space-y-4">
+          <div className="w-full max-w-[689px] space-y-4 relative pb-8"> {/* Add some padding at the bottom */}
             {/* Name input */}
             <div className="relative">
               <input
@@ -134,15 +134,15 @@ const ContactForm = () => {
             </div>
 
             {/* Status message */}
-            {status && (
-              <p className="text-center font-bold mt-4">{status}</p>
-            )}
+            <div className="absolute w-full text-center"> {/* Position status below the form */}
+              {status && (
+                <p className="font-bold">{status}</p>
+              )}
+            </div>
           </div>
         </form>
       </motion.div>
-      
     </section>
-   
   );
 };
 
