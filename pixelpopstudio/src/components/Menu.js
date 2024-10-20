@@ -1,9 +1,19 @@
 import { motion } from 'framer-motion';
 import SocialIcons from './SocialIcons';
 
-// Animation for the close button (X)
+// Animation for the burger icon and the X icon
 const xIconVariant = {
   open: { rotate: 45, y: 5, transition: { duration: 0.3 } },
+  closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
+};
+
+const middleIconVariant = {
+  open: { opacity: 0 },
+  closed: { opacity: 1 }
+};
+
+const bottomIconVariant = {
+  open: { rotate: -45, y: -5, transition: { duration: 0.3 } },
   closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
 };
 
@@ -14,26 +24,29 @@ export default function Menu({ isOpen, onClose }) {
     <div
       className="fixed inset-0 p-5 shadow-lg z-50 bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] opacity-90 text-[#192A51] px-4 lg:px-16"
     >
-      {/* Animated X for closing the menu */}
+      {/* Improved X for closing the menu */}
       <div className="absolute top-4 right-4">
         <motion.div
           className="w-8 h-8 bg-transparent cursor-pointer flex flex-col justify-between"
           onClick={onClose}
         >
+          {/* Top line */}
           <motion.span
             className="block h-1 bg-black"
-            animate="open"
+            animate={isOpen ? "open" : "closed"}
             variants={xIconVariant}
           />
+          {/* Middle line */}
           <motion.span
             className="block h-1 bg-black"
-            animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-            transition={{ duration: 0.3 }}
+            animate={isOpen ? "open" : "closed"}
+            variants={middleIconVariant}
           />
+          {/* Bottom line */}
           <motion.span
             className="block h-1 bg-black"
-            animate="open"
-            variants={xIconVariant}
+            animate={isOpen ? "open" : "closed"}
+            variants={bottomIconVariant}
           />
         </motion.div>
       </div>
