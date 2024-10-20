@@ -13,7 +13,7 @@ const imageVariant = {
 
 const MiniAbout = () => {
   return (
-    <section className="py-12 bg-gradient-to-b from-light-header to-light-background dark:from-dark-background dark:to-dark-footer flex flex-col lg:flex-row items-center justify-center lg:px-16">
+    <section className="py-12 bg-gradient-to-b from-light-header to-light-background  flex flex-col lg:flex-row items-center justify-center lg:px-16">
       
       {/* Profile Image */}
       <motion.div

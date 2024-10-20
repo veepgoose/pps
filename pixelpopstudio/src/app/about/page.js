@@ -49,7 +49,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-footer ">
       <SiteHeader>
-        <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
+        
       </SiteHeader>
 
       {/* Starry Background Section */}
