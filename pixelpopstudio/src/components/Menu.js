@@ -27,13 +27,13 @@ export default function Menu({ isOpen, onClose }) {
         >
           {/* Top line */}
           <motion.span
-            className="block h-0.5 w-full bg-black"
+            className="block h-0.5 w-full bg-[#192A51]"
             animate={isOpen ? "open" : "closed"}
             variants={topLineVariant}
           />
           {/* Bottom line */}
           <motion.span
-            className="block h-0.5 w-full bg-black"
+            className="block h-0.5 w-full bg-[#192A51]"
             animate={isOpen ? "open" : "closed"}
             variants={bottomLineVariant}
           />
@@ -44,17 +44,17 @@ export default function Menu({ isOpen, onClose }) {
       <nav className="mt-10">
         <ul className="space-y-4">
           <li>
+            <a href="#services" className="block p-6 py-8 text-5xl text-left font-bold">
+              Services
+            </a>
+          </li>
+          <li>
             <a href="/about" className="block p-6 py-8 text-5xl text-left font-bold">
               About
             </a>
           </li>
           <li>
-            <a href="/portfolio" className="block p-6 py-8 text-5xl text-left font-bold">
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a href="/packages" className="block p-6 py-8 text-5xl text-left font-bold">
+            <a href="#miniPackages" className="block p-6 py-8 text-5xl text-left font-bold">
               Packages
             </a>
           </li>
@@ -64,7 +64,7 @@ export default function Menu({ isOpen, onClose }) {
             </a>
           </li>
           <li>
-            <a href="/contact" className="block p-6 py-8 text-5xl text-left font-bold">
+            <a href="#contact" className="block p-6 py-8 text-5xl text-left font-bold">
               Contact
             </a>
           </li>

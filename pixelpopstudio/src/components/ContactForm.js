@@ -127,9 +127,9 @@ const ContactForm = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="w-[150px] md:w-[185px] h-[40px] md:h-[47px] bg-[#FB6FC6] border-4 border-black rounded-2xl font-mono font-black text-base md:text-xl"
+                className="w-[150px] md:w-[185px] h-[40px] md:h-[47px] bg-[#FB6FC6] border-4 border-black rounded-2xl font-mono font-black text-[#192A51] text-base md:text-xl hover:bg-[#FCFF6C] hover:text-black transition-all"
               >
-                Submit
+                SUBMIT
               </button>
             </div>
 

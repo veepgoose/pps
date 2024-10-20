@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import Menu from './Menu';
+import Image from 'next/image';  // Import Image component
 import { h1Variant } from '@/utils/motion';
 
 // Animation for the two-line burger menu icon
@@ -27,11 +28,7 @@ const Header = () => {
       {/* Navigation Bar */}
       <div className="min-h-20 w-full lg:min-h-36">
         <div className="absolute top-3 inset-x-0 px-4">
-          <header className="flex justify-between items-center">
-            {/* Logo */}
-            <div className="text-xl font-bold">
-              <a href="#home">PIXEL.POP.STUDIO</a>
-            </div>
+          <header className="flex justify-end items-center">  {/* Align everything to the right */}
             
             {/* Nav Links (Desktop) */}
             <nav className="hidden lg:flex space-x-6 text-lg font-black font-mono">
@@ -42,20 +39,20 @@ const Header = () => {
             </nav>
 
             {/* Burger Menu Icon (Mobile) */}
-            <div className="lg:hidden flex items-center">
+            <div className="lg:hidden flex items-center ml-4"> {/* Ensure burger menu is also aligned right */}
               <motion.div
                 className="w-8 h-3 bg-transparent cursor-pointer flex flex-col justify-between"
                 onClick={toggleMenu}
               >
                 {/* Top line */}
                 <motion.span
-                  className="block h-0.5 w-full bg-black"
+                  className="block h-0.5 w-full bg-[#192A51]"
                   animate={isMenuOpen ? "open" : "closed"}
                   variants={topLineVariant}
                 />
                 {/* Bottom line */}
                 <motion.span
-                  className="block h-0.5 w-full bg-black"
+                  className="block h-0.5 w-full bg-[#192A51]"
                   animate={isMenuOpen ? "open" : "closed"}
                   variants={bottomLineVariant}
                 />
@@ -66,15 +63,21 @@ const Header = () => {
       </div>
       
       <div className="flex justify-center mt-6">
-        {/* Animate the h1 text */}
-        <motion.h1
-          className="text-3xl lg:text-6xl font-mono font-black text-center text-[#FB6FC6] drop-shadow-2xl text-shadow-custom-yellow-mobile lg:text-shadow-custom-yellow"
+        {/* Replace the h1 text with the image */}
+        <motion.div
+          className="w-2/3 lg:w-2/6"
           variants={h1Variant}
           initial="initial"
           animate="animate"
         >
-          PIXEL.POP.STUDIO
-        </motion.h1>
+          <Image 
+            src="/PIXEL.POP.STUDIO.png" 
+            alt="Pixel Pop Studio Logo"
+            width={500}
+            height={100}
+            layout="responsive"
+          />
+        </motion.div>
       </div>
       
       {/* Mobile Menu (Shown when burger is clicked) */}
@@ -95,6 +98,9 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
 
 
 
