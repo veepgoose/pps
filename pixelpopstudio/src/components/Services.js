@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Services = () => {
   return (
     <section className="py-12 text-center bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] opacity-90 text-[#192A51] px-4 lg:px-16">
-      <h2 className="text-2xl lg:text-4xl font-bold mb-8">Our Services</h2>
+      <h2 className="text-2xl lg:text-4xl font-mono font-black mb-8">Our Services</h2>
       
       {/* Services Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 text-lg">

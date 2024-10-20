@@ -28,19 +28,17 @@ const Header = () => {
       {/* Navigation Bar */}
       <div className="min-h-20 w-full lg:min-h-36">
         <div className="absolute top-3 inset-x-0 px-4">
-          <header className="flex justify-end items-center">  {/* Align everything to the right */}
-            
-          {/* Nav Links (Desktop) */}
-<nav className="hidden lg:flex space-x-10 text-lg font-black font-mono">
-  <a href="#services" className="hover:text-[#FCFF6C] transition-colors">Services</a>
-  <a href="#about" className="hover:text-[#FCFF6C] transition-colors">About</a>
-  <a href="#packages" className="hover:text-[#FCFF6C] transition-colors">Packages</a>
-  <a href="#contact" className="hover:text-[#FCFF6C] transition-colors">Contact</a>
-</nav>
-
+          <header className="flex justify-end items-center"> {/* Align everything to the right */}
+            {/* Nav Links (Desktop) */}
+            <nav className="hidden lg:flex space-x-10 text-lg font-black font-mono">
+              <a href="#services" className="hover:text-[#FCFF6C] transition-colors">Services</a>
+              <a href="#about" className="hover:text-[#FCFF6C] transition-colors">About</a>
+              <a href="#packages" className="hover:text-[#FCFF6C] transition-colors">Packages</a>
+              <a href="#contact" className="hover:text-[#FCFF6C] transition-colors">Contact</a>
+            </nav>
 
             {/* Burger Menu Icon (Mobile) */}
-            <div className="lg:hidden flex items-center ml-4"> {/* Ensure burger menu is also aligned right */}
+            <div className="lg:hidden flex items-center ml-4">
               <motion.div
                 className="w-8 h-3 bg-transparent cursor-pointer flex flex-col justify-between"
                 onClick={toggleMenu}
@@ -62,9 +60,9 @@ const Header = () => {
           </header>
         </div>
       </div>
-      
+
       <div className="flex justify-center mt-6">
-        {/* Replace the h1 text with the image */}
+        {/* Replace the h1 text with the image (centered with motion animation) */}
         <motion.div
           className="w-2/3 lg:w-2/6 z-20"
           variants={h1Variant}
@@ -80,7 +78,7 @@ const Header = () => {
           />
         </motion.div>
       </div>
-      
+
       {/* Mobile Menu (Shown when burger is clicked) */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-80 flex flex-col items-center justify-center z-50">
@@ -92,13 +90,14 @@ const Header = () => {
           </nav>
         </div>
       )}
-      
+
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
   );
 };
 
 export default Header;
+
 
 
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Footer from '@/components/Footer';
+import FooterAlt from '@/components/FooterAlt';
 import SiteHeader from '@/components/SiteHeader';
 import ThemeToggle from '@/components/ThemeToggle';
 import Image from 'next/image';
@@ -48,7 +48,7 @@ export default function JumpstartPackage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-footer to-light-header ">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-footer">
       <SiteHeader>
         <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
       </SiteHeader>
@@ -175,7 +175,7 @@ export default function JumpstartPackage() {
         </div>
       </motion.div>
 
-      <Footer theme={theme} />
+      <FooterAlt theme={theme} />
     </div>
   );
 }

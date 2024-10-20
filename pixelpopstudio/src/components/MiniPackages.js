@@ -49,7 +49,7 @@ const MiniPackages = () => {
           initial="initial"
           animate="animate"
         >
-          PIXEL POP PACKAGES
+          Pixel Pop Packages
         </motion.h2>
         <motion.p
           className="max-w-xl mx-auto p-4"

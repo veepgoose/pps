@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Menu from './Menu';
+import Link from 'next/link'; // Import Link from Next.js
+import MenuAlt from './MenuAlt';
 import { topLineVariant, bottomLineVariant } from '@/utils/motion';
 
 const SiteHeader = () => {
@@ -23,13 +24,15 @@ const SiteHeader = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             >
-              <Image 
-                src="/PIXEL.POP.STUDIO.png" 
-                alt="Pixel Pop Studio Logo"
-                width={500} // Adjust the size to make it larger
-                height={100}
-                layout="responsive"
-              />
+              <Link href="/"> {/* Wrap Image with Link */}
+                <Image 
+                  src="/PIXEL.POP.STUDIO.png" 
+                  alt="Pixel Pop Studio Logo"
+                  width={500} // Adjust the size to make it larger
+                  height={100}
+                  layout="responsive"
+                />
+              </Link>
             </motion.div>
 
             {/* Nav Links (Desktop) */}
@@ -65,7 +68,7 @@ const SiteHeader = () => {
       </div>
 
       {/* Mobile Menu handled by Menu.js */}
-      <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <MenuAlt isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
   );
 };

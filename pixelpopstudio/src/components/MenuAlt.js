@@ -12,15 +12,13 @@ const bottomLineVariant = {
   closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
 };
 
-export default function Menu({ isOpen, onClose }) {
+export default function MenuAlt({ isOpen, onClose }) {
   if (!isOpen) return null;
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      onClose();  // Close the menu after navigating to section
-    }
+  const redirectToLandingPageSection = (id) => {
+    // Redirect to the landing page and scroll to the specified section
+    window.location.href = `/${id}`;
+    onClose();  // Close the menu after navigating
   };
 
   return (
@@ -53,28 +51,28 @@ export default function Menu({ isOpen, onClose }) {
         <ul className="space-y-4">
           <li>
             <button 
-              onClick={() => scrollToSection('services')} 
+              onClick={() => redirectToLandingPageSection('#services')} 
               className="block p-6 py-8 text-5xl text-left font-bold">
               Services
             </button>
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('about')} 
+              onClick={() => redirectToLandingPageSection('#about')} 
               className="block p-6 py-8 text-5xl text-left font-bold">
               About
             </button>
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('packages')} 
+              onClick={() => redirectToLandingPageSection('#packages')} 
               className="block p-6 py-8 text-5xl text-left font-bold">
               Packages
             </button>
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('contact')} 
+              onClick={() => redirectToLandingPageSection('#contact')} 
               className="block p-6 py-8 text-5xl text-left font-bold">
               Contact
             </button>

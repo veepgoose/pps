@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Footer from '@/components/Footer';
+import FooterAlt from '@/components/FooterAlt';
 import SiteHeader from '@/components/SiteHeader';
 import ThemeToggle from '@/components/ThemeToggle';
 import Image from 'next/image';
@@ -23,13 +23,13 @@ const contentVariant = {
   animate: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-// New variant for the ShopIcon to animate from the top
 const iconVariant = {
   initial: { opacity: 0, y: -100 },
   animate: { opacity: 1, y: 0, transition: { duration: 1.5 } },
 };
 
 export default function ShopPackage() {
+
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
@@ -48,12 +48,12 @@ export default function ShopPackage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-background dark:from-dark-footer dark:to-dark-background">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-footer">
       <SiteHeader>
         <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
       </SiteHeader>
       
-      {/* Starry Background Section (above the grid layout) */}
+      {/* Starry Background Section */}
       <div className="relative flex flex-col items-center justify-start flex-grow pt-16 pb-2 md:pt-24 lg:-mt-6 lg:pb-8">
         {/* Starry background with animation */}
         <motion.div className="absolute inset-0 w-full h-full flex justify-center items-center z-0 pointer-events-none overflow-hidden">
@@ -91,7 +91,7 @@ export default function ShopPackage() {
           />
         </motion.div>
 
-        {/* Add the heading, subtext, and pricing to starry section */}
+        {/* Heading, subtext, and pricing */}
         <motion.div
           className="relative z-10 text-center mt-8"
           variants={contentVariant}
@@ -99,12 +99,12 @@ export default function ShopPackage() {
           animate="animate"
         >
           <h1 className="text-2xl font-bold mb-4">Pixel Pop Shop</h1>
-          <p className="italic mb-2">Blast off into e-commerce with a custom Shopify solution</p>
-          <p className="text-2xl font-bold">£3,999</p>
+          <p className="italic mb-2">Bring your store online with a powerful e-commerce solution</p>
+          <p className="text-2xl font-bold">£2,499</p>
         </motion.div>
       </div>
 
-      {/* Main Content Section with gradient (without starry background, with fade-up animation) */}
+      {/* Main Content Section */}
       <motion.div 
         className="px-0 md:px-16 lg:px-24"
         variants={contentVariant}
@@ -112,25 +112,25 @@ export default function ShopPackage() {
         animate="animate"
       >
         {/* Grid Layout for Package Details */}
-        <div className="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           
           {/* Package Details */}
-          <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-20 dark:bg-opacity-20 lg:bg-transparent lg:dark:bg-transparent">
-            <h2 className="font-semibold mb-2">Pixel Pop Shop</h2>
+          <div className="w-full p-4">
+            <h2 className="font-semibold mb-2">Package Details</h2>
             <ul className="list-disc ml-4">
-              <li>Everything in Pixel Pop Pro, plus:</li>
-              <li>Custom Shopify store using Next.js frontend</li>
-              <li>Product inventory setup (up to 25 products)</li>
-              <li>Secure payment gateway integration</li>
-              <li>Order management system</li>
-              <li>Advanced SEO for e-commerce</li>
-              <li>3 rounds of revisions</li>
+              <li>Custom-coded e-commerce website</li>
+              <li>Up to 12 product listings</li>
+              <li>Integration with a payment gateway</li>
+              <li>Shopping cart functionality</li>
+              <li>SEO optimization for product pages</li>
+              <li>2 rounds of revisions</li>
+              <li>2 weeks of aftercare</li>
               <li>1-hour training session</li>
             </ul>
           </div>
 
           {/* Why Choose Us */}
-          <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-40 dark:bg-opacity-40 lg:bg-transparent lg:dark:bg-transparent">
+          <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm">
               We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over a decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don&apos;t just build websites - we create digital solutions that drive real business growth.
@@ -138,10 +138,10 @@ export default function ShopPackage() {
           </div>
 
           {/* Power-Ups */}
-          <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-55 dark:bg-opacity-60 lg:bg-transparent lg:dark:bg-transparent">
+          <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Power-Ups (Add-On Services)</h2>
             <ul className="list-disc ml-4">
-              <li>Extra Design Boost: £200 per revision round</li>
+              <li>Extra Product Listings: £100 per 5 products</li>
               <li>Monthly Pixel Maintenance: £199/month</li>
               <li>Social Media Amplifier: From £499/month</li>
               <li>Content Creation Magic: From £299/month</li>
@@ -152,7 +152,7 @@ export default function ShopPackage() {
           </div>
 
           {/* Package Inclusions */}
-          <div className="w-full p-4 bg-light-menuBackground dark:bg-dark-packagesBackground bg-opacity-70 dark:bg-opacity-70 lg:bg-transparent lg:dark:bg-transparent">
+          <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Every Package Includes</h2>
             <ul className="list-disc ml-4">
               <li>Unlimited creative freedom with custom coding</li>
@@ -167,7 +167,7 @@ export default function ShopPackage() {
         </div>
 
         {/* Payment Terms Section */}
-        <div className="w-full p-4  mt-4 pb-24">
+        <div className="w-full p-4 mt-4 pb-24">
           <p className="text-sm text-center lg:text-center">
             <strong>Payment terms:</strong> 50% deposit, 50% upon completion.
             <br />
@@ -176,7 +176,7 @@ export default function ShopPackage() {
         </div>
       </motion.div>
 
-      <Footer theme={theme} />
+      <FooterAlt theme={theme} />
     </div>
   );
 }

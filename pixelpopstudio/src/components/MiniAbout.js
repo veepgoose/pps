@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const textVariant = {
   hidden: { opacity: 0, x: 100 },
@@ -13,10 +14,7 @@ const imageVariant = {
 const MiniAbout = () => {
   return (
     <section className="py-12 bg-gradient-to-b from-light-header to-light-background dark:from-dark-background dark:to-dark-footer flex flex-col lg:flex-row items-center justify-center lg:px-16">
-      <h2 className="text-2xl lg:text-4xl font-bold mb-8 lg:mb-0 text-center lg:text-left lg:hidden">
-        About Me
-      </h2>
-
+      
       {/* Profile Image */}
       <motion.div
         className="lg:w-1/3 flex justify-center lg:justify-end"
@@ -36,19 +34,26 @@ const MiniAbout = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-2xl lg:text-4xl font-bold mb-4 hidden lg:block">About Me</h2>
-        <p className="text-lg lg:text-xl mb-4">
-          Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
+        <h2 className="text-2xl lg:text-4xl font-mono font-black mb-4">Behind The Pixels</h2>
+      
+        <p className="text-lg lg:text-lg mb-4">
+          At Pixel Pop, we believe your online presence should be as unique and impactful as your business. 
+          We focus on creating bespoke, hand-coded websites that capture the essence of your brand and help you stand out in the digital world.
         </p>
-        <p className="text-lg lg:text-xl mb-4">
-          Pixel Pop Studios was founded in 2024 by Victoria Platt, after 11 years of running successful businesses in the Wine industry. Vic decided to make a life-changing career switch into the world of Tech and learned how to code. Utilizing her background in design after graduating from BCU with a degree in Fine Art, Vic offers a unique blend of experience in Design, Business, and Coding.
+        <p className="text-lg lg:text-lg mb-4">
+          Our approach to web design and development combines fresh ideas with solid business understanding. Whether you’re a startup in Digbeth or an established brand in Birmingham’s city centre, we elevate your digital strategy with creativity and technical know-how.
+        </p>
+        <p className="text-lg lg:text-lg mb-4">
+          Working with Pixel Pop means collaborating directly with Victoria – a creative problem-solver who combines artistic vision, business acumen, and a strong foundation in modern web development.
         </p>
         
         {/* Read More Button */}
         <div className="text-center lg:text-right">
-          <button className="px-6 py-2 bg-[#FB6FC6] text-[#192A51] font-black font-mono rounded-lg hover:bg-[#FCFF6C] hover:text-black transition-all">
-            Read More
-          </button>
+          <Link href="/about">
+            <button className="px-6 py-2 bg-[#FB6FC6] text-[#192A51] font-black font-mono rounded-lg hover:bg-[#FCFF6C] hover:text-black transition-all">
+              READ MORE
+            </button>
+          </Link>
         </div>
       </motion.div>
     </section>
@@ -56,5 +61,6 @@ const MiniAbout = () => {
 };
 
 export default MiniAbout;
+
 
 
