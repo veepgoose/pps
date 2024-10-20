@@ -1,57 +1,77 @@
-import SocialIcons from "./SocialIcons";
-import Rectangles from "./Rectangles";
+import { motion } from 'framer-motion';
+import SocialIcons from './SocialIcons';
+
+// Animation for the close button (X)
+const xIconVariant = {
+  open: { rotate: 45, y: 5, transition: { duration: 0.3 } },
+  closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
+};
 
 export default function Menu({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div 
-      className="fixed inset-0 p-5 shadow-lg z-50 bg-light-menuBackground text-light-menuText dark:bg-dark-menuBackground dark:text-dark-menuText"
+    <div
+      className="fixed inset-0 p-5 shadow-lg z-50 bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] opacity-90 text-[#192A51] px-4 lg:px-16"
     >
-      <button 
-        onClick={onClose} 
-        className="absolute top-4 right-4 focus:outline-none text-light-header dark:text-light-header"
-      >
-        Close
-      </button>
+      {/* Animated X for closing the menu */}
+      <div className="absolute top-4 right-4">
+        <motion.div
+          className="w-8 h-8 bg-transparent cursor-pointer flex flex-col justify-between"
+          onClick={onClose}
+        >
+          <motion.span
+            className="block h-1 bg-black"
+            animate="open"
+            variants={xIconVariant}
+          />
+          <motion.span
+            className="block h-1 bg-black"
+            animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.span
+            className="block h-1 bg-black"
+            animate="open"
+            variants={xIconVariant}
+          />
+        </motion.div>
+      </div>
 
+      {/* Menu Items */}
       <nav className="mt-10">
-        <ul className="space-y-4"> {/* Adds spacing between list items */}
+        <ul className="space-y-4">
           <li>
-            <a href="/about" className="block p-6  py-8 text-6xl text-left font-bold"> {/* Adjust text size and centering */}
+            <a href="/about" className="block p-6 py-8 text-5xl text-left font-bold">
               About
             </a>
           </li>
           <li>
-            <a href="/portfolio" className="block p-6 py-8 text-6xl text-left font-bold"> {/* Adjust text size and centering */}
+            <a href="/portfolio" className="block p-6 py-8 text-5xl text-left font-bold">
               Portfolio
             </a>
           </li>
           <li>
-            <a href="/packages" className="block p-6 py-8 text-6xl text-left font-bold">
+            <a href="/packages" className="block p-6 py-8 text-5xl text-left font-bold">
               Packages
             </a>
           </li>
           <li>
-            <a href="/blog" className="block p-6 py-8 text-6xl text-left font-bold">
+            <a href="/blog" className="block p-6 py-8 text-5xl text-left font-bold">
               Blog
             </a>
           </li>
           <li>
-            <a href="/contact" className="block p-6 py-8 text-6xl text-left font-bold">
+            <a href="/contact" className="block p-6 py-8 text-5xl text-left font-bold">
               Contact
             </a>
           </li>
         </ul>
       </nav>
-      <div className="relative mt-6">
-        {/* Rectangle and SocialIcons */}
-        <div className="relative flex justify-center items-center">
-          <Rectangles />
-          <div className="absolute inset-0 flex justify-center items-center">
-            <SocialIcons />
-          </div>
-        </div>
+
+      {/* Social Icons at the bottom */}
+      <div className="flex justify-center items-center mt-12">
+        <SocialIcons />
       </div>
     </div>
   );
