@@ -1,19 +1,14 @@
 import { motion } from 'framer-motion';
 import SocialIcons from './SocialIcons';
 
-// Animation for the burger icon and the X icon
-const xIconVariant = {
-  open: { rotate: 45, y: 5, transition: { duration: 0.3 } },
+// Animation for the two-line burger and X icon
+const topLineVariant = {
+  open: { rotate: 45, y: 7, transition: { duration: 0.3 } },
   closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
 };
 
-const middleIconVariant = {
-  open: { opacity: 0 },
-  closed: { opacity: 1 }
-};
-
-const bottomIconVariant = {
-  open: { rotate: -45, y: -5, transition: { duration: 0.3 } },
+const bottomLineVariant = {
+  open: { rotate: -45, y: -7, transition: { duration: 0.3 } },
   closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
 };
 
@@ -22,7 +17,7 @@ export default function Menu({ isOpen, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 p-5 shadow-lg z-50 bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] opacity-90 text-[#192A51] px-4 lg:px-16"
+      className="fixed inset-0 p-5 shadow-lg z-50 bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] text-[#192A51] px-4 lg:px-16"
     >
       {/* Improved X for closing the menu */}
       <div className="absolute top-4 right-4">
@@ -34,19 +29,13 @@ export default function Menu({ isOpen, onClose }) {
           <motion.span
             className="block h-1 bg-black"
             animate={isOpen ? "open" : "closed"}
-            variants={xIconVariant}
-          />
-          {/* Middle line */}
-          <motion.span
-            className="block h-1 bg-black"
-            animate={isOpen ? "open" : "closed"}
-            variants={middleIconVariant}
+            variants={topLineVariant}
           />
           {/* Bottom line */}
           <motion.span
             className="block h-1 bg-black"
             animate={isOpen ? "open" : "closed"}
-            variants={bottomIconVariant}
+            variants={bottomLineVariant}
           />
         </motion.div>
       </div>
@@ -82,8 +71,8 @@ export default function Menu({ isOpen, onClose }) {
         </ul>
       </nav>
 
-      {/* Social Icons at the bottom */}
-      <div className="flex justify-center items-center mt-12">
+      {/* Social Icons positioned higher */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center items-center">
         <SocialIcons />
       </div>
     </div>

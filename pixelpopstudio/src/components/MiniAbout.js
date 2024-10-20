@@ -12,7 +12,7 @@ const imageVariant = {
 
 const MiniAbout = () => {
   return (
-    <section className="py-12 bg-gradient-to-b from-light-background to-light-header dark:from-dark-background dark:to-dark-footer flex flex-col lg:flex-row items-center justify-center lg:px-16">
+    <section className="py-12 bg-gradient-to-b from-light-header to-light-background dark:from-dark-background dark:to-dark-footer flex flex-col lg:flex-row items-center justify-center lg:px-16">
       <h2 className="text-2xl lg:text-4xl font-bold mb-8 lg:mb-0 text-center lg:text-left lg:hidden">
         About Me
       </h2>
