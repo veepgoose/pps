@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex justify-center items-center mb-4 lg:mb-2">
         <SocialIcons />
       </div>
-      <p className="absolute bottom-4 lg:bottom-2 text-sm lg:text-sm text-[#B1CCE4]">
+      <p className="text-sm lg:text-sm text-[#B1CCE4] mt-4 lg:mt-2">
         Created by Pixel Pop Studios © 2024
       </p>
     </footer>
