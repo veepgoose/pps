@@ -5,27 +5,61 @@ import Menu from './Menu';
 import LPLogo from './LPLogo';
 import { h1Variant } from '@/utils/motion';  // Import the h1 animation variant
 
+// Animation for the burger menu icon
+const burgerVariant = {
+  open: { rotate: 45, y: 5, transition: { duration: 0.3 } },
+  closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
+};
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="relative">
+      {/* Navigation Bar */}
       <div className="min-h-20 w-full lg:min-h-36">
         <div className="absolute top-3 inset-x-0 px-4">
           <header className="flex justify-between items-center">
-            {/* <ThemeToggle className="self-start -mt-4" /> */}
-            {/* <button
-              onClick={() => setIsMenuOpen(true)}
-              className="bg-transparent p-0 border-none cursor-pointer outline-none"
-            >
-              <svg width="50" height="50" viewBox="0 0 104 116" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="62.5" cy="74.5" r="41.5" fill="black" />
-                <circle cx="48" cy="48" r="44" fill="#FB6FC6" stroke="black" strokeWidth="6" />
-                <rect x="21" y="45" width="54" height="6" fill="black" />
-                <rect x="21" y="59" width="54" height="6" fill="black" />
-                <rect x="21" y="31" width="54" height="6" fill="black" />
-              </svg>
-            </button> */}
+            {/* Logo */}
+            <div className="text-xl font-bold">
+              <a href="#home">PIXEL.POP.STUDIO</a>
+            </div>
+            
+            {/* Nav Links (Desktop) */}
+            <nav className="hidden lg:flex space-x-6 text-lg font-black font-mono">
+              <a href="#services" className="hover:underline">Services</a>
+              <a href="#about" className="hover:underline">About</a>
+              <a href="#packages" className="hover:underline">Packages</a>
+              <a href="#contact" className="hover:underline">Contact</a>
+            </nav>
+
+            {/* Burger Menu Icon (Mobile) */}
+            <div className="lg:hidden flex items-center">
+              <motion.div
+                className="w-8 h-8 bg-transparent cursor-pointer flex flex-col justify-between"
+                onClick={toggleMenu}
+              >
+                <motion.span
+                  className="block h-1 bg-black"
+                  animate={isMenuOpen ? "open" : "closed"}
+                  variants={burgerVariant}
+                />
+                <motion.span
+                  className="block h-1 bg-black"
+                  animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.span
+                  className="block h-1 bg-black"
+                  animate={isMenuOpen ? "open" : "closed"}
+                  variants={burgerVariant}
+                />
+              </motion.div>
+            </div>
           </header>
         </div>
       </div>
@@ -42,10 +76,23 @@ const Header = () => {
         </motion.h1>
       </div>
       
+      {/* Mobile Menu (Shown when burger is clicked) */}
+      {isMenuOpen && (
+        <div className="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-80 flex flex-col items-center justify-center z-50">
+          <nav className="space-y-8 text-white font-mono font-black text-2xl">
+            <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+            <a href="#packages" onClick={() => setIsMenuOpen(false)}>Packages</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          </nav>
+        </div>
+      )}
+      
       <Menu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </div>
   );
 };
 
 export default Header;
+
 

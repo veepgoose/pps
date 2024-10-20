@@ -46,7 +46,7 @@ const MiniAbout = () => {
         
         {/* Read More Button */}
         <div className="text-right">
-          <button className="px-6 py-2 bg-[#FB6FC6] text-white font-bold rounded-lg hover:bg-[#FCFF6C] hover:text-black transition-all">
+          <button className="px-6 py-2 bg-[#FB6FC6] text-[#FFF6E3] font-black font-mono rounded-lg hover:bg-[#FCFF6C] hover:text-black transition-all">
             Read More
           </button>
         </div>

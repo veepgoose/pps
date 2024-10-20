@@ -68,12 +68,29 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Other sections before the footer */}
-      <Services />
-      <MiniAbout />
-      <MiniPackages />
+    
+       {/* Services Section */}
+       <div id="services">
+        <Services />
+      </div>
+     
+       {/* About Section */}
+       <div id="about">
+        <MiniAbout />
+      </div>
+
+        {/* Packages Section */}
+      <div id="packages">
+        <MiniPackages />
+      </div>
+      
       <CallToAction />
-      <ContactForm />
+
+       {/* Contact */}
+       <div id="contact">
+       <ContactForm />
+      </div>
+     
 
       {/* Footer */}
       <Footer theme={theme} />
