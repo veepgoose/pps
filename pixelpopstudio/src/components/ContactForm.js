@@ -140,7 +140,9 @@ const ContactForm = () => {
           </div>
         </form>
       </motion.div>
+      
     </section>
+   
   );
 };
 
