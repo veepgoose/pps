@@ -1,9 +1,11 @@
 'use client';
 
+
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 
 // Animation Variants for header, text, and packages
 const headerVariant = {
@@ -11,18 +13,22 @@ const headerVariant = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+
 const textVariant = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
+
 
 const packageVariant = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+
 const MiniPackages = () => {
   const [theme, setTheme] = useState('light');
+
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -32,12 +38,14 @@ const MiniPackages = () => {
     }
   }, []);
 
+
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
   };
+
 
   return (
     <section className="relative py-12 text-center flex flex-col min-h-screen overflow-hidden bg-gradient-to-b from-light-footer to-light-menuText dark:from-dark-background dark:to-dark-footer">
@@ -52,14 +60,31 @@ const MiniPackages = () => {
           Pixel Pop Packages
         </motion.h2>
         <motion.p
-          className="max-w-xl mx-auto p-4"
+          className="max-w-xl mx-auto font-bold p-4"
           variants={textVariant}
           initial="initial"
           whileInView="animate"
         >
-          When it comes to working with Pixel Pop Studio, the stratosphere is the limit! Whether you’re looking for a simple website, or a full E-Commerce store, everything is hand coded, so whatever you dream is possible! Much unlike the limitations of website builders. PPS can cater for your every need, so get in touch for an in-depth chat about how we can help you. Otherwise, we offer some packages which will give you an idea of our process and pricing. {' '}
+          Elevate Your Online Presence with Pixel Pop Studio
+        </motion.p>
+        <motion.p
+          className="max-w-3xl mx-auto p-4"
+          variants={textVariant}
+          initial="initial"
+          whileInView="animate"
+        >
+          At Pixel Pop Studio, we blend creativity with technical expertise to craft websites that truly represent your brand. While we excel in creating bespoke, hand-coded solutions, we understand that you might be looking for a starting point. That&apos;s why we&apos;ve developed four distinct packages: Pixel Pop Jumpstart, Pixel Pop Pro, Pixel Pop Shop, and Pixel Pop Power.
+        </motion.p>
+        <motion.p
+          className="max-w-3xl mx-auto p-4"
+          variants={textVariant}
+          initial="initial"
+          whileInView="animate"
+        >
+          These packages offer a glimpse into our process and pricing, but remember - they&apos;re just the beginning. Whether you find a package that fits or need something completely unique, we&apos;re here to help. Explore our options below, and don&apos;t hesitate to reach out for an in-depth discussion on how we can elevate your digital presence and propel your business to new heights.
         </motion.p>
       </div>
+
 
       {/* Starry background with animation */}
       <motion.div className="absolute inset-0 w-full h-full flex justify-center items-center z-0 pointer-events-none overflow-hidden">
@@ -68,16 +93,17 @@ const MiniPackages = () => {
           alt="Starry background 1"
           className="absolute left-0 w-1/2 h-full object-cover opacity-40"
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0, transition: { duration: 2 } }}
+          animate={{ opacity: 0.5, x: 0, transition: { duration: 2 } }}
         />
         <motion.img
           src="/starrySky2.svg"
           alt="Starry background 2"
           className="absolute right-0 w-1/2 h-full object-cover opacity-40"
           initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0, transition: { duration: 2 } }}
+          animate={{ opacity: 0.5, x: 0, transition: { duration: 2 } }}
         />
       </motion.div>
+
 
       {/* Packages Grid */}
       <div className="relative z-10 grid grid-cols-2 gap-4 md:grid-cols-4 mt-12 pb-16 md:mt-8 lg:mt-16 xl:mt-32 px-4 lg:pb-16">
@@ -96,6 +122,7 @@ const MiniPackages = () => {
           </div>
         </motion.div>
 
+
         {/* Package 2 */}
         <motion.div
           className="flex flex-col items-center"
@@ -111,6 +138,7 @@ const MiniPackages = () => {
           </div>
         </motion.div>
 
+
         {/* Package 3 */}
         <motion.div
           className="flex flex-col items-center"
@@ -125,6 +153,7 @@ const MiniPackages = () => {
             </Link>
           </div>
         </motion.div>
+
 
         {/* Package 4 */}
         <motion.div
@@ -145,7 +174,9 @@ const MiniPackages = () => {
   );
 };
 
+
 export default MiniPackages;
+
 
 
 

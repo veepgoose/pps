@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+
 // Motion Variants for the form animation
 const formVariant = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +17,7 @@ const ContactForm = () => {
   });
   const [status, setStatus] = useState('');
 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -23,9 +26,11 @@ const ContactForm = () => {
     }));
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('Preparing for Blast Off...');
+
 
     try {
       const response = await fetch('/api/contact', {
@@ -36,7 +41,9 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
+
       const data = await response.json();
+
 
       if (response.ok) {
         setStatus('Message sent! 🚀');
@@ -50,6 +57,7 @@ const ContactForm = () => {
       setStatus('An error occurred. Please try again later.');
     }
   };
+
 
   return (
     <section className="relative flex flex-col min-h-screen overflow-hidden bg-gradient-to-b from-light-footer to-light-menuText dark:from-dark-background dark:to-dark-footer py-12">
@@ -71,6 +79,7 @@ const ContactForm = () => {
         />
       </motion.div>
 
+
       {/* Form with motion animation */}
       <motion.div
         className="relative w-11/12 md:w-[817px] h-auto min-h-[400px] mx-auto mt-12 mb-28 md:mb-28 lg:h-[500px] lg:mt-28"
@@ -81,6 +90,7 @@ const ContactForm = () => {
         {/* Background rectangles */}
         <div className="absolute w-full h-full bg-[#192A51] border-4 rounded-2xl border-black left-1 md:left-[27px] top-1 md:top-[17px]"></div>
         <div className="absolute w-full h-full bg-[#7493AF] border-4 rounded-2xl border-black"></div>
+
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-8">
@@ -98,6 +108,7 @@ const ContactForm = () => {
               />
             </div>
 
+
             {/* Email input */}
             <div className="relative">
               <input
@@ -111,6 +122,7 @@ const ContactForm = () => {
               />
             </div>
 
+
             {/* Message textarea */}
             <div className="relative">
               <textarea
@@ -123,8 +135,9 @@ const ContactForm = () => {
               ></textarea>
             </div>
 
+
             {/* Submit button */}
-            <div className="flex justify-center mb-4"> {/* Added mb-4 for spacing below the button */}
+            <div className="flex justify-center space-y-4"> {/* Added mb-4 for spacing below the button */}
               <button
                 type="submit"
                 className="w-[150px] md:w-[185px] h-[40px] md:h-[47px] bg-[#FB6FC6] border-4 border-black rounded-2xl font-mono font-black text-[#192A51] text-base md:text-xl hover:bg-[#FCFF6C] hover:text-black transition-all"
@@ -133,10 +146,11 @@ const ContactForm = () => {
               </button>
             </div>
 
+
             {/* Status message */}
-            <div className="absolute w-full text-center mt-4"> {/* Increased spacing with mt-4 for better visibility */}
+            <div className="absolute w-full text-center"> {/* Increased spacing with mt-4 for better visibility */}
               {status && (
-                <p className="font-bold">{status}</p>
+                <p className="font-bold text-sm md:text-base">{status}</p>
               )}
             </div>
           </div>
@@ -146,6 +160,6 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
 
+export default ContactForm;
 
