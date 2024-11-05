@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden relative">
       {/* Hero Section */}
-      <div className="relative flex flex-col flex-grow min-h-screen bg-gradient-to-b from-light-footer to-light-sectionPrimary dark:from-dark-background dark:to-dark-footer">
+      <div className="relative flex flex-col flex-grow min-h-screen bg-gradient-to-b from-light-header to-light-sectionPrimary dark:from-dark-background dark:to-dark-footer">
         {/* Header */}
         <Header theme={theme} />
 

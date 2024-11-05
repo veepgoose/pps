@@ -17,7 +17,7 @@ module.exports = {
           background: '#FFF6E3',
           text: '#192A51',
           header: '#7493AF',
-          footer: '#7493AF',
+          footer: '#B1CCE4',
           menuBackground: '#FB6FC6',
           menuText: '#192A51',
           sectionPrimary: '#FB6FC6',
