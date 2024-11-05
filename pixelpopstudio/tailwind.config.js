@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'sans-serif', 'Karla', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
@@ -17,7 +17,7 @@ module.exports = {
           background: '#FFF6E3',
           text: '#192A51',
           header: '#7493AF',
-          footer: '#B1CCE4',
+          footer: '#7493AF',
           menuBackground: '#FB6FC6',
           menuText: '#192A51',
           sectionPrimary: '#FB6FC6',
