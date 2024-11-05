@@ -48,7 +48,7 @@ const MiniPackages = () => {
 
 
   return (
-    <section className="relative py-12 text-center flex flex-col min-h-screen overflow-hidden bg-gradient-to-b from-light-footer to-light-menuText dark:from-dark-background dark:to-dark-footer">
+    <section className="relative py-12 text-center flex flex-col min-h-screen overflow-hidden bg-gradient-to-b from-light-footer to-light-header dark:from-dark-background dark:to-dark-footer">
       {/* Heading and Text with motion */}
       <div className="relative z-10">
         <motion.h2
