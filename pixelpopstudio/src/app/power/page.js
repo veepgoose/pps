@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import FooterAlt from '@/components/FooterAlt';
 import SiteHeader from '@/components/SiteHeader';
-import ThemeToggle from '@/components/ThemeToggle';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -29,28 +28,11 @@ const iconVariant = {
 };
 
 export default function PowerPackage() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
-  };
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-footer">
-      <SiteHeader>
-        <ThemeToggle darkMode={theme === 'dark'} toggleTheme={toggleTheme} />
-      </SiteHeader>
+      <SiteHeader />
+       
 
       {/* Starry Background Section */}
       <div className="relative flex flex-col items-center justify-start flex-grow pt-16 pb-2 md:pt-24 lg:-mt-6 lg:pb-8">
@@ -176,7 +158,7 @@ export default function PowerPackage() {
         </div>
       </motion.div>
 
-      <FooterAlt theme={theme} />
+      <FooterAlt />
     </div>
   );
 }

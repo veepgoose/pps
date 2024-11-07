@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import FooterAlt from '@/components/FooterAlt';
 import SiteHeader from '@/components/SiteHeader';
-import ThemeToggle from '@/components/ThemeToggle';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -29,22 +28,7 @@ const imageVariant = {
 };
 
 export default function AboutPage() {
-  const [theme, setTheme] = useState('light');
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
-  };
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-footer ">
@@ -147,7 +131,7 @@ export default function AboutPage() {
         </div>
       </motion.div>
 
-      <FooterAlt theme={theme} />
+      <FooterAlt />
     </div>
   );
 }

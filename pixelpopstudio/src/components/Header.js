@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
 import Menu from './Menu';
-import Image from 'next/image';  // Import Image component
+import Image from 'next/image';
 import { h1Variant } from '@/utils/motion';
 
 // Animation for the two-line burger menu icon
@@ -28,7 +27,7 @@ const Header = () => {
       {/* Navigation Bar */}
       <div className="min-h-20 w-full lg:min-h-36">
         <div className="absolute top-3 inset-x-0 px-4">
-          <header className="flex justify-end items-center"> {/* Align everything to the right */}
+          <header className="flex justify-end items-center">
             {/* Nav Links (Desktop) */}
             <nav className="hidden lg:flex space-x-10 text-lg font-black font-mono">
               <a href="#services" className="hover:text-[#FCFF6C] transition-colors">Services</a>
@@ -64,16 +63,15 @@ const Header = () => {
       <div className="flex justify-center mt-6">
         {/* Replace the h1 text with the image (centered with motion animation) */}
         <motion.div
-  className="w-2/3 lg:w-2/6 z-20"
-  variants={h1Variant}
-  initial="initial"
-  animate="animate"
->
-  <h1 className="text-6xl lg:text-9xl leading-loose lg:tracking-widest lg:leading-snug text-center font-extrabold font-karla text-[#192A51]">
-    PIXEL POP STUDIO
-  </h1>
-</motion.div>
-
+          className="w-2/3 lg:w-2/6 z-20"
+          variants={h1Variant}
+          initial="initial"
+          animate="animate"
+        >
+          <h1 className="text-6xl lg:text-9xl leading-loose lg:tracking-widest lg:leading-snug text-center font-extrabold font-karla text-[#192A51]">
+            PIXEL POP STUDIO
+          </h1>
+        </motion.div>
       </div>
 
       {/* Mobile Menu (Shown when burger is clicked) */}
@@ -94,6 +92,7 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
 

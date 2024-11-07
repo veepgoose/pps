@@ -1,7 +1,5 @@
 'use client';
 
-
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -27,26 +25,7 @@ const packageVariant = {
 
 
 const MiniPackages = () => {
-  const [theme, setTheme] = useState('light');
-
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
-
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
-  };
-
-
+  
   return (
     <section className="relative py-12 text-center flex flex-col min-h-screen overflow-hidden bg-gradient-to-b from-light-footer to-light-header dark:from-dark-background dark:to-dark-footer">
       {/* Heading and Text with motion */}
