@@ -10,7 +10,7 @@ import MiniAbout from '@/components/MiniAbout';
 import MiniPackages from '@/components/MiniPackages';
 import CallToAction from '@/components/CallToAction';
 import ContactForm from '@/components/ContactForm';
-import { starryHeroVariant1, starryHeroVariant2, logoVariant } from '@/utils/motion'; // Import motion variants
+import { starryHeroVariant1, starryHeroVariant2, hillVariantLeft, hillVariantRight } from '@/utils/motion'; // Import motion variants
 
 // Animation variants for the clouds
 const cloudVariant = {
@@ -102,7 +102,49 @@ export default function Home() {
             animate="animate"
           />
         </motion.div>
+
+{/* Left Hill */}
+<motion.div
+  className="absolute bottom-0 left-0 w-2/3 lg:w-2/3 z-10 scale-110 md:scale-100" // Scale up slightly on mobile, reset on larger screens
+  variants={hillVariantLeft}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/HillLeft.svg"
+    alt="Hill 1"
+    width={1920}
+    height={400}
+    className="object-cover"
+  />
+</motion.div>
+
+{/* Right Hill */}
+<motion.div
+  className="absolute bottom-0 right-0 w-3/4 lg:w-3/4 z-20 scale-110 md:scale-100" // Same approach as Left Hill
+  variants={hillVariantRight}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/HillRight.svg"
+    alt="Hill 2"
+    width={1920}
+    height={400}
+    className="object-cover"
+  />
+</motion.div>
+
+
+
+
+
+
+
+        
       </div>
+
+      
 
       {/* Services Section */}
       <div id="services">

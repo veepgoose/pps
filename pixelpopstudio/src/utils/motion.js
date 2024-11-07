@@ -61,4 +61,30 @@ export const logoVariant = {
     closed: { rotate: 0, y: 0, transition: { duration: 0.3 } }
   };
   
-  
+  // Define animation variants for the hills
+  export const hillVariantLeft = {
+    initial: { y: '100%', opacity: 0 },
+    animate: {
+      y: '0%',
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        ease: 'easeOut',
+        delay: 0.5, // Slightly earlier delay for the left hill
+      },
+    },
+  };
+
+  // Right Hill Animation Variant
+export const hillVariantRight = {
+  initial: { y: '100%', opacity: 0 },
+  animate: {
+    y: '0%',
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      ease: 'easeOut',
+      delay: 0.6, // Slightly later delay for the right hill
+    },
+  },
+};
