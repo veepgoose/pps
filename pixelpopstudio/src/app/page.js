@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden relative">
       {/* Hero Section */}
-      <div className="relative flex flex-col flex-grow min-h-screen bg-gradient-to-b from-light-header to-light-sectionPrimary">
+      <div className="relative flex flex-col flex-grow w-full min-h-screen bg-gradient-to-b from-light-header to-light-sectionPrimary">
         {/* Header */}
         <Header />
 
@@ -118,7 +118,7 @@ export default function Home() {
 
          {/* Grass Layer */}
          <motion.div
-          className="absolute bottom-0 w-full scale-x-110 md:w-full z-30" // Ensures it overlaps the hills
+          className="absolute bottom-0 w-full md:w-full z-30" // Ensures it overlaps the hills
           variants={grassVariant}
           initial="initial"
           animate="animate"
