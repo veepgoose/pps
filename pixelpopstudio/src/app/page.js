@@ -118,7 +118,7 @@ export default function Home() {
 
          {/* Grass Layer */}
          <motion.div
-          className="absolute bottom-0 w-[105%] lg:w-full z-30" // Ensures it overlaps the hills
+          className="absolute bottom-0 w-full scale-x-110 md:w-full z-30" // Ensures it overlaps the hills
           variants={grassVariant}
           initial="initial"
           animate="animate"

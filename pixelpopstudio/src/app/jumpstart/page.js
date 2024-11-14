@@ -83,7 +83,7 @@ export default function JumpstartPackage() {
         >
           <h1 className="text-2xl font-bold mb-4">Pixel Pop Jumpstart</h1>
           <p className="italic mb-2">Your launchpad to a standout online presence</p>
-          <p className="text-2xl font-bold">£749</p>
+          <p className="text-2xl font-bold">£999</p>
         </motion.div>
       </div>
 
