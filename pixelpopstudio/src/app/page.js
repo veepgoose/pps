@@ -9,7 +9,7 @@ import MiniAbout from '@/components/MiniAbout';
 import MiniPackages from '@/components/MiniPackages';
 import CallToAction from '@/components/CallToAction';
 import ContactForm from '@/components/ContactForm';
-import { starryHeroVariant1, starryHeroVariant2, hillVariantLeft, hillVariantRight } from '@/utils/motion';
+import { starryHeroVariant1, starryHeroVariant2, hillVariantLeft, hillVariantRight, grassVariant } from '@/utils/motion';
 
 // Animation variants for the clouds
 const cloudVariant = {
@@ -112,6 +112,22 @@ export default function Home() {
             alt="Hill 2"
             width={1920}
             height={400}
+            className="object-cover"
+          />
+        </motion.div>
+
+         {/* Grass Layer */}
+         <motion.div
+          className="absolute bottom-0 w-full z-30" // Ensures it overlaps the hills
+          variants={grassVariant}
+          initial="initial"
+          animate="animate"
+        >
+          <Image
+            src="/Grass.svg"
+            alt="Grass Layer"
+            width={1920}
+            height={150} // Adjust height as needed
             className="object-cover"
           />
         </motion.div>

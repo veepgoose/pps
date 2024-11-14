@@ -88,3 +88,17 @@ export const hillVariantRight = {
     },
   },
 };
+
+// Grass animation variant
+export const grassVariant = {
+  initial: { y: '100%', opacity: 0 },
+  animate: {
+    y: '0%',
+    opacity: 1,
+    transition: {
+      duration: 1.5, // Adjust duration for smoothness
+      ease: 'easeInOut',
+      delay: 1.5, // Set delay to start after the hills
+    },
+  },
+};
