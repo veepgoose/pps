@@ -24,7 +24,7 @@ const cloudVariantRight = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen w-full overflow-hidden relative">
+    <div className="flex flex-col min-h-screen  overflow-hidden relative">
       {/* Hero Section */}
       <div className="relative flex flex-col flex-grow w-full min-h-screen bg-gradient-to-b from-light-header to-light-sectionPrimary">
         {/* Header */}
