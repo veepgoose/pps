@@ -1,25 +1,25 @@
 export default function SocialIcons() {
     return (
-      <div className="flex justify-center items-center space-x-4">
+      <div className="flex justify-center items-center space-x-2">
         <a href="https://www.linkedin.com/in/vplatt/" aria-label="LinkedIn">
           <img
-            src="/LinkedInIcon.svg"
+            src="/LinkedIconPink.svg"
             alt="LinkedIn"
-            className="w-16 h-16"
+            className="w-16 h-18"
           />
         </a>
         <a href="https://www.instagram.com/pixel.pop.studio" aria-label="Instagram">
           <img
-            src="/InstagramIcon.svg"
+            src="/InstaIconPink.svg"
             alt="Instagram"
-            className="w-16 h-16"
+            className="w-16 h-18"
           />
         </a>
         <a href="mailto:vic@pixelpopstudio.co.uk" aria-label="Email">
           <img
-            src="/EmailIcon.svg"
+            src="/EmailIconPink.svg"
             alt="Email"
-            className="w-16 h-16"
+            className="w-16 h-18"
           />
         </a>
       </div>
