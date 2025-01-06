@@ -92,7 +92,7 @@ export default function Home() {
           animate="animate"
         >
           <Image
-            src="/HillLeft.svg"
+            src="/HillLeft.png"
             alt="Hill 1"
             width={1920}
             height={400}
@@ -108,7 +108,7 @@ export default function Home() {
           animate="animate"
         >
           <Image
-            src="/HillRight.svg"
+            src="/HillRight.png"
             alt="Hill 2"
             width={1920}
             height={400}
@@ -124,7 +124,7 @@ export default function Home() {
           animate="animate"
         >
           <Image
-            src="/Grass.svg"
+            src="/Grass.png"
             alt="Grass Layer"
             width={1920}
             height={150} // Adjust height as needed
