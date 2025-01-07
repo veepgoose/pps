@@ -60,19 +60,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mt-6">
-        {/* Replace the h1 text with the image (centered with motion animation) */}
-        <motion.div
-          className="w-2/3 lg:w-2/6 z-20"
-          variants={h1Variant}
-          initial="initial"
-          animate="animate"
-        >
-          <h1 className="text-6xl lg:text-9xl leading-loose lg:tracking-widest lg:leading-snug text-center font-extrabold font-karla text-[#192A51]">
-            PIXEL POP STUDIO
-          </h1>
-        </motion.div>
-      </div>
+    
 
       {/* Mobile Menu (Shown when burger is clicked) */}
       {isMenuOpen && (

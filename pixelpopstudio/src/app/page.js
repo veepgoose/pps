@@ -9,17 +9,17 @@ import MiniAbout from '@/components/MiniAbout';
 import MiniPackages from '@/components/MiniPackages';
 import CallToAction from '@/components/CallToAction';
 import ContactForm from '@/components/ContactForm';
-import { starryHeroVariant1, starryHeroVariant2, hillVariantLeft, hillVariantRight, grassVariant } from '@/utils/motion';
+import { starryHeroVariant1, starryHeroVariant2, hillVariantLeft, hillVariantRight, grassVariant, bullVariant, kongVariant, rotundaVariant, h1Variant } from '@/utils/motion';
 
 // Animation variants for the clouds
 const cloudVariant = {
   initial: { opacity: 0, x: '-100vw' },
-  animate: { opacity: 1, x: 0, transition: { duration: 2, ease: 'easeInOut' } }
+  animate: { opacity: 1, x: 0, transition: { duration: 2, ease: 'easeInOut', delay: 1.8 } }
 };
 
 const cloudVariantRight = {
   initial: { opacity: 0, x: '100vw' },
-  animate: { opacity: 1, x: 0, transition: { duration: 2, ease: 'easeInOut' } }
+  animate: { opacity: 1, x: 0, transition: { duration: 2, ease: 'easeInOut', delay: 1.8 } }
 };
 
 export default function Home() {
@@ -31,37 +31,74 @@ export default function Home() {
         <Header />
 
         {/* Animated Clouds */}
+     
         <motion.div
-          className="absolute top-[20%] left-[2%] w-1/4 sm:top-[30%] sm:left-[5%] md:left-[10%] z-10"
+          className="absolute top-[20%] right-[2%] w-1/4 sm:top-[30%] sm:right-[8%] md:right-[25%] md:top-[7%] z-10"
           variants={cloudVariant}
           initial="initial"
           animate="animate"
         >
-          <Image src="/Cloud.svg" alt="Cloud" width={300} height={150} />
+          <Image src="/Cloud.svg" alt="Small Cloud" width={160} height={75} />
         </motion.div>
-        <motion.div
-          className="absolute top-[7%] left-[17%] w-1/6 sm:top-[10%] sm:left-[15%] md:left-[30%] z-10"
-          variants={cloudVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <Image src="/Cloud.svg" alt="Small Cloud" width={150} height={75} />
-        </motion.div>
-        <motion.div
-          className="absolute top-[20%] right-[2%] w-1/4 sm:top-[30%] sm:right-[8%] md:right-[5%] z-10"
+
+          <motion.div
+          className="absolute top-[20%] right-[2%] w-1/4 sm:top-[30%] sm:right-[8%] md:right-[10%] md:top-[15%] z-10"
           variants={cloudVariantRight}
           initial="initial"
           animate="animate"
         >
-          <Image src="/Cloud.svg" alt="Cloud" width={300} height={150} />
+          <Image src="/Cloud.svg" alt="Cloud" width={200} height={150} />
         </motion.div>
         <motion.div
-          className="absolute top-[7%] right-[17%] w-1/6 sm:top-[10%] sm:right-[20%] md:right-[24%] z-10"
+          className="absolute top-[10%] right-[17%] w-1/6 sm:top-[10%] sm:right-[20%] md:right-[0%] md:top-[5%] z-10"
           variants={cloudVariantRight}
           initial="initial"
           animate="animate"
         >
           <Image src="/Cloud.svg" alt="Small Cloud" width={150} height={75} />
+        </motion.div>
+
+         {/* PPS Logo */}
+         <motion.div
+          className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-1/2 md:w-[80%] md:left-[6%] md:top-[8%] z-20"
+          variants={h1Variant}
+          initial="initial"
+          animate="animate"
+        >
+          <Image
+            src="/Logo1.svg"
+            alt="Pixel Pop Studio Logo"
+            width={850}
+            height={800}
+          />
+        </motion.div>
+
+           {/* Animated Illustrations */}
+           <motion.div
+          className="absolute bottom-[9%] left-[7%] w-[20%] sm:w-[15%] md:w-1/2 z-40"
+          variants={bullVariant}
+          initial="initial"
+          animate="animate"
+        >
+          <Image src="/Bull.png" alt="Bull" width={400} height={400} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-[0%] right-[7%] w-[25%] sm:w-[20%] md:w-[70%] md:right-[-33%] z-40"
+          variants={kongVariant}
+          initial="initial"
+          animate="animate"
+        >
+          <Image src="/KongStatue.png" alt="King Kong Statue" width={600} height={600} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-[12%] right-[5%] w-[15%] sm:w-[12%] md:w-[17%] md:right-[3%] z-20"
+          variants={rotundaVariant}
+          initial="initial"
+          animate="animate"
+        >
+          <Image src="/Rotunda.png" alt="Rotunda" width={350} height={350} />
         </motion.div>
 
         {/* Starry background with animation */}

@@ -84,7 +84,7 @@ export const hillVariantRight = {
     transition: {
       duration: 1.5,
       ease: 'easeOut',
-      delay: 0.6, // Slightly later delay for the right hill
+      delay: 0.7, // Slightly later delay for the right hill
     },
   },
 };
@@ -98,7 +98,50 @@ export const grassVariant = {
     transition: {
       duration: 1.5, // Adjust duration for smoothness
       ease: 'easeInOut',
-      delay: 1.5, // Set delay to start after the hills
+      delay: 1.2, // Set delay to start after the hills
     },
   },
 };
+
+// Bull Animation Variant
+export const bullVariant = {
+  initial: { opacity: 0, x: -200 }, // Start off-screen to the left
+  animate: {
+    opacity: 1,
+    x: 0, // Move to its final position
+    transition: {
+      duration: 2.2,
+      ease: 'easeOut',
+      delay: 1.6,
+    },
+  },
+};
+
+// King Kong Animation Variant
+export const kongVariant = {
+  initial: { opacity: 0, scale: 0.8 }, // Start smaller and invisible
+  animate: {
+    opacity: 1,
+    scale: 1, // Grow to full size
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+      delay:1.7,
+    },
+  },
+};
+
+// Rotunda Animation Variant
+export const rotundaVariant = {
+  initial: { opacity: 0, x: 200 }, // Start off-screen to the right
+  animate: {
+    opacity: 1,
+    x: 0, // Move to its final position
+    transition: {
+      duration: 1.2,
+      ease: 'easeOut',
+      delay: 1.8,
+    },
+  },
+};
+
