@@ -60,7 +60,7 @@ export default function Home() {
 
          {/* PPS Logo */}
          <motion.div
-          className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-1/2 md:w-[80%] md:left-[6%] md:top-[8%] z-20"
+          className="absolute top-[15%] left-1/2 transform -translate-x-1/2 w-1/2 md:w-[80%] md:left-[6%] md:top-[8%] z-20"
           variants={h1Variant}
           initial="initial"
           animate="animate"
