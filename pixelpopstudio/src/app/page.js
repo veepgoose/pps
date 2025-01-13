@@ -155,19 +155,18 @@ export default function Home() {
 
          {/* Grass Layer */}
          <motion.div
-          className="absolute bottom-0 w-full scale-110 md:w-full z-30" // Ensures it overlaps the hills
+          className="absolute bottom-0 w-screen h-[30px] md:h-[150px] lg:h-[150px] z-30" // Ensures it overlaps the hills
           variants={grassVariant}
           initial="initial"
           animate="animate"
         >
-          <Image
-            src="/Grass.png"
-            alt="Grass Layer"
-            width={1920}
-            height={150} // Adjust height as needed
-            className="object-cover"
-          />
-        </motion.div>
+       <Image
+    src="/Grass.png"
+    alt="Grass Layer"
+    layout="fill" // Makes the image fill its parent container
+    className="object-cover" // Ensures proper scaling without distortion
+  />
+</motion.div>
       </div>
 
       {/* Services Section */}
