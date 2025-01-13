@@ -33,13 +33,23 @@ export default function Home() {
         {/* Animated Clouds */}
      
         <motion.div
-          className="absolute top-[20%] right-[2%] w-1/4 sm:top-[30%] sm:right-[8%] md:right-[25%] md:top-[7%] z-10"
-          variants={cloudVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <Image src="/Cloud.svg" alt="Small Cloud" width={160} height={75} />
-        </motion.div>
+  className="absolute top-[7%] right-[35%] w-[20vw] sm:w-[15vw] z-10"
+  variants={cloudVariant}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/Cloud.svg"
+    alt="Small Cloud"
+    layout="intrinsic" // Automatically scales based on the intrinsic aspect ratio
+    width={160} // Replace with the actual width of the image in pixels
+    height={160
+
+    } // Replace with the actual height of the image in pixels
+    className="object-cover"
+  />
+</motion.div>
+
 
           <motion.div
           className="absolute top-[20%] right-[2%] w-1/4 sm:top-[30%] sm:right-[8%] md:right-[10%] md:top-[15%] z-10"
@@ -60,46 +70,74 @@ export default function Home() {
 
          {/* PPS Logo */}
          <motion.div
-          className="absolute top-[15%] left-1/2 transform -translate-x-1/2 w-1/2 md:w-[80%] md:left-[6%] md:top-[8%] z-20"
-          variants={h1Variant}
-          initial="initial"
-          animate="animate"
-        >
-          <Image
-            src="/Logo1.svg"
-            alt="Pixel Pop Studio Logo"
-            width={850}
-            height={800}
-          />
-        </motion.div>
+  className="absolute top-[15%] left-1/2 transform -translate-x-1/2 w-1/2 md:w-[45%] md:left-[6%] md:top-[8%] z-20 aspect-[1450/850]"
+  variants={h1Variant}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/Logo1.svg"
+    alt="Pixel Pop Studio Logo"
+    layout="responsive"
+    width={1450} 
+    height={850} 
+    className="object-cover"
+  />
+</motion.div>
+
 
            {/* Animated Illustrations */}
            <motion.div
-          className="absolute bottom-[9%] left-[7%] w-[20%] sm:w-[15%] md:w-1/2 z-40"
-          variants={bullVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <Image src="/Bull.png" alt="Bull" width={400} height={400} />
-        </motion.div>
+  className="absolute bottom-[8%] left-[6%] w-[20vw] sm:w-[22vw] z-40 aspect-[962/728]"
+  variants={bullVariant}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/Bull.svg"
+    alt="Bull Illustration"
+    layout="responsive" // Makes it scale responsively
+    width={962} // Width from viewBox
+    height={728} // Height from viewBox
+    className="object-cover"
+  />
+</motion.div>
+
+
+<motion.div
+  className="absolute bottom-[0.5%] right-[5.5%] w-[30vw] sm:w-[50vw] md:w-[31vw] z-40 aspect-[618/756]"
+  variants={kongVariant}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/Kong.svg"
+    alt="King Kong Statue"
+    layout="responsive" 
+    width={618} 
+    height={756} 
+    className="object-cover"
+  />
+</motion.div>
+
 
         <motion.div
-          className="absolute bottom-[0%] right-[7%] w-[25%] sm:w-[20%] md:w-[70%] md:right-[-33%] z-40"
-          variants={kongVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <Image src="/KongStatue.png" alt="King Kong Statue" width={600} height={600} />
-        </motion.div>
+  className="absolute bottom-[20%] right-[4.5%] w-[13vw] sm:w-[13vw] aspect-[331/606] z-20"
+  variants={rotundaVariant}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/Rotunda.svg"
+    alt="Rotunda Illustration"
+    layout="responsive" 
+    width={331} 
+    height={606} 
+    className="object-cover"
+  />
+</motion.div>
 
-        <motion.div
-          className="absolute bottom-[12%] right-[5%] w-[15%] sm:w-[12%] md:w-[17%] md:right-[3%] z-20"
-          variants={rotundaVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <Image src="/Rotunda.png" alt="Rotunda" width={350} height={350} />
-        </motion.div>
+
 
         {/* Starry background with animation */}
         <motion.div className="absolute inset-0 w-full h-full flex justify-center items-center z-0 pointer-events-none overflow-hidden">
@@ -122,51 +160,61 @@ export default function Home() {
         </motion.div>
 
         {/* Left Hill */}
-        <motion.div
-          className="absolute bottom-0 left-0 w-2/3 lg:w-2/3 z-10 scale-110 md:scale-100"
-          variants={hillVariantLeft}
-          initial="initial"
-          animate="animate"
-        >
-          <Image
-            src="/HillLeft.png"
-            alt="Hill 1"
-            width={1920}
-            height={400}
-            className="object-cover"
-          />
-        </motion.div>
 
-        {/* Right Hill */}
-        <motion.div
-          className="absolute bottom-0 right-0 w-3/4 lg:w-3/4 z-20 scale-110 md:scale-100"
-          variants={hillVariantRight}
-          initial="initial"
-          animate="animate"
-        >
-          <Image
-            src="/HillRight.png"
-            alt="Hill 2"
-            width={1920}
-            height={400}
-            className="object-cover"
-          />
-        </motion.div>
-
-         {/* Grass Layer */}
-         <motion.div
-          className="absolute bottom-0 w-screen h-[30px] md:h-[150px] lg:h-[150px] z-30" // Ensures it overlaps the hills
-          variants={grassVariant}
-          initial="initial"
-          animate="animate"
-        >
-       <Image
-    src="/Grass.png"
-    alt="Grass Layer"
-    layout="fill" // Makes the image fill its parent container
-    className="object-cover" // Ensures proper scaling without distortion
-  />
+<motion.div
+  className="absolute bottom-0 left-0 w-2/3 lg:w-2/3 z-10 scale-110 md:scale-100"
+  variants={hillVariantLeft}
+  initial="initial"
+  animate="animate"
+>
+  <div className="w-full h-auto">
+    <Image
+      src="/HillLeft.svg"
+      alt="Hill 1"
+      layout="responsive" // Ensures the SVG scales with its parent container
+      width={1920} // Use viewBox width of the SVG
+      height={400} // Use viewBox height of the SVG
+      className="object-cover"
+    />
+  </div>
 </motion.div>
+
+{/* Right Hill */}
+<motion.div
+  className="absolute bottom-0 right-0 w-3/4 lg:w-3/4 z-20 scale-110 md:scale-100"
+  variants={hillVariantRight}
+  initial="initial"
+  animate="animate"
+>
+  <div className="w-full h-auto">
+    <Image
+      src="/HillRight.svg"
+      alt="Hill 2"
+      layout="responsive" // Scales smoothly with the container
+      width={1920} // SVG viewBox width
+      height={400} // SVG viewBox height
+      className="object-cover"
+    />
+  </div>
+</motion.div>
+
+{/* Grass Layer */}
+<motion.div
+  className="absolute bottom-0 w-screen h-[30px] md:h-[150px] lg:h-[150px] z-30"
+  variants={grassVariant}
+  initial="initial"
+  animate="animate"
+>
+  <div className="w-full h-full">
+    <Image
+      src="/Grass.svg"
+      alt="Grass Layer"
+      layout="fill" // Fills its parent container
+      className="object-cover" // Prevents distortion
+    />
+  </div>
+</motion.div>
+
       </div>
 
       {/* Services Section */}
