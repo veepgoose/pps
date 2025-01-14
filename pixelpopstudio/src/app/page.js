@@ -68,22 +68,25 @@ export default function Home() {
           <Image src="/Cloud.svg" alt="Small Cloud" width={150} height={75} />
         </motion.div>
 
-         {/* PPS Logo */}
-         <motion.div
-  className="absolute top-[15%] left-1/2 transform -translate-x-1/2 w-1/2 md:w-[45%] md:left-[6%] md:top-[8%] z-20 aspect-[1450/850]"
+{/* PPS Logo */}
+<motion.div
+  className="absolute top-[10%] w-full flex justify-center md:top-[8%] md:justify-start md:left-[6%] z-20"
   variants={h1Variant}
   initial="initial"
   animate="animate"
 >
-  <Image
-    src="/Logo1.svg"
-    alt="Pixel Pop Studio Logo"
-    layout="responsive"
-    width={1450} 
-    height={850} 
-    className="object-cover"
-  />
+  <div className="w-[85vw] sm:w-[70vw] md:w-[45%] aspect-[1450/850]">
+    <Image
+      src="/Logo1.svg"
+      alt="Pixel Pop Studio Logo"
+      layout="responsive"
+      width={1450}
+      height={850}
+      className="object-cover"
+    />
+  </div>
 </motion.div>
+
 
 
            {/* Animated Illustrations */}
