@@ -219,21 +219,45 @@ export default function Home() {
 </motion.div>
 
 {/* Grass Layer */}
-<motion.div
-  className="absolute bottom-0 w-screen h-[30px] md:h-[150px] lg:h-[150px] z-30"
-  variants={grassVariant}
-  initial="initial"
-  animate="animate"
->
-  <div className="w-full h-full">
-    <Image
-      src="/Grass.svg"
-      alt="Grass Layer"
-      layout="fill" // Fills its parent container
-      className="object-cover" // Prevents distortion
-    />
-  </div>
-</motion.div>
+<div>
+  {/* Mobile Grass Layer */}
+  <motion.div
+    className="absolute bottom-0 w-full h-auto md:hidden z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/GrassMobile.svg"
+        alt="Grass Layer for Mobile"
+        width={393.005} // ViewBox width of the mobile SVG
+        height={68.73} // ViewBox height of the mobile SVG
+        layout="responsive" // Makes it responsive
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Desktop Grass Layer */}
+  <motion.div
+    className="absolute bottom-0 w-full h-[150px] hidden md:block lg:h-[150px] z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/Grass.svg"
+        alt="Grass Layer for Desktop"
+        layout="fill" // Fills its parent container
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+</div>
+
+
 
       </div>
 
