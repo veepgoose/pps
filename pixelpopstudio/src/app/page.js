@@ -31,9 +31,9 @@ export default function Home() {
         <Header />
 
         {/* Animated Clouds */}
-     
-        <motion.div
-  className="absolute top-[7%] right-[35%] w-[20vw] sm:w-[15vw] z-10"
+{/* Left Cloud */}
+<motion.div
+  className="absolute top-[42%] right-[70%] w-[15vw] md:right-[35%] md:top-[7%] sm:w-[15vw] sm:right-[35%] z-10"
   variants={cloudVariant}
   initial="initial"
   animate="animate"
@@ -41,32 +41,49 @@ export default function Home() {
   <Image
     src="/Cloud.svg"
     alt="Small Cloud"
-    layout="intrinsic" // Automatically scales based on the intrinsic aspect ratio
-    width={160} // Replace with the actual width of the image in pixels
+    layout="intrinsic" 
+    width={160} 
     height={160
 
-    } // Replace with the actual height of the image in pixels
+    }
     className="object-cover"
   />
 </motion.div>
 
+{/* Middle Cloud */}
+<motion.div
+  className="absolute top-[50%] right-[35%] w-[18vw] sm:w-[12vw] md:w-[10.5vw] sm:top-[30%] sm:right-[8%] md:right-[24%] md:top-[15%] z-10"
+  variants={cloudVariantRight}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/Cloud.svg"
+    alt="Cloud"
+    layout="responsive"
+    width={200} // SVG width
+    height={150} // SVG height
+    className="object-cover"
+  />
+</motion.div>
 
-          <motion.div
-          className="absolute top-[20%] right-[2%] w-1/4 sm:top-[30%] sm:right-[8%] md:right-[10%] md:top-[15%] z-10"
-          variants={cloudVariantRight}
-          initial="initial"
-          animate="animate"
-        >
-          <Image src="/Cloud.svg" alt="Cloud" width={200} height={150} />
-        </motion.div>
-        <motion.div
-          className="absolute top-[10%] right-[17%] w-1/6 sm:top-[10%] sm:right-[20%] md:right-[0%] md:top-[5%] z-10"
-          variants={cloudVariantRight}
-          initial="initial"
-          animate="animate"
-        >
-          <Image src="/Cloud.svg" alt="Small Cloud" width={150} height={75} />
-        </motion.div>
+{/* Right Cloud */}
+<motion.div
+  className="absolute top-[40%] right-[15%] w-[12vw] sm:w-[8vw] md:w-[8vw] sm:top-[10%] sm:right-[20%] md:right-[8%] md:top-[5%] z-10"
+  variants={cloudVariantRight}
+  initial="initial"
+  animate="animate"
+>
+  <Image
+    src="/Cloud.svg"
+    alt="Small Cloud"
+    layout="responsive"
+    width={150} // SVG width
+    height={75} // SVG height
+    className="object-cover"
+  />
+</motion.div>
+
 
 {/* PPS Logo */}
 <motion.div
