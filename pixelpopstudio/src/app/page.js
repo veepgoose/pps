@@ -198,7 +198,7 @@ export default function Home() {
       alt="Left Hill for Mobile"
       layout="responsive"
       width={393}
-      height={100}
+      height={93}
       className="object-cover"
     />
   </div>
@@ -238,8 +238,8 @@ export default function Home() {
       <Image
         src="/RightHillMobile.svg"
         alt="Right Hill for Mobile"
-        width={393.005} // ViewBox width of the mobile SVG
-        height={68.73} // ViewBox height of the mobile SVG
+        width={390} // ViewBox width of the mobile SVG
+        height={98} // ViewBox height of the mobile SVG
         layout="responsive"
         className="object-cover"
       />
@@ -272,6 +272,9 @@ export default function Home() {
   {/* Mobile Grass Layer */}
   <motion.div
     className="absolute bottom-0 w-full md:hidden z-30"
+    style={{
+      marginLeft: '-1px', // Slight negative margin to fill the gap
+    }}
     variants={grassVariant}
     initial="initial"
     animate="animate"
