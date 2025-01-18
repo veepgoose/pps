@@ -107,8 +107,9 @@ export default function Home() {
 
 
            {/* Animated Illustrations */}
-           <motion.div
-  className="absolute bottom-[8%] left-[6%] w-[20vw] sm:w-[22vw] z-40 aspect-[962/728]"
+{/* Bull */}
+<motion.div
+  className="absolute bottom-[6%] left-[5%] w-[44vw] sm:w-[22vw] z-40 aspect-[962/728] md:left-[6%] md:bottom-[8%]"
   variants={bullVariant}
   initial="initial"
   animate="animate"
@@ -116,16 +117,16 @@ export default function Home() {
   <Image
     src="/Bull.svg"
     alt="Bull Illustration"
-    layout="responsive" // Makes it scale responsively
-    width={962} // Width from viewBox
-    height={728} // Height from viewBox
+    layout="responsive"
+    width={962}
+    height={728}
     className="object-cover"
   />
 </motion.div>
 
-
+{/* Kong */}
 <motion.div
-  className="absolute bottom-[0.5%] right-[5.5%] w-[30vw] sm:w-[50vw] md:w-[31vw] z-40 aspect-[618/756]"
+  className="absolute bottom-[3%] right-[3%] w-[65vw] sm:w-[50vw] md:w-[31vw] z-40 aspect-[618/756] md:right-[5.5%] md:bottom-[0.5%]"
   variants={kongVariant}
   initial="initial"
   animate="animate"
@@ -133,16 +134,16 @@ export default function Home() {
   <Image
     src="/Kong.svg"
     alt="King Kong Statue"
-    layout="responsive" 
-    width={618} 
-    height={756} 
+    layout="responsive"
+    width={618}
+    height={756}
     className="object-cover"
   />
 </motion.div>
 
-
-        <motion.div
-  className="absolute bottom-[20%] right-[4.5%] w-[13vw] sm:w-[13vw] aspect-[331/606] z-20"
+{/* Rotunda */}
+<motion.div
+  className="absolute bottom-[9%] right-[1.5%] w-[30vw] sm:w-[13vw] aspect-[331/606] z-20 md:bottom-[20%] md:right-[4.5%]"
   variants={rotundaVariant}
   initial="initial"
   animate="animate"
@@ -150,12 +151,13 @@ export default function Home() {
   <Image
     src="/Rotunda.svg"
     alt="Rotunda Illustration"
-    layout="responsive" 
-    width={331} 
-    height={606} 
+    layout="responsive"
+    width={331}
+    height={606}
     className="object-cover"
   />
 </motion.div>
+
 
 
 
