@@ -183,24 +183,27 @@ export default function Home() {
 
         {/* Left Hill */}
 <div>
-  {/* Mobile Left Hill */}
-  <motion.div
-    className="absolute bottom-0 left-0 w-full h-auto md:hidden z-10"
-    variants={hillVariantLeft}
-    initial="initial"
-    animate="animate"
-  >
-    <div className="w-full h-auto">
-      <Image
-        src="/LeftHillMobile.svg"
-        alt="Left Hill for Mobile"
-        width={393.005} // ViewBox width of the mobile SVG
-        height={68.73} // ViewBox height of the mobile SVG
-        layout="responsive"
-        className="object-cover"
-      />
-    </div>
-  </motion.div>
+<motion.div
+  className="absolute bottom-0 left-0 w-full md:w-2/3 z-10 scale-110 md:scale-100"
+  style={{
+    marginLeft: '-1px', // Slight negative margin to fill the gap
+  }}
+  variants={hillVariantLeft}
+  initial="initial"
+  animate="animate"
+>
+  <div className="w-full h-auto">
+    <Image
+      src="/LeftHillMobile.svg"
+      alt="Left Hill for Mobile"
+      layout="responsive"
+      width={393}
+      height={100}
+      className="object-cover"
+    />
+  </div>
+</motion.div>
+
 
   {/* Desktop Left Hill */}
   <motion.div
@@ -268,7 +271,7 @@ export default function Home() {
 <div>
   {/* Mobile Grass Layer */}
   <motion.div
-    className="absolute bottom-0 w-full h-auto md:hidden z-30"
+    className="absolute bottom-0 w-full md:hidden z-30"
     variants={grassVariant}
     initial="initial"
     animate="animate"
