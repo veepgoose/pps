@@ -108,55 +108,166 @@ export default function Home() {
 
            {/* Animated Illustrations */}
 {/* Bull */}
-<motion.div
-  className="absolute bottom-[6%] left-[5%] w-[44vw] sm:w-[22vw] z-40 aspect-[962/728] md:left-[6%] md:bottom-[8%]"
-  variants={bullVariant}
-  initial="initial"
-  animate="animate"
->
-  <Image
-    src="/Bull.svg"
-    alt="Bull Illustration"
-    layout="responsive"
-    width={962}
-    height={728}
-    className="object-cover"
-  />
-</motion.div>
+<div>
+  {/* Mobile Bull */}
+  <motion.div
+    className="absolute bottom-[6%] left-[5%] w-[44vw] sm:hidden z-40 aspect-[962/728]"
+    variants={bullVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Bull.svg"
+      alt="Bull Illustration for Mobile"
+      layout="responsive"
+      width={962}
+      height={728}
+      className="object-cover"
+    />
+  </motion.div>
+
+  {/* Tablet Bull */}
+  <motion.div
+    className="absolute bottom-[9.5%] left-[6%] hidden sm:block lg:hidden w-[42vw] z-40 aspect-[962/728]"
+    variants={bullVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Bull.svg"
+      alt="Bull Illustration for Tablet"
+      layout="responsive"
+      width={962}
+      height={728}
+      className="object-cover"
+    />
+  </motion.div>
+
+  {/* Desktop Bull */}
+  <motion.div
+    className="absolute bottom-[8%] left-[6%] hidden lg:block w-[22vw] z-40 aspect-[962/728]"
+    variants={bullVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Bull.svg"
+      alt="Bull Illustration for Desktop"
+      layout="responsive"
+      width={962}
+      height={728}
+      className="object-cover"
+    />
+  </motion.div>
+</div>
 
 {/* Kong */}
-<motion.div
-  className="absolute bottom-[3%] right-[3%] w-[65vw] sm:w-[50vw] md:w-[31vw] z-40 aspect-[618/756] md:right-[5.5%] md:bottom-[0.5%]"
-  variants={kongVariant}
-  initial="initial"
-  animate="animate"
->
-  <Image
-    src="/Kong.svg"
-    alt="King Kong Statue"
-    layout="responsive"
-    width={618}
-    height={756}
-    className="object-cover"
-  />
-</motion.div>
+<div>
+  {/* Mobile Kong */}
+  <motion.div
+    className="absolute bottom-[3%] right-[3%] w-[65vw] sm:hidden z-40 aspect-[618/756]"
+    variants={kongVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Kong.svg"
+      alt="King Kong Statue for Mobile"
+      layout="responsive"
+      width={618}
+      height={756}
+      className="object-cover"
+    />
+  </motion.div>
+
+  {/* Tablet Kong */}
+  <motion.div
+    className="absolute bottom-[5%] right-[5%] hidden sm:block lg:hidden w-[60vw] z-40 aspect-[618/756]"
+    variants={kongVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Kong.svg"
+      alt="King Kong Statue for Tablet"
+      layout="responsive"
+      width={618}
+      height={756}
+      className="object-cover"
+    />
+  </motion.div>
+
+  {/* Desktop Kong */}
+  <motion.div
+    className="absolute bottom-[0.5%] right-[5.5%] hidden lg:block w-[31vw] z-40 aspect-[618/756]"
+    variants={kongVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Kong.svg"
+      alt="King Kong Statue for Desktop"
+      layout="responsive"
+      width={618}
+      height={756}
+      className="object-cover"
+    />
+  </motion.div>
+</div>
 
 {/* Rotunda */}
-<motion.div
-  className="absolute bottom-[9%] right-[1.5%] w-[30vw] sm:w-[13vw] aspect-[331/606] z-20 md:bottom-[20%] md:right-[4.5%]"
-  variants={rotundaVariant}
-  initial="initial"
-  animate="animate"
->
-  <Image
-    src="/Rotunda.svg"
-    alt="Rotunda Illustration"
-    layout="responsive"
-    width={331}
-    height={606}
-    className="object-cover"
-  />
-</motion.div>
+<div>
+  {/* Mobile Rotunda */}
+  <motion.div
+    className="absolute bottom-[9%] right-[1.5%] w-[30vw] sm:hidden z-20 aspect-[331/606]"
+    variants={rotundaVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Rotunda.svg"
+      alt="Rotunda Illustration for Mobile"
+      layout="responsive"
+      width={331}
+      height={606}
+      className="object-cover"
+    />
+  </motion.div>
+
+  {/* Tablet Rotunda */}
+  <motion.div
+    className="absolute bottom-[15%] right-[3%] hidden sm:block lg:hidden w-[25vw] z-20 aspect-[331/606]"
+    variants={rotundaVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Rotunda.svg"
+      alt="Rotunda Illustration for Tablet"
+      layout="responsive"
+      width={331}
+      height={606}
+      className="object-cover"
+    />
+  </motion.div>
+
+  {/* Desktop Rotunda */}
+  <motion.div
+    className="absolute bottom-[20%] right-[4.5%] hidden lg:block w-[13vw] z-20 aspect-[331/606]"
+    variants={rotundaVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Rotunda.svg"
+      alt="Rotunda Illustration for Desktop"
+      layout="responsive"
+      width={331}
+      height={606}
+      className="object-cover"
+    />
+  </motion.div>
+</div>
 
 
 
@@ -180,34 +291,55 @@ export default function Home() {
             animate="animate"
           />
         </motion.div>
-
-        {/* Left Hill */}
+{/* Left Hill */}
 <div>
-<motion.div
-  className="absolute bottom-0 left-0 w-full h-auto md:w-2/3 z-10 scale-110 md:scale-100"
-  style={{
-    marginLeft: '-1px', // Ensures no gap on the left side
-  }}
-  variants={hillVariantLeft}
-  initial="initial"
-  animate="animate"
->
-  <div className="w-full h-auto">
-    <Image
-      src="/LeftHillMobile.svg"
-      alt="Left Hill for Mobile"
-      layout="responsive"
-      width={393}
-      height={93}
-      className="object-cover"
-    />
-  </div>
-</motion.div>
+  {/* Mobile Left Hill */}
+  <motion.div
+    className="absolute bottom-0 left-0 w-full h-auto md:hidden z-10"
+    style={{
+      marginLeft: '-1px', // Prevent gaps for mobile
+    }}
+    variants={hillVariantLeft}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/LeftHillMobile.svg"
+        alt="Left Hill for Mobile"
+        width={393}
+        height={93}
+        layout="responsive"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
 
+  {/* Tablet Left Hill */}
+  <motion.div
+    className="absolute bottom-0 left-0 hidden md:block lg:hidden w-full h-auto z-10"
+    style={{
+      marginLeft: '-1px', // Prevent gaps for tablet
+    }}
+    variants={hillVariantLeft}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/LeftHillMobile.svg"
+        alt="Left Hill for Tablets"
+        width={393}
+        height={93}
+        layout="responsive"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
 
   {/* Desktop Left Hill */}
   <motion.div
-    className="absolute bottom-0 left-0 w-2/3 lg:w-2/3 hidden md:block z-10 scale-110 md:scale-100"
+    className="absolute bottom-0 left-0 hidden lg:block w-2/3 lg:w-2/3 z-10 scale-110"
     variants={hillVariantLeft}
     initial="initial"
     animate="animate"
@@ -238,8 +370,27 @@ export default function Home() {
       <Image
         src="/RightHillMobile.svg"
         alt="Right Hill for Mobile"
-        width={390} // ViewBox width of the mobile SVG
-        height={98} // ViewBox height of the mobile SVG
+        width={390}
+        height={98}
+        layout="responsive"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Tablet Right Hill */}
+  <motion.div
+    className="absolute bottom-0 right-0 hidden md:block lg:hidden w-full h-auto z-20"
+    variants={hillVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/RightHillMobile.svg"
+        alt="Right Hill for Tablets"
+        width={390}
+        height={98}
         layout="responsive"
         className="object-cover"
       />
@@ -248,7 +399,7 @@ export default function Home() {
 
   {/* Desktop Right Hill */}
   <motion.div
-    className="absolute bottom-0 right-0 w-3/4 lg:w-3/4 hidden md:block z-20 scale-110 md:scale-100"
+    className="absolute bottom-0 right-0 hidden lg:block w-3/4 lg:w-3/4 z-20 scale-110"
     variants={hillVariantRight}
     initial="initial"
     animate="animate"
@@ -271,8 +422,10 @@ export default function Home() {
 <div>
   {/* Mobile Grass Layer */}
   <motion.div
-    className="absolute bottom-0 w-full md:hidden z-30"
-    
+    className="absolute bottom-0 w-full sm:w-[130%] sm:scale-110 md:hidden z-30"
+    style={{
+      marginLeft: '-2px', // Prevent gaps for tablets
+    }}
     variants={grassVariant}
     initial="initial"
     animate="animate"
@@ -281,9 +434,31 @@ export default function Home() {
       <Image
         src="/GrassMobile.svg"
         alt="Grass Layer for Mobile"
-        width={393.005} // ViewBox width of the mobile SVG
-        height={68.73} // ViewBox height of the mobile SVG
-        layout="responsive" // Makes it responsive
+        width={393.005} // ViewBox width
+        height={68.73} // ViewBox height
+        layout="responsive"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Tablet Grass Layer */}
+  <motion.div
+    className="absolute bottom-0 hidden md:block lg:hidden w-full h-auto z-30"
+    style={{
+      marginLeft: '-2px', // Prevent gaps for tablets
+    }}
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/GrassMobile.svg"
+        alt="Grass Layer for Tablets"
+        width={393.005}
+        height={68.73}
+        layout="responsive"
         className="object-cover"
       />
     </div>
@@ -291,7 +466,7 @@ export default function Home() {
 
   {/* Desktop Grass Layer */}
   <motion.div
-    className="absolute bottom-0 w-full h-[150px] hidden md:block lg:h-[150px] z-30"
+    className="absolute bottom-0 hidden lg:block w-full lg:h-[150px] z-30"
     variants={grassVariant}
     initial="initial"
     animate="animate"
@@ -300,12 +475,13 @@ export default function Home() {
       <Image
         src="/Grass.svg"
         alt="Grass Layer for Desktop"
-        layout="fill" // Fills its parent container
+        layout="fill"
         className="object-cover"
       />
     </div>
   </motion.div>
 </div>
+
 
 
 
