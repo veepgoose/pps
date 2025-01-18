@@ -180,43 +180,87 @@ export default function Home() {
         </motion.div>
 
         {/* Left Hill */}
+<div>
+  {/* Mobile Left Hill */}
+  <motion.div
+    className="absolute bottom-0 left-0 w-full h-auto md:hidden z-10"
+    variants={hillVariantLeft}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/LeftHillMobile.svg"
+        alt="Left Hill for Mobile"
+        width={393.005} // ViewBox width of the mobile SVG
+        height={68.73} // ViewBox height of the mobile SVG
+        layout="responsive"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
 
-<motion.div
-  className="absolute bottom-0 left-0 w-2/3 lg:w-2/3 z-10 scale-110 md:scale-100"
-  variants={hillVariantLeft}
-  initial="initial"
-  animate="animate"
->
-  <div className="w-full h-auto">
-    <Image
-      src="/HillLeft.svg"
-      alt="Hill 1"
-      layout="responsive" // Ensures the SVG scales with its parent container
-      width={1920} // Use viewBox width of the SVG
-      height={400} // Use viewBox height of the SVG
-      className="object-cover"
-    />
-  </div>
-</motion.div>
+  {/* Desktop Left Hill */}
+  <motion.div
+    className="absolute bottom-0 left-0 w-2/3 lg:w-2/3 hidden md:block z-10 scale-110 md:scale-100"
+    variants={hillVariantLeft}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/HillLeft.svg"
+        alt="Left Hill for Desktop"
+        layout="responsive"
+        width={1920} // ViewBox width of the desktop SVG
+        height={400} // ViewBox height of the desktop SVG
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+</div>
 
 {/* Right Hill */}
-<motion.div
-  className="absolute bottom-0 right-0 w-3/4 lg:w-3/4 z-20 scale-110 md:scale-100"
-  variants={hillVariantRight}
-  initial="initial"
-  animate="animate"
->
-  <div className="w-full h-auto">
-    <Image
-      src="/HillRight.svg"
-      alt="Hill 2"
-      layout="responsive" // Scales smoothly with the container
-      width={1920} // SVG viewBox width
-      height={400} // SVG viewBox height
-      className="object-cover"
-    />
-  </div>
-</motion.div>
+<div>
+  {/* Mobile Right Hill */}
+  <motion.div
+    className="absolute bottom-0 right-0 w-full h-auto md:hidden z-20"
+    variants={hillVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/RightHillMobile.svg"
+        alt="Right Hill for Mobile"
+        width={393.005} // ViewBox width of the mobile SVG
+        height={68.73} // ViewBox height of the mobile SVG
+        layout="responsive"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Desktop Right Hill */}
+  <motion.div
+    className="absolute bottom-0 right-0 w-3/4 lg:w-3/4 hidden md:block z-20 scale-110 md:scale-100"
+    variants={hillVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/HillRight.svg"
+        alt="Right Hill for Desktop"
+        layout="responsive"
+        width={1920} // ViewBox width of the desktop SVG
+        height={400} // ViewBox height of the desktop SVG
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+</div>
+
 
 {/* Grass Layer */}
 <div>
