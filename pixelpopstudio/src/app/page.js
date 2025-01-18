@@ -185,9 +185,6 @@ export default function Home() {
 <div>
 <motion.div
   className="absolute bottom-0 left-0 w-full h-auto md:w-2/3 z-10 scale-110 md:scale-100"
-  style={{
-    marginLeft: '-1px', // Slight negative margin to fill the gap
-  }}
   variants={hillVariantLeft}
   initial="initial"
   animate="animate"
