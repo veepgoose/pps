@@ -30,79 +30,220 @@ export default function Home() {
         {/* Header */}
         <Header />
 
-        {/* Animated Clouds */}
-{/* Left Cloud */}
-<motion.div
-  className="absolute top-[42%] right-[70%] w-[15vw] md:right-[35%] md:top-[7%] sm:w-[15vw] sm:right-[35%] z-10"
-  variants={cloudVariant}
-  initial="initial"
-  animate="animate"
->
-  <Image
-    src="/Cloud.svg"
-    alt="Small Cloud"
-    layout="intrinsic" 
-    width={160} 
-    height={160
-
-    }
-    className="object-cover"
-  />
-</motion.div>
-
-{/* Middle Cloud */}
-<motion.div
-  className="absolute top-[50%] right-[35%] w-[18vw] sm:w-[12vw] md:w-[10.5vw] sm:top-[30%] sm:right-[8%] md:right-[24%] md:top-[15%] z-10"
-  variants={cloudVariantRight}
-  initial="initial"
-  animate="animate"
->
-  <Image
-    src="/Cloud.svg"
-    alt="Cloud"
-    layout="responsive"
-    width={200} // SVG width
-    height={150} // SVG height
-    className="object-cover"
-  />
-</motion.div>
-
-{/* Right Cloud */}
-<motion.div
-  className="absolute top-[40%] right-[15%] w-[12vw] sm:w-[8vw] md:w-[8vw] sm:top-[10%] sm:right-[20%] md:right-[8%] md:top-[5%] z-10"
-  variants={cloudVariantRight}
-  initial="initial"
-  animate="animate"
->
-  <Image
-    src="/Cloud.svg"
-    alt="Small Cloud"
-    layout="responsive"
-    width={150} // SVG width
-    height={75} // SVG height
-    className="object-cover"
-  />
-</motion.div>
-
-
-{/* PPS Logo */}
-<motion.div
-  className="absolute top-[10%] w-full flex justify-center md:top-[8%] md:justify-start md:left-[6%] z-20"
-  variants={h1Variant}
-  initial="initial"
-  animate="animate"
->
-  <div className="w-[85vw] sm:w-[70vw] md:w-[45%] aspect-[1450/850]">
+       {/* Animated Clouds */}
+<div>
+  {/* Left Cloud */}
+  <motion.div
+    className="absolute top-[42%] right-[70%] w-[15vw] sm:hidden z-10"
+    variants={cloudVariant}
+    initial="initial"
+    animate="animate"
+  >
     <Image
-      src="/Logo1.svg"
-      alt="Pixel Pop Studio Logo"
-      layout="responsive"
-      width={1450}
-      height={850}
+      src="/Cloud.svg"
+      alt="Small Cloud for Mobile"
+      layout="intrinsic"
+      width={160}
+      height={160}
       className="object-cover"
     />
-  </div>
-</motion.div>
+  </motion.div>
+
+  <motion.div
+    className="absolute top-[38%] left-[13%] hidden sm:block lg:hidden w-[11vw] z-10"
+    variants={cloudVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Small Cloud for Tablet"
+      layout="intrinsic"
+      width={160}
+      height={160}
+      className="object-cover"
+    />
+  </motion.div>
+
+  <motion.div
+    className="absolute top-[7%] right-[35%] hidden lg:block w-[15vw] z-10"
+    variants={cloudVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Small Cloud for Desktop"
+      layout="intrinsic"
+      width={160}
+      height={160}
+      className="object-cover"
+    />
+  </motion.div>
+</div>
+
+<div>
+  {/* Middle Cloud */}
+  <motion.div
+    className="absolute top-[50%] right-[35%] w-[18vw] sm:hidden z-10"
+    variants={cloudVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Cloud for Mobile"
+      layout="responsive"
+      width={200}
+      height={150}
+      className="object-cover"
+    />
+  </motion.div>
+
+  <motion.div
+    className="absolute top-[38%] right-[35%] hidden sm:block lg:hidden w-[23vw] z-10"
+    variants={cloudVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Cloud for Tablet"
+      layout="responsive"
+      width={200}
+      height={150}
+      className="object-cover"
+    />
+  </motion.div>
+
+  <motion.div
+    className="absolute top-[15%] right-[24%] hidden lg:block w-[10.5vw] z-10"
+    variants={cloudVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Cloud for Desktop"
+      layout="responsive"
+      width={200}
+      height={150}
+      className="object-cover"
+    />
+  </motion.div>
+</div>
+
+<div>
+  {/* Right Cloud */}
+  <motion.div
+    className="absolute top-[40%] right-[15%] w-[12vw] sm:hidden z-10"
+    variants={cloudVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Right Cloud for Mobile"
+      layout="responsive"
+      width={150}
+      height={75}
+      className="object-cover"
+    />
+  </motion.div>
+
+  <motion.div
+    className="absolute top-[34%] right-[14%] hidden sm:block lg:hidden w-[10vw] z-10"
+    variants={cloudVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Right Cloud for Tablet"
+      layout="responsive"
+      width={150}
+      height={75}
+      className="object-cover"
+    />
+  </motion.div>
+
+  <motion.div
+    className="absolute top-[5%] right-[8%] hidden lg:block w-[8vw] z-10"
+    variants={cloudVariantRight}
+    initial="initial"
+    animate="animate"
+  >
+    <Image
+      src="/Cloud.svg"
+      alt="Right Cloud for Desktop"
+      layout="responsive"
+      width={150}
+      height={75}
+      className="object-cover"
+    />
+  </motion.div>
+</div>
+
+{/* PPS Logo */}
+<div>
+  {/* Mobile Logo */}
+  <motion.div
+    className="absolute top-[10%] w-full flex justify-center sm:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-[85vw] aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for Mobile"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Tablet Logo */}
+  <motion.div
+    className="absolute top-[6%] left-[7%] w-[70vw] hidden sm:block lg:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for Tablet"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Desktop Logo */}
+  <motion.div
+    className="absolute top-[8%] left-[6%] w-[45%] hidden lg:block z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for Desktop"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+</div>
+
 
 
 
