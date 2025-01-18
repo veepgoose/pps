@@ -184,7 +184,7 @@ export default function Home() {
         {/* Left Hill */}
 <div>
 <motion.div
-  className="absolute bottom-0 left-0 w-full md:w-2/3 z-10 scale-110 md:scale-100"
+  className="absolute bottom-0 left-0 w-full h-auto md:w-2/3 z-10 scale-110 md:scale-100"
   style={{
     marginLeft: '-1px', // Slight negative margin to fill the gap
   }}
@@ -272,9 +272,7 @@ export default function Home() {
   {/* Mobile Grass Layer */}
   <motion.div
     className="absolute bottom-0 w-full md:hidden z-30"
-    style={{
-      marginLeft: '-1px', // Slight negative margin to fill the gap
-    }}
+    
     variants={grassVariant}
     initial="initial"
     animate="animate"
