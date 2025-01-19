@@ -240,7 +240,10 @@ export default function Home() {
         height={850}
         className="object-cover"
       />
+
     </div>
+
+    {/*Add more breakpoints for the logo for Xl and 2Xl and Mac*/}
   </motion.div>
 </div>
 
