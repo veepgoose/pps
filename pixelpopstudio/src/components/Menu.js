@@ -25,7 +25,7 @@ export default function Menu({ isOpen, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 p-5 shadow-lg z-50 bg-gradient-to-r from-[#FB6FC6] to-[#FCFF6C] text-[#192A51] px-4 lg:px-16"
+      className="fixed inset-0 p-5 shadow-lg z-50 bg-gradient-to-b from-light-header to-light-sectionPrimary text-[#192A51] px-4 lg:px-16"
     >
       {/* Improved X for closing the menu */}
       <div className="absolute top-4 right-4">
