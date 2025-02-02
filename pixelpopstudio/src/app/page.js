@@ -224,9 +224,9 @@ export default function Home() {
     </div>
   </motion.div>
 
-  {/* Desktop Logo */}
-  <motion.div
-    className="absolute top-[8%] left-[6%] w-[45%] hidden lg:block z-20"
+    {/* Medium Screens */}
+    <motion.div
+    className="absolute top-[6%] left-[7%] w-[70vw] hidden md:hidden z-20"
     variants={h1Variant}
     initial="initial"
     animate="animate"
@@ -234,7 +234,26 @@ export default function Home() {
     <div className="aspect-[1450/850]">
       <Image
         src="/Logo1.svg"
-        alt="Pixel Pop Studio Logo for Desktop"
+        alt="Pixel Pop Studio Logo for Tablet"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Desktop Logo */}
+  <motion.div
+    className="absolute top-[8%] left-[6%] w-[45%] hidden lg:block xl:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for Desktop(lg)"
         layout="responsive"
         width={1450}
         height={850}
@@ -242,9 +261,63 @@ export default function Home() {
       />
 
     </div>
-
-    {/*Add more breakpoints for the logo for Xl and 2Xl and Mac*/}
   </motion.div>
+{/* XL Screens */}
+<motion.div
+  className="absolute top-[8%] left-[6%] w-[40%] hidden xl:block 2xl:hidden z-20"
+  variants={h1Variant}
+  initial="initial"
+  animate="animate"
+>
+  <div className="aspect-[1450/850]">
+    <Image
+      src="/Logo1.svg"
+      alt="Pixel Pop Studio Logo for XL"
+      layout="responsive"
+      width={1450}
+      height={850}
+      className="object-cover"
+    />
+  </div>
+</motion.div>
+
+{/* 2XL Screens */}
+<motion.div
+  className="absolute top-[8%] left-[6%] w-[45%] hidden 2xl:block ultrawide:hidden z-20"
+  variants={h1Variant}
+  initial="initial"
+  animate="animate"
+>
+  <div className="aspect-[1450/850]">
+    <Image
+      src="/Logo1.svg"
+      alt="Pixel Pop Studio Logo for 2XL"
+      layout="responsive"
+      width={1450}
+      height={850}
+      className="object-cover"
+    />
+  </div>
+</motion.div>
+
+{/* UltraWide Screens */}
+<motion.div
+  className="absolute top-[8%] left-[6%] w-[30%] hidden ultrawide:block z-20"
+  variants={h1Variant}
+  initial="initial"
+  animate="animate"
+>
+  <div className="aspect-[1450/850]">
+    <Image
+      src="/Logo1.svg"
+      alt="Pixel Pop Studio Logo for UltraWide"
+      layout="responsive"
+      width={1450}
+      height={850}
+      className="object-cover"
+    />
+  </div>
+</motion.div>
 </div>
 
 
@@ -610,7 +683,7 @@ export default function Home() {
 
   {/* Desktop Grass Layer */}
   <motion.div
-    className="absolute bottom-0 hidden lg:block w-full lg:h-[150px] z-30"
+    className="absolute bottom-0 hidden lg:block w-full lg:h-[150px]  z-30"
     variants={grassVariant}
     initial="initial"
     animate="animate"

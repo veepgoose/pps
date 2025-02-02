@@ -12,6 +12,24 @@ module.exports = {
         sans: ['Inter', 'sans-serif', 'Karla', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
+
+      screens: {
+        theme: {
+          extend: {
+            screens: {
+              sm: '768px',
+              md: '1024px',
+              lg: '1428px',
+              xl: '1600px', // Default Tailwind xl
+              '2xl': '1920px', // Default Tailwind 2xl
+              macbook: '1440px', // Custom for MacBook Pro
+              ultrawide: '2561px', // Custom for UltraWide
+              superwide: '3440px', // Custom for SuperWide
+            },
+          },
+        },
+        
+      },
       colors: {
         light: {
           background: '#FFF6E3',
