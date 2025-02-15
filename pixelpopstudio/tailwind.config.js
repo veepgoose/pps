@@ -12,24 +12,20 @@ module.exports = {
         sans: ['Inter', 'sans-serif', 'Karla', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
-
       screens: {
-        theme: {
-          extend: {
-            screens: {
-              sm: '768px',
-              md: '1024px',
-              lg: '1428px',
-              xl: '1600px', // Default Tailwind xl
-              '2xl': '1920px', // Default Tailwind 2xl
-              macbook: '1440px', // Custom for MacBook Pro
-              ultrawide: '2561px', // Custom for UltraWide
-              superwide: '3440px', // Custom for SuperWide
-            },
-          },
-        },
-        
+        sm: '768px', // Tablets
+        md: '1024px', // Small desktops
+        lg: '1428px', // MacBook Air (unchanged)
+        macbook: { raw: '(min-width: 1440px) and (max-width: 1529px)' }, // Stops before 1536px
+        scaled: { raw: '(min-width: 1536px) and (max-width: 1599px)' }, // Only targets 1536px - 1599px
+        xl: '1600px', // MacBook Pro Browser Viewport
+        '2xl': '1920px', // Retina 4K, Curved Monitors
+        ultrawide: '2560px', // UltraWide
+        superwide: '3440px', // 34-inch UltraWide
       },
+      
+      
+      
       colors: {
         light: {
           background: '#FFF6E3',
@@ -64,13 +60,13 @@ module.exports = {
         'dark-gradient': 'linear-gradient(to bottom, #192A51, #7493AF)',
       },
       textShadow: {
-        'custom-yellow-mobile': '2px 2px 0 rgba(252, 255, 108, 0.8)', // Smaller shadow for mobile
-        'custom-yellow': '2px 4px 0 rgba(252, 255, 108, 0.7)', // Larger shadow for desktop
+        'custom-yellow-mobile': '2px 2px 0 rgba(252, 255, 108, 0.8)', // Mobile shadow
+        'custom-yellow': '2px 4px 0 rgba(252, 255, 108, 0.7)', // Desktop shadow
       },
     },
   },
   plugins: [
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       const newUtilities = {
         '.text-shadow-custom-yellow-mobile': {
           textShadow: '2px 2px 0 rgba(252, 255, 108, 0.8)', // Mobile shadow

@@ -188,7 +188,7 @@ export default function Home() {
 <div>
   {/* Mobile Logo */}
   <motion.div
-    className="absolute top-[10%] w-full flex justify-center sm:hidden z-20"
+    className="absolute top-[7%] w-full flex justify-center sm:hidden z-20"
     variants={h1Variant}
     initial="initial"
     animate="animate"
@@ -205,9 +205,9 @@ export default function Home() {
     </div>
   </motion.div>
 
-  {/* Tablet Logo */}
+  {/* Tablet Logo (iPads) */}
   <motion.div
-    className="absolute top-[6%] left-[7%] w-[70vw] hidden sm:block lg:hidden z-20"
+    className="absolute top-[5%] left-[7%] w-[75vw] hidden sm:block md:hidden z-20"
     variants={h1Variant}
     initial="initial"
     animate="animate"
@@ -224,28 +224,29 @@ export default function Home() {
     </div>
   </motion.div>
 
-    {/* Medium Screens */}
-    <motion.div
-    className="absolute top-[6%] left-[7%] w-[70vw] hidden md:hidden z-20"
-    variants={h1Variant}
-    initial="initial"
-    animate="animate"
-  >
-    <div className="aspect-[1450/850]">
-      <Image
-        src="/Logo1.svg"
-        alt="Pixel Pop Studio Logo for Tablet"
-        layout="responsive"
-        width={1450}
-        height={850}
-        className="object-cover"
-      />
-    </div>
-  </motion.div>
+  {/* Medium Screens (1024px - 1099px, Fix for 1024x680) */}
+<motion.div
+  className="absolute top-[8%] left-[7%] w-[50vw] hidden md:block lg:hidden scaled:hidden macbook:hidden z-20"
+  variants={h1Variant}
+  initial="initial"
+  animate="animate"
+>
+  <div className="aspect-[1450/850]">
+    <Image
+      src="/Logo1.svg"
+      alt="Pixel Pop Studio Logo for Medium Screens (1024px - 1099px)"
+      layout="responsive"
+      width={1450}
+      height={850}
+      className="object-cover"
+    />
+  </div>
+</motion.div>
 
-  {/* Desktop Logo */}
+
+  {/* Scaled Display (1536px only) */}
   <motion.div
-    className="absolute top-[8%] left-[6%] w-[45%] hidden lg:block xl:hidden z-20"
+    className="absolute top-[8%] left-[5%] w-[45vw] hidden scaled:block macbook:hidden lg:hidden z-20"
     variants={h1Variant}
     initial="initial"
     animate="animate"
@@ -253,72 +254,132 @@ export default function Home() {
     <div className="aspect-[1450/850]">
       <Image
         src="/Logo1.svg"
-        alt="Pixel Pop Studio Logo for Desktop(lg)"
+        alt="Pixel Pop Studio Logo for Scaled Display (1536px)"
         layout="responsive"
         width={1450}
         height={850}
         className="object-cover"
       />
-
     </div>
   </motion.div>
-{/* XL Screens */}
-<motion.div
-  className="absolute top-[8%] left-[6%] w-[40%] hidden xl:block 2xl:hidden z-20"
-  variants={h1Variant}
-  initial="initial"
-  animate="animate"
->
-  <div className="aspect-[1450/850]">
-    <Image
-      src="/Logo1.svg"
-      alt="Pixel Pop Studio Logo for XL"
-      layout="responsive"
-      width={1450}
-      height={850}
-      className="object-cover"
-    />
-  </div>
-</motion.div>
 
-{/* 2XL Screens */}
-<motion.div
-  className="absolute top-[8%] left-[6%] w-[45%] hidden 2xl:block ultrawide:hidden z-20"
-  variants={h1Variant}
-  initial="initial"
-  animate="animate"
->
-  <div className="aspect-[1450/850]">
-    <Image
-      src="/Logo1.svg"
-      alt="Pixel Pop Studio Logo for 2XL"
-      layout="responsive"
-      width={1450}
-      height={850}
-      className="object-cover"
-    />
-  </div>
-</motion.div>
+  {/* Desktop Logo (MacBook Air 1428px & Small Desktops) */}
+  <motion.div
+    className="absolute top-[9%] left-[6%] w-[45%] hidden lg:block xl:hidden macbook:hidden scaled:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for Desktop (MacBook Air & Small Desktops)"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
 
-{/* UltraWide Screens */}
-<motion.div
-  className="absolute top-[8%] left-[6%] w-[30%] hidden ultrawide:block z-20"
-  variants={h1Variant}
-  initial="initial"
-  animate="animate"
->
-  <div className="aspect-[1450/850]">
-    <Image
-      src="/Logo1.svg"
-      alt="Pixel Pop Studio Logo for UltraWide"
-      layout="responsive"
-      width={1450}
-      height={850}
-      className="object-cover"
-    />
-  </div>
-</motion.div>
+  {/* MacBook Pro (1440px only) */}
+  <motion.div
+    className="absolute top-[8%] left-[6%] w-[55%] hidden macbook:block lg:hidden xl:hidden scaled:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for MacBook Pro (1440px only)"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* XL Screens (MacBook Pro Browser Viewport, 1680px) */}
+  <motion.div
+    className="absolute top-[8%] left-[6%] w-[50%] hidden xl:block 2xl:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for XL Screens"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* 2XL Screens (Retina 4K, 1920px, Curved Monitor) */}
+  <motion.div
+    className="absolute top-[8%] left-[6%] w-[45%] hidden 2xl:block ultrawide:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for 2XL Screens (Retina 4K & 1920px)"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* UltraWide Screens (2560px) */}
+  <motion.div
+    className="absolute top-[9%] left-[5%] w-[45%] hidden ultrawide:block superwide:hidden z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for UltraWide Screens (2560px)"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* SuperWide Screens (3440px) */}
+  <motion.div
+    className="absolute top-[9%] left-[5%] w-[35%] hidden superwide:block z-20"
+    variants={h1Variant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="aspect-[1450/850]">
+      <Image
+        src="/Logo1.svg"
+        alt="Pixel Pop Studio Logo for SuperWide Screens (3440px)"
+        layout="responsive"
+        width={1450}
+        height={850}
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
 </div>
+
+
+
 
 
 
