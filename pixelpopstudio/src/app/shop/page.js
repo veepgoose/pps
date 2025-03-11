@@ -83,7 +83,7 @@ export default function ShopPackage() {
         >
           <h1 className="text-2xl font-bold mb-4">Pixel Pop Shop</h1>
           <p className="italic mb-2">Bring your store online with a powerful e-commerce solution</p>
-          <p className="text-2xl font-bold">£2,999</p>
+          <p className="text-2xl font-bold">£5,999</p>
         </motion.div>
       </div>
 

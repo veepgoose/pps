@@ -82,7 +82,7 @@ export default function ProPackage() {
         >
           <h1 className="text-2xl font-bold mb-4">Pixel Pop Pro</h1>
           <p className="italic mb-2">Level up your digital game with comprehensive online solutions</p>
-          <p className="text-2xl font-bold">£1,599</p>
+          <p className="text-2xl font-bold">£3,999</p>
         </motion.div>
       </div>
 

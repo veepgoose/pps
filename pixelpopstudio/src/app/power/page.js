@@ -81,7 +81,7 @@ export default function PowerPackage() {
         >
           <h1 className="text-2xl font-bold mb-4">Pixel Pop Power</h1>
           <p className="italic mb-2">Full digital transformation for visionary businesses</p>
-          <p className="text-2xl font-bold">Starting at £7,999</p>
+          <p className="text-2xl font-bold">Starting at £12,999</p>
         </motion.div>
       </div>
 

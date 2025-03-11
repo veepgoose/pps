@@ -712,15 +712,15 @@ export default function Home() {
       <Image
         src="/GrassMobile.svg"
         alt="Grass Layer for Mobile"
-        width={393.005} // ViewBox width
-        height={68.73} // ViewBox height
+        width={393.005}
+        height={68.73}
         layout="responsive"
         className="object-cover"
       />
     </div>
   </motion.div>
 
-  {/* Tablet Grass Layer */}
+  {/* Tablet Grass Layer (iPads) */}
   <motion.div
     className="absolute bottom-0 hidden md:block lg:hidden w-full h-auto z-30"
     style={{
@@ -742,9 +742,9 @@ export default function Home() {
     </div>
   </motion.div>
 
-  {/* Desktop Grass Layer */}
+  {/* Scaled Display (1536px only) */}
   <motion.div
-    className="absolute bottom-0 hidden lg:block w-full lg:h-[150px]  z-30"
+    className="absolute bottom-0 hidden scaled:block lg:hidden macbook:hidden w-full h-auto z-30"
     variants={grassVariant}
     initial="initial"
     animate="animate"
@@ -752,13 +752,116 @@ export default function Home() {
     <div className="w-full h-auto">
       <Image
         src="/Grass.svg"
-        alt="Grass Layer for Desktop"
+        alt="Grass Layer for Scaled Display (1536px)"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* Desktop Grass Layer (MacBook Air & Small Desktops) */}
+  <motion.div
+    className="absolute bottom-0 hidden lg:block xl:hidden macbook:hidden scaled:hidden w-full lg:h-[150px] z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/Grass.svg"
+        alt="Grass Layer for Desktop (MacBook Air & Small Desktops)"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* MacBook Pro (1440px only) */}
+  <motion.div
+    className="absolute bottom-0 hidden macbook:block lg:hidden xl:hidden scaled:hidden w-full h-auto z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/Grass.svg"
+        alt="Grass Layer for MacBook Pro (1440px)"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* XL Screens (MacBook Pro Browser Viewport, 1680px) */}
+  <motion.div
+    className="absolute bottom-0 hidden xl:block 2xl:hidden w-full h-auto z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/Grass.svg"
+        alt="Grass Layer for XL Screens (MacBook Pro Browser 1680px)"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* 2XL Screens (Retina 4K, 1920px, Curved Monitor) */}
+  <motion.div
+    className="absolute bottom-0 hidden 2xl:block ultrawide:hidden w-full h-auto z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/Grass.svg"
+        alt="Grass Layer for 2XL Screens (Retina 4K, 1920px, Curved Monitor)"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* UltraWide Screens (2560px) */}
+  <motion.div
+    className="absolute bottom-0 hidden ultrawide:block superwide:hidden w-full h-auto z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/Grass.svg"
+        alt="Grass Layer for UltraWide Screens (2560px)"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
+  </motion.div>
+
+  {/* SuperWide Screens (3440px) */}
+  <motion.div
+    className="absolute bottom-0 hidden superwide:block w-full h-auto z-30"
+    variants={grassVariant}
+    initial="initial"
+    animate="animate"
+  >
+    <div className="w-full h-auto">
+      <Image
+        src="/Grass.svg"
+        alt="Grass Layer for SuperWide Screens (3440px)"
         layout="fill"
         className="object-cover"
       />
     </div>
   </motion.div>
 </div>
+
 
 
 
