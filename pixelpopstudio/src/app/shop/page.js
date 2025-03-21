@@ -98,8 +98,8 @@ export default function ShopPackage() {
   </p>
   <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
     ✨ "Ready to sell online in style? Pixel Pop Shop gives you a beautifully branded,
-    custom-built storefront that’s fast, secure, and designed to convert. Whether 
-    you’re launching your first product or levelling up your existing shop, this 
+    custom-built storefront that&apos;s fast, secure, and designed to convert. Whether 
+    you&apos;re launching your first product or levelling up your existing shop, this 
     package gives you the tools to run a smart, seamless online store with confidence."
   </p>
   <p className="text-2xl font-bold mb-4">£5,999</p>

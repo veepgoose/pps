@@ -97,8 +97,8 @@ export default function JumpstartPackage() {
   <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
     ✨ "Just getting started? The Jumpstart package is your perfect launchpad.
     With a beautifully designed, custom-coded website and all the essentials 
-    baked in, you’ll have everything you need to make a bold, professional 
-    entrance online. It’s lean, clean, and built to grow with you."
+    baked in, you&apos;ll have everything you need to make a bold, professional 
+    entrance online. It&apos;s lean, clean, and built to grow with you."
   </p>
   <p className="text-2xl font-bold mb-4">£2,499</p>
 </motion.div>
@@ -146,7 +146,7 @@ export default function JumpstartPackage() {
             <ul className="list-disc ml-4">
               <li>Extra Design Boost: £350 per revision round</li>
               <li>Website Care & Maintenance: £199/month</li>
-              <li>Social Media Branding Pack: £299–£499 (one-time)</li>
+              <li>Social Media Branding Pack: £299-£499 (one-time)</li>
               <li>Website Content Strategy: £299 (one-time)</li>
               <li>Power User Training: £200/hour</li>
               <li>Brand Identity & Style Guide: From £999</li>

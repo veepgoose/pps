@@ -91,12 +91,12 @@ export default function ProPackage() {
       Level up your digital game with comprehensive online solutions
     </p>
     <p className="text-sm leading-relaxed">
-      ✨ "You’re past the starting line—now it’s time to level up. The Pro
+      ✨ "You&apos;re past the starting line—now it&apos;s time to level up. The Pro
       package is all about blending smart strategy with stunning design. Not
-      only do you get a sleek, custom-coded website, but you’ll also benefit
-      from a deep dive into your brand’s digital presence. With a business
+      only do you get a sleek, custom-coded website, but you&apos;ll also benefit
+      from a deep dive into your brand&apos;s digital presence. With a business
       discovery session, tailored growth insights, and performance
-      optimisation built-in, this isn’t just a website—it’s your digital
+      optimisation built-in, this isn&apos;t just a website—it&apos;s your digital
       secret weapon."
     </p>
     <p className="text-2xl font-bold mt-4">£3,999</p>
@@ -180,7 +180,7 @@ export default function ProPackage() {
             <ul className="list-disc ml-5 text-sm leading-relaxed">
               <li>Extra Design Boost: £350 per revision round</li>
               <li>Website Care & Maintenance: £199/month</li>
-              <li>Social Media Branding Pack: £299–£499 (one-time)</li>
+              <li>Social Media Branding Pack: £299-£499 (one-time)</li>
               <li>Website UX Audit: £699 (one-time)</li>
             </ul>
           </div>

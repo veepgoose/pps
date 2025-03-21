@@ -97,7 +97,7 @@ export default function PowerPackage() {
     Full digital transformation for visionary businesses
   </p>
   <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
-    ✨ "This is the full works – designed for established businesses ready to elevate 
+    ✨ "This is the full works - designed for established businesses ready to elevate 
     their online game to elite level. With completely bespoke functionality, advanced 
     integrations, and brand storytelling woven into every detail, Pixel Pop Power 
     turns your website into a high-impact digital ecosystem. Ideal for serious scale-ups 
