@@ -87,15 +87,25 @@ export default function PowerPackage() {
 
         {/* Heading, subtext, and pricing */}
         <motion.div
-          className="relative z-10 text-center mt-8"
-          variants={contentVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <h1 className="text-2xl font-bold mb-4">Pixel Pop Power</h1>
-          <p className="italic mb-2">Full digital transformation for visionary businesses</p>
-          <p className="text-2xl font-bold">Starting at £12,999</p>
-        </motion.div>
+  className="relative z-10 text-center mt-8 px-4 md:px-12 lg:px-16"
+  variants={contentVariant}
+  initial="initial"
+  animate="animate"
+>
+  <h1 className="text-2xl font-bold mb-4">Pixel Pop Power</h1>
+  <p className="italic mb-2">
+    Full digital transformation for visionary businesses
+  </p>
+  <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
+    ✨ "This is the full works – designed for established businesses ready to elevate 
+    their online game to elite level. With completely bespoke functionality, advanced 
+    integrations, and brand storytelling woven into every detail, Pixel Pop Power 
+    turns your website into a high-impact digital ecosystem. Ideal for serious scale-ups 
+    and bold rebrands."
+  </p>
+  <p className="text-2xl font-bold mb-4">Starting at £12,999</p>
+</motion.div>
+
       </div>
 
       {/* Main Content Section */}

@@ -80,18 +80,29 @@ export default function ProPackage() {
         </motion.div>
 
         <motion.div
-          className="relative z-10 text-center mt-8"
-          variants={contentVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <h1 className="text-2xl font-bold mb-4">Pixel Pop Pro</h1>
-          <p className="italic mb-2">
-            Level up your digital game with comprehensive online solutions
-          </p>
-          <p className="text-2xl font-bold">£3,999</p>
-        </motion.div>
-      </div>
+  className="relative z-10 mt-8 px-4 md:px-8 text-center"
+  variants={contentVariant}
+  initial="initial"
+  animate="animate"
+>
+  <div className="max-w-2xl mx-auto">
+    <h1 className="text-2xl font-bold mb-4">Pixel Pop Pro</h1>
+    <p className="italic mb-2">
+      Level up your digital game with comprehensive online solutions
+    </p>
+    <p className="text-sm leading-relaxed">
+      ✨ "You’re past the starting line—now it’s time to level up. The Pro
+      package is all about blending smart strategy with stunning design. Not
+      only do you get a sleek, custom-coded website, but you’ll also benefit
+      from a deep dive into your brand’s digital presence. With a business
+      discovery session, tailored growth insights, and performance
+      optimisation built-in, this isn’t just a website—it’s your digital
+      secret weapon."
+    </p>
+    <p className="text-2xl font-bold mt-4">£3,999</p>
+  </div>
+</motion.div>
+</div>
 
       {/* Main Content Section */}
       <motion.div
@@ -100,25 +111,7 @@ export default function ProPackage() {
         initial="initial"
         animate="animate"
       >
-        <div className="flex justify-center">
-          {/* Removed `max-w-4xl` here to allow the grid to expand */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">
-            <div className="w-full p-4">
-              <h2 className="font-bold text-xl mb-2 text-center">
-                What is Pixel Pop Pro?
-              </h2>
-              <p className="text-sm leading-relaxed text-center lg: px-72">
-                ✨ "You’re past the starting line—now it’s time to level up. The
-                Pro package is all about blending smart strategy with stunning
-                design. Not only do you get a sleek, custom-coded website, but
-                you’ll also benefit from a deep dive into your brand’s digital
-                presence. With a business discovery session, tailored growth
-                insights, and performance optimisation built-in, this isn’t just
-                a website—it’s your digital secret weapon."
-              </p>
-            </div>
-          </div>
-        </div>
+
 
 
         {/* Package Details */}

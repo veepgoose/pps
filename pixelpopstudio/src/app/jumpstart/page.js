@@ -84,16 +84,25 @@ export default function JumpstartPackage() {
 
         {/* Heading, subtext, and pricing */}
         <motion.div
-          className="relative z-10 text-center mt-8"
-          variants={contentVariant}
-          initial="initial"
-          animate="animate"
-        >
-          <h1 className="text-2xl font-bold mb-4">Pixel Pop Jumpstart</h1>
-          <p className="italic mb-2">Your launchpad to a standout online presence</p>
-          <p className="text-2xl font-bold">£2,499</p>
-        </motion.div>
-      </div>
+  className="relative z-10 text-center mt-8 px-4 md:px-12 lg:px-16"
+  variants={contentVariant}
+  initial="initial"
+  animate="animate"
+>
+  <h1 className="text-2xl font-bold mb-4">Pixel Pop Jumpstart</h1>
+  <p className="italic mb-2">
+    Your launchpad to a standout online presence
+  </p>
+  
+  <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
+    ✨ "Just getting started? The Jumpstart package is your perfect launchpad.
+    With a beautifully designed, custom-coded website and all the essentials 
+    baked in, you’ll have everything you need to make a bold, professional 
+    entrance online. It’s lean, clean, and built to grow with you."
+  </p>
+  <p className="text-2xl font-bold mb-4">£2,499</p>
+</motion.div>
+</div>
 
       {/* Main Content Section */}
       <motion.div 
@@ -185,3 +194,5 @@ export default function JumpstartPackage() {
     </div>
   );
 }
+
+
