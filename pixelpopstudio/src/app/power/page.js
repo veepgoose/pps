@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import FooterAlt from '@/components/FooterAlt';
 import SiteHeader from '@/components/SiteHeader';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 // Motion Variants for the starry background, heading, and icon animation
@@ -28,6 +29,18 @@ const iconVariant = {
 };
 
 export default function PowerPackage() {
+
+  const packages = [
+    { name: 'Jumpstart', path: '/jumpstart', icon: '/JumpstartIcon.png' },
+    { name: 'Pro', path: '/pro', icon: '/ProIcon.png' },
+    { name: 'Shop', path: '/shop', icon: '/ShopIcon.png' },
+    { name: 'Power', path: '/power', icon: '/PowerIcon.png' },
+  ];
+
+  const currentIndex = packages.findIndex((pkg) => pkg.path === '/power');
+  const nextIndex = (currentIndex + 1) % packages.length;
+  const prevIndex = (currentIndex - 1 + packages.length) % packages.length;
+
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-footer">
@@ -115,7 +128,7 @@ export default function PowerPackage() {
           <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm">
-              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over a decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don&apos;t just build websites - we create digital solutions that drive real business growth.
+              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over two decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don&apos;t just build websites - we create digital solutions that drive real business growth.
             </p>
           </div>
 
@@ -146,6 +159,17 @@ export default function PowerPackage() {
               <li>Smart contact form integration</li>
             </ul>
           </div>
+        </div>
+               {/* Package Navigation */}
+               <div className="flex justify-between items-center mt-8 p-4">
+          <Link href={packages[(currentIndex - 1 + packages.length) % packages.length].path}
+                className="text-blue-600 hover:underline">
+            ← {packages[(currentIndex - 1 + packages.length) % packages.length].name}
+          </Link>
+          <Link href={packages[(currentIndex + 1) % packages.length].path}
+                className="text-blue-600 hover:underline">
+            {packages[(currentIndex + 1) % packages.length].name} →
+          </Link>
         </div>
 
         {/* Payment Terms Section */}

@@ -6,6 +6,7 @@ import SiteHeader from '@/components/SiteHeader';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 // Motion Variants for the starry background, heading, and icon animation
 const starryHeroVariant1 = {
   initial: { opacity: 0, x: -100 },
@@ -27,22 +28,24 @@ const iconVariant = {
   animate: { opacity: 1, y: 0, transition: { duration: 1.5 } },
 };
 
-export default function JumpstartPackage() {
-    // Package navigation
-    const packages = [
-      { name: "Jumpstart", path: "/jumpstart", icon: "/JumpstartIcon.png" },
-      { name: "Pro", path: "/pro", icon: "/ProIcon.png" },
-      { name: "Shop", path: "/shop", icon: "/ShopIcon.png" },
-      { name: "Power", path: "/power", icon: "/PowerIcon.png" },
-    ];
-  
-    // Get current package index
-    const currentIndex = packages.findIndex(pkg => pkg.path === "/jumpstart");
-    const nextIndex = (currentIndex + 1) % packages.length;
-    const prevIndex = (currentIndex - 1 + packages.length) % packages.length;
+export default function ProPackage() {
+      // Package navigation
+      const packages = [
+        { name: "Jumpstart", path: "/jumpstart", icon: "/JumpstartIcon.png" },
+        { name: "Pro", path: "/pro", icon: "/ProIcon.png" },
+        { name: "Shop", path: "/shop", icon: "/ShopIcon.png" },
+        { name: "Power", path: "/power", icon: "/PowerIcon.png" },
+      ];
+    
+      // Get current package index
+      const currentIndex = packages.findIndex(pkg => pkg.path === "/pro");
+      const nextIndex = (currentIndex + 1) % packages.length;
+      const prevIndex = (currentIndex - 1 + packages.length) % packages.length;
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-light-header to-light-footer">
       <SiteHeader />
+      
       
       {/* Starry Background Section */}
       <div className="relative flex flex-col items-center justify-start flex-grow pt-16 pb-2 md:pt-24 lg:-mt-6 lg:pb-8">
@@ -66,7 +69,7 @@ export default function JumpstartPackage() {
           />
         </motion.div>
 
-        {/* Jumpstart Icon with animation */}
+        {/* Pro Icon with animation */}
         <motion.div
           className="relative z-10 w-2/6 md:w-2/3 lg:w-1/6"
           variants={iconVariant}
@@ -74,8 +77,8 @@ export default function JumpstartPackage() {
           animate="animate"
         >
           <Image 
-            src="/JumpstartIcon.png" 
-            alt="Jumpstart Package" 
+            src="/ProIcon.png" 
+            alt="Pixel Pop Pro Package" 
             width={150} 
             height={100} 
             layout="responsive" 
@@ -89,9 +92,9 @@ export default function JumpstartPackage() {
           initial="initial"
           animate="animate"
         >
-          <h1 className="text-2xl font-bold mb-4">Pixel Pop Jumpstart</h1>
-          <p className="italic mb-2">Your launchpad to a standout online presence</p>
-          <p className="text-2xl font-bold">£2,499</p>
+          <h1 className="text-2xl font-bold mb-4">Pixel Pop Pro</h1>
+          <p className="italic mb-2">Level up your digital game with comprehensive online solutions</p>
+          <p className="text-2xl font-bold">£3,999</p>
         </motion.div>
       </div>
 
@@ -109,20 +112,19 @@ export default function JumpstartPackage() {
           <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Package Details</h2>
             <ul className="list-disc ml-4">
-              <li>Custom-coded 5-page responsive website</li>
-              <li>Mobile-first design implementation</li>
-              <li>Performance-optimised codebase</li>
-              <li>30-minute business alignment call</li>
-              <li>Clean, semantic HTML & advanced CSS</li>
-              <li>Basic SEO optimisation</li>
+              <li>Everything in Pixel Perfect, plus:</li>
+              <li>Up to 8 pages of custom content</li>
+              <li>Logo design (if needed)</li>
+              <li>Basic brand guidelines</li>
+              <li>Blog or FAQ section setup</li>
+              <li>Enhanced SEO optimization</li>
               <li>2 rounds of revisions</li>
-              <li>2 weeks of launch support</li>
-              
+              <li>2 weeks of aftercare</li>
+              <li>30-minute training session</li>
             </ul>
           </div>
-
-          {/* Why Choose Us */}
-          <div className="w-full p-4">
+    {/* Why Choose Us */}
+    <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm">
               We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. We don't just build websites - we create digital solutions that drive real business growth.
@@ -152,10 +154,10 @@ export default function JumpstartPackage() {
             <ul className="list-disc ml-4">
               <li>Unlimited creative freedom with custom coding</li>
               <li>Lightning-fast, secure hosting setup</li>
-              <li>SSL certificate setup</li>
-              <li>Basic analytics implementation</li>
-              <li>Responsive design across all devices</li>
-              <li>Robust security features</li>
+              <li>SSL certificate</li>
+              <li>Analytics dashboard</li>
+              <li>Mobile responsiveness</li>
+              <li>Rock-solid security features</li>
               <li>Smart contact form integration</li>
             </ul>
           </div>
@@ -173,7 +175,7 @@ export default function JumpstartPackage() {
 
         {/* Payment Terms Section */}
         <div className="w-full p-4 mt-4 pb-24">
-          <p className="text-sm text-center">
+          <p className="text-sm text-center lg:text-center">
             <strong>Payment terms:</strong> 50% deposit, 50% upon completion.
             <br />
             Domain and hosting costs are additional: Approximately £150/year.
