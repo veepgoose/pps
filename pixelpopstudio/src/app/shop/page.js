@@ -97,10 +97,10 @@ export default function ShopPackage() {
     Bring your store online with a powerful e-commerce solution
   </p>
   <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
-    ✨ "Ready to sell online in style? Pixel Pop Shop gives you a beautifully branded,
-    custom-built storefront that&apos;s fast, secure, and designed to convert. Whether 
+    ✨ Ready to sell online in style? Pixel Pop Shop gives you a beautifully branded,
+    custom&ndash;built storefront that&apos;s fast, secure, and designed to convert. Whether 
     you&apos;re launching your first product or levelling up your existing shop, this 
-    package gives you the tools to run a smart, seamless online store with confidence."
+    package gives you the tools to run a smart, seamless online store with confidence.
   </p>
   <p className="text-2xl font-bold mb-4">£5,999</p>
 </motion.div>
@@ -120,14 +120,14 @@ export default function ShopPackage() {
           <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Package Details</h2>
             <ul className="list-disc ml-4">
-              <li>Custom-coded e-commerce website</li>
+              <li>Custom&ndash;coded e&ndash;commerce website</li>
               <li>Up to 12 product listings</li>
               <li>Integration with a payment gateway</li>
               <li>Shopping cart functionality</li>
-              <li>SEO optimization for product pages</li>
+              <li>SEO optimisation for product pages</li>
               <li>2 rounds of revisions</li>
               <li>2 weeks of aftercare</li>
-              <li>1-hour training session</li>
+              <li>1&ndash;hour training session</li>
             </ul>
           </div>
 
@@ -135,13 +135,13 @@ export default function ShopPackage() {
           <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm">
-              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over two decade of successful business experience, including building a thriving e-commerce wine business from the ground up. We don&apos;t just build websites - we create digital solutions that drive real business growth.
+              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. Our founder brings over two decade of successful business experience, including building a thriving e&ndash;commerce wine business from the ground up. We don&apos;t just build websites &ndash; we create digital solutions that drive real business growth.
             </p>
           </div>
 
           {/* Power-Ups */}
           <div className="w-full p-4">
-            <h2 className="font-semibold mb-2">Power-Ups (Add-On Services)</h2>
+            <h2 className="font-semibold mb-2">Power&ndash;Ups (Add&ndash;On Services)</h2>
             <ul className="list-disc ml-4">
               <li>Extra Product Listings: £100 per 5 products</li>
               <li>Monthly Pixel Maintenance: £199/month</li>
@@ -158,11 +158,11 @@ export default function ShopPackage() {
             <h2 className="font-semibold mb-2">Every Package Includes</h2>
             <ul className="list-disc ml-4">
               <li>Unlimited creative freedom with custom coding</li>
-              <li>Lightning-fast, secure hosting setup</li>
+              <li>Lightning&ndash;fast, secure hosting setup</li>
               <li>SSL certificate</li>
               <li>Analytics dashboard</li>
               <li>Mobile responsiveness</li>
-              <li>Rock-solid security features</li>
+              <li>Rock&ndash;solid security features</li>
               <li>Smart contact form integration</li>
             </ul>
           </div>

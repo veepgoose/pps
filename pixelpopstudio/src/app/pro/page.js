@@ -91,13 +91,13 @@ export default function ProPackage() {
       Level up your digital game with comprehensive online solutions
     </p>
     <p className="text-sm leading-relaxed">
-      ✨ "You&apos;re past the starting line—now it&apos;s time to level up. The Pro
+      ✨ You&apos;re past the starting line—now it&apos;s time to level up. The Pro
       package is all about blending smart strategy with stunning design. Not
       only do you get a sleek, custom-coded website, but you&apos;ll also benefit
       from a deep dive into your brand&apos;s digital presence. With a business
       discovery session, tailored growth insights, and performance
-      optimisation built-in, this isn&apos;t just a website—it&apos;s your digital
-      secret weapon."
+      optimisation built&ndash;in, this isn&apos;t just a website&ndash;it&apos;s your digital
+      secret weapon.
     </p>
     <p className="text-2xl font-bold mt-4">£3,999</p>
   </div>
@@ -119,8 +119,8 @@ export default function ProPackage() {
           <div className="w-full p-4">
             <h2 className="font-bold text-xl mb-2">Package Features</h2>
             <ul className="list-disc ml-5 text-sm leading-relaxed">
-              <li>Custom-coded website (up to 7 pages)</li>
-              <li>90-minute business discovery session</li>
+              <li>Custom&ndash;coded website (up to 7 pages)</li>
+              <li>90&ndash;minute business discovery session</li>
               <li>Digital strategy document</li>
               <li>Progressive Web App capabilities</li>
               <li>Performance optimisation session</li>
@@ -128,7 +128,7 @@ export default function ProPackage() {
               <li>Blog or news section setup</li>
               <li>2 rounds of revisions</li>
               <li>4 weeks of launch support</li>
-              <li>Post-launch strategy session</li>
+              <li>Post&ndash;launch strategy session</li>
             </ul>
           </div>
 
@@ -165,7 +165,7 @@ export default function ProPackage() {
             <p className="text-sm">
               We create websites that break free from templates, giving you
               unlimited creative freedom to express your brand exactly how you
-              envision it. We don't just build websites - we create digital
+              envision it. We don't just build websites &ndash; we create digital
               solutions that drive real business growth.
               <br />
               <br />
@@ -176,12 +176,12 @@ export default function ProPackage() {
           </div>
 
           <div className="w-full p-4">
-            <h2 className="font-bold text-xl mb-2">Power-Ups (Add-On Services)</h2>
+            <h2 className="font-bold text-xl mb-2">Power&ndash;Ups (Add&ndash;On Services)</h2>
             <ul className="list-disc ml-5 text-sm leading-relaxed">
               <li>Extra Design Boost: £350 per revision round</li>
               <li>Website Care & Maintenance: £199/month</li>
               <li>Social Media Branding Pack: £299-£499 (one-time)</li>
-              <li>Website UX Audit: £699 (one-time)</li>
+              <li>Website UX Audit: £699 (one&ndash;time)</li>
             </ul>
           </div>
 

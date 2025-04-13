@@ -95,10 +95,10 @@ export default function JumpstartPackage() {
   </p>
   
   <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
-    ✨ "Just getting started? The Jumpstart package is your perfect launchpad.
-    With a beautifully designed, custom-coded website and all the essentials 
+    ✨ Just getting started? The Jumpstart package is your perfect launchpad.
+    With a beautifully designed, custom&ndash;coded website and all the essentials 
     baked in, you&apos;ll have everything you need to make a bold, professional 
-    entrance online. It&apos;s lean, clean, and built to grow with you."
+    entrance online. It&apos;s lean, clean, and built to grow with you.
   </p>
   <p className="text-2xl font-bold mb-4">£2,499</p>
 </motion.div>
@@ -134,7 +134,7 @@ export default function JumpstartPackage() {
           <div className="w-full p-4">
             <h2 className="font-semibold mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm">
-              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. We don't just build websites - we create digital solutions that drive real business growth.
+              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. We don&apos;t just build websites - we create digital solutions that drive real business growth.
               <br /><br />
               Our unique design approach combines creative flair with a deep understanding of user experience, ensuring that every project is as visually stunning as it is functional. We pride ourselves on delivering designs that not only stand out from the crowd but also resonate with your target audience.
             </p>
@@ -160,7 +160,7 @@ export default function JumpstartPackage() {
             <h2 className="font-semibold mb-2">Every Package Includes</h2>
             <ul className="list-disc ml-4">
               <li>Unlimited creative freedom with custom coding</li>
-              <li>Lightning-fast, secure hosting setup</li>
+              <li>Lightning&ndash;fast, secure hosting setup</li>
               <li>SSL certificate setup</li>
               <li>Basic analytics implementation</li>
               <li>Responsive design across all devices</li>

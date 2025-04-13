@@ -97,11 +97,11 @@ export default function PowerPackage() {
     Full digital transformation for visionary businesses
   </p>
   <p className="text-sm leading-relaxed text-center max-w-[600px] mx-auto">
-    ✨ "This is the full works - designed for established businesses ready to elevate 
+    ✨ This is the full works &ndash; designed for established businesses ready to elevate 
     their online game to elite level. With completely bespoke functionality, advanced 
     integrations, and brand storytelling woven into every detail, Pixel Pop Power 
-    turns your website into a high-impact digital ecosystem. Ideal for serious scale-ups 
-    and bold rebrands."
+    turns your website into a high&ndash;impact digital ecosystem. Ideal for serious scale&ndash;ups 
+    and bold rebrands.
   </p>
   <p className="text-2xl font-bold mb-4">Starting at £12,999</p>
 </motion.div>
@@ -124,11 +124,11 @@ export default function PowerPackage() {
             <ul className="list-disc ml-4">
               <li>Everything in Pixel Pop Shop, plus:</li>
               <li>Comprehensive brand strategy</li>
-              <li>In-depth market research</li>
-              <li>Custom e-commerce integration</li>
+              <li>In&ndash;depth market research</li>
+              <li>Custom e&ndash;commerce integration</li>
               <li>Advanced features and functionality</li>
               <li>Ongoing support and maintenance</li>
-              <li>Advanced SEO for e-commerce</li>
+              <li>Advanced SEO for e&ndash;commerce</li>
               <li>3 rounds of revisions</li>
               <li>Monthly strategy meetings</li>
             </ul>
@@ -144,7 +144,7 @@ export default function PowerPackage() {
 
           {/* Power-Ups */}
           <div className="w-full p-4">
-            <h2 className="font-semibold mb-2">Power-Ups (Add-On Services)</h2>
+            <h2 className="font-semibold mb-2">Power&ndash;Ups (Add&ndash;On Services)</h2>
             <ul className="list-disc ml-4">
               <li>Extra Design Boost: £200 per revision round</li>
               <li>Monthly Pixel Maintenance: £199/month</li>
@@ -161,11 +161,11 @@ export default function PowerPackage() {
             <h2 className="font-semibold mb-2">Every Package Includes</h2>
             <ul className="list-disc ml-4">
               <li>Unlimited creative freedom with custom coding</li>
-              <li>Lightning-fast, secure hosting setup</li>
+              <li>Lightning&ndash;fast, secure hosting setup</li>
               <li>SSL certificate</li>
               <li>Analytics dashboard</li>
               <li>Mobile responsiveness</li>
-              <li>Rock-solid security features</li>
+              <li>Rock&ndash;solid security features</li>
               <li>Smart contact form integration</li>
             </ul>
           </div>
