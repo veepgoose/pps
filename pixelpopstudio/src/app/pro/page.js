@@ -165,7 +165,7 @@ export default function ProPackage() {
             <p className="text-sm">
               We create websites that break free from templates, giving you
               unlimited creative freedom to express your brand exactly how you
-              envision it. We don't just build websites &ndash; we create digital
+              envision it. We don&apos;t just build websites &ndash; we create digital
               solutions that drive real business growth.
               <br />
               <br />
