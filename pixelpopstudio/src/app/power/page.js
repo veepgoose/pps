@@ -148,7 +148,7 @@ export default function PowerPackage() {
           <div className="w-full p-4">
             <h2 className="font-bold text-xl mb-2">Why Choose Pixel Pop Studio?</h2>
             <p className="text-sm leading-relaxed">
-              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. We don't just build websites — we create digital solutions that drive real business growth.
+              We create websites that break free from templates, giving you unlimited creative freedom to express your brand exactly how you envision it. We don&apos;t just build websites — we create digital solutions that drive real business growth.
               <br />
               <br />
               Our unique design approach combines creative flair with a deep understanding of user experience, ensuring that every project is as visually stunning as it is functional.

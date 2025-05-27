@@ -152,7 +152,7 @@ export default function ShopPackage() {
             <p className="text-sm leading-relaxed">
               We create websites that break free from templates, giving you
               unlimited creative freedom to express your brand exactly how you
-              envision it. We don't just build websites – we create digital
+              envision it. We don&apos;t just build websites – we create digital
               solutions that drive real business growth.
               <br />
               <br />
