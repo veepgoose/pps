@@ -80,29 +80,29 @@ export default function ProPackage() {
         </motion.div>
 
         <motion.div
-  className="relative z-10 mt-8 px-4 md:px-8 text-center"
-  variants={contentVariant}
-  initial="initial"
-  animate="animate"
->
-  <div className="max-w-2xl mx-auto">
-    <h1 className="text-2xl font-bold mb-4">Pixel Pop Pro</h1>
-    <p className="italic mb-2">
-      Level up your digital game with comprehensive online solutions
-    </p>
-    <p className="text-sm leading-relaxed">
-      ✨ You&apos;re past the starting line—now it&apos;s time to level up. The Pro
-      package is all about blending smart strategy with stunning design. Not
-      only do you get a sleek, custom-coded website, but you&apos;ll also benefit
-      from a deep dive into your brand&apos;s digital presence. With a business
-      discovery session, tailored growth insights, and performance
-      optimisation built&ndash;in, this isn&apos;t just a website&ndash;it&apos;s your digital
-      secret weapon.
-    </p>
-    <p className="text-2xl font-bold mt-4">£3,999</p>
-  </div>
-</motion.div>
-</div>
+          className="relative z-10 mt-8 px-4 md:px-8 text-center"
+          variants={contentVariant}
+          initial="initial"
+          animate="animate"
+        >
+          <div className="max-w-2xl mx-auto">
+            <h1 className="text-2xl font-bold mb-4">Pixel Pop Pro</h1>
+            <p className="italic mb-2">
+              Level up your digital game with comprehensive online solutions
+            </p>
+            <p className="text-sm leading-relaxed">
+              ✨ You&apos;re past the starting line—now it&apos;s time to level up. The Pro
+              package is all about blending smart strategy with stunning design. Not
+              only do you get a sleek, custom-coded website, but you&apos;ll also benefit
+              from a deep dive into your brand&apos;s digital presence. With a business
+              discovery session, tailored growth insights, and performance
+              optimisation built–in, this isn&apos;t just a website–it&apos;s your digital
+              secret weapon.
+            </p>
+            <p className="text-2xl font-bold mt-4">£3,999</p>
+          </div>
+        </motion.div>
+      </div>
 
       {/* Main Content Section */}
       <motion.div
@@ -111,90 +111,85 @@ export default function ProPackage() {
         initial="initial"
         animate="animate"
       >
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4 mt-8">
+  {/* Row 1 */}
+  <div className="w-full p-4">
+    <h2 className="font-bold text-xl mb-2">Package Features</h2>
+    <ul className="list-disc ml-5 text-sm leading-relaxed">
+      <li>Custom–coded website (up to 7 pages)</li>
+      <li>90–minute business discovery session</li>
+      <li>Digital strategy document</li>
+      <li>Progressive Web App capabilities</li>
+      <li>Performance optimisation session</li>
+      <li>Advanced responsive design</li>
+      <li>Blog or news section setup</li>
+      <li>2 rounds of revisions</li>
+      <li>4 weeks of launch support</li>
+      <li>Post–launch strategy session</li>
+    </ul>
+  </div>
+
+  <div className="w-full p-4">
+    <h2 className="font-bold text-xl mb-2">Business Growth Features</h2>
+    <ul className="list-disc text-sm ml-4">
+      <li>Customer journey mapping</li>
+      <li>Digital presence audit</li>
+      <li>Growth opportunity identification</li>
+      <li>Conversion optimisation recommendations</li>
+      <li>Technical SEO implementation</li>
+    </ul>
+  </div>
+
+  <div className="w-full p-4">
+    <h2 className="font-bold text-xl mb-2">Technical Features</h2>
+    <ul className="list-disc text-sm ml-4">
+      <li>Everything in Jumpstart, plus:</li>
+      <li>Advanced performance optimization</li>
+      <li>Custom animations and interactions</li>
+      <li>Enhanced security features</li>
+      <li>Advanced contact form with customisation</li>
+      <li>Integration with business tools</li>
+    </ul>
+  </div>
+
+  {/* Row 2 - aligned directly below each col above */}
+  <div className="w-full p-4">
+    <h2 className="font-bold text-xl mb-2">Why Choose Pixel Pop Studio?</h2>
+    <p className="text-sm leading-relaxed">
+      We create websites that break free from templates, giving you
+      unlimited creative freedom to express your brand exactly how you
+      envision it. We don't just build websites – we create digital
+      solutions that drive real business growth.
+      <br />
+      <br />
+      Our unique design approach combines creative flair with a deep
+      understanding of user experience, ensuring that every project is
+      as visually stunning as it is functional.
+    </p>
+  </div>
+
+  <div className="w-full p-4">
+    <h2 className="font-bold text-xl mb-2">Power–Ups (Add–On Services)</h2>
+    <ul className="list-disc ml-5 text-sm leading-relaxed">
+      <li>Extra Design Boost: £350 per revision round</li>
+      <li>Website Care & Maintenance: £199/month</li>
+      <li>Social Media Branding Pack: £299–£499 (one-time)</li>
+      <li>Website UX Audit: £699 (one–time)</li>
+    </ul>
+  </div>
+
+  <div className="w-full p-4">
+    <h2 className="font-bold text-xl mb-2">Every Package Includes</h2>
+    <ul className="list-disc ml-5 text-sm leading-relaxed">
+      <li>Unlimited creative freedom with custom coding</li>
+      <li>SSL certificate setup</li>
+      <li>Basic analytics implementation</li>
+      <li>Responsive design across all devices</li>
+    </ul>
+  </div>
+</div>
 
 
-
-        {/* Package Details */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="w-full p-4">
-            <h2 className="font-bold text-xl mb-2">Package Features</h2>
-            <ul className="list-disc ml-5 text-sm leading-relaxed">
-              <li>Custom&ndash;coded website (up to 7 pages)</li>
-              <li>90&ndash;minute business discovery session</li>
-              <li>Digital strategy document</li>
-              <li>Progressive Web App capabilities</li>
-              <li>Performance optimisation session</li>
-              <li>Advanced responsive design</li>
-              <li>Blog or news section setup</li>
-              <li>2 rounds of revisions</li>
-              <li>4 weeks of launch support</li>
-              <li>Post&ndash;launch strategy session</li>
-            </ul>
-          </div>
-
-          <div className="w-full p-4">
-            <h2 className="font-bold text-xl mb-2">Business Growth Features</h2>
-            <ul className="list-disc text-sm ml-4">
-              <li>Customer journey mapping</li>
-              <li>Digital presence audit</li>
-              <li>Growth opportunity identification</li>
-              <li>Conversion optimisation recommendations</li>
-              <li>Technical SEO implementation</li>
-            </ul>
-          </div>
-
-          <div className="w-full p-4">
-            <h2 className="font-bold text-xl mb-2">Technical Features</h2>
-            <ul className="list-disc text-sm ml-4">
-              <li>Everything in Jumpstart, plus:</li>
-              <li>Advanced performance optimization</li>
-              <li>Custom animations and interactions</li>
-              <li>Enhanced security features</li>
-              <li>Advanced contact form with customisation</li>
-              <li>Integration with business tools</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Second Row */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="w-full p-4">
-            <h2 className="font-bold text-xl mb-2">
-              Why Choose Pixel Pop Studio?
-            </h2>
-            <p className="text-sm">
-              We create websites that break free from templates, giving you
-              unlimited creative freedom to express your brand exactly how you
-              envision it. We don&apos;t just build websites &ndash; we create digital
-              solutions that drive real business growth.
-              <br />
-              <br />
-              Our unique design approach combines creative flair with a deep
-              understanding of user experience, ensuring that every project is
-              as visually stunning as it is functional.
-            </p>
-          </div>
-
-          <div className="w-full p-4">
-            <h2 className="font-bold text-xl mb-2">Power&ndash;Ups (Add&ndash;On Services)</h2>
-            <ul className="list-disc ml-5 text-sm leading-relaxed">
-              <li>Extra Design Boost: £350 per revision round</li>
-              <li>Website Care & Maintenance: £199/month</li>
-              <li>Social Media Branding Pack: £299-£499 (one-time)</li>
-              <li>Website UX Audit: £699 (one&ndash;time)</li>
-            </ul>
-          </div>
-
-          <div className="w-full p-4">
-            <h2 className="font-bold text-xl mb-2">Every Package Includes</h2>
-            <ul className="list-disc ml-5 text-sm leading-relaxed">
-              <li>Unlimited creative freedom with custom coding</li>
-              <li>SSL certificate setup</li>
-              <li>Basic analytics implementation</li>
-              <li>Responsive design across all devices</li>
-            </ul>
-          </div>
-        </div>
 
         {/* Package Navigation */}
         <div className="flex justify-between items-center mt-8 p-4">
@@ -221,3 +216,4 @@ export default function ProPackage() {
     </div>
   );
 }
+
